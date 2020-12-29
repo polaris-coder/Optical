@@ -5,11 +5,18 @@
 # Created by: PyQt5 UI code generator 5.12.1
 #
 # WARNING! All changes made in this file will be lost!
+import matplotlib
+matplotlib.use("Qt5Agg")  # 声明使用QT5
+from PyQt5.Qt import (QWidget, QHBoxLayout, QFrame,
+    QSplitter, QStyleFactory, QApplication)
 from PyQt5.QtCore import Qt
 from PyQt5 import QtCore, QtGui, QtWidgets
 from Geometric_optics_ui.connectDB import connection
 from PyQt5.QtWidgets import *
 from Geometric_optics_ui import aberration
+from Geometric_optics.main_aberrationAndDistortion import Tool
+from Geometric_optics_ui.connectDB import connection
+import numpy as np
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -18,6 +25,25 @@ class Ui_MainWindow(object):
 
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
+
+        self.toolBar = QtWidgets.QToolBar(MainWindow)
+        self.toolBar.setObjectName("toolBar")
+        MainWindow.addToolBar(QtCore.Qt.TopToolBarArea, self.toolBar)
+        # 设置工具栏中按钮的显示方式为：文字显示在图标的下方
+        self.toolBar.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
+        self.qaction1 = QtWidgets.QAction(QtGui.QIcon("image/img2.ico"),"点列图") # 创建点列图按钮对象
+        self.qaction2 = QtWidgets.QAction(QtGui.QIcon("image/img2.ico"),"像差曲线") # 创建像差曲线按钮对象
+        self.qaction3 = QtWidgets.QAction(QtGui.QIcon("image/img2.ico"),"畸变曲线") # 创建畸变曲线按钮对象
+        self.qaction4 = QtWidgets.QAction(QtGui.QIcon("image/img2.ico"),"二维光线图") # 创建二维光线图按钮对象
+        self.qaction5 = QtWidgets.QAction(QtGui.QIcon("image/img2.ico"),"图像仿真") # 创建图像仿真按钮对象
+        # 将创建的QAction添加到工具栏中
+        self.toolBar.addActions([self.qaction1,self.qaction2,self.qaction3,self.qaction4,self.qaction5])
+        # 设置工具栏按钮的大小
+        self.toolBar.setIconSize(QtCore.QSize(20,20))
+        # 设置工具栏可以移动
+        self.toolBar.setMovable(True)
+        # 为工具栏中的QAction绑定triggered信号
+        self.toolBar.actionTriggered[QtWidgets.QAction].connect(self.getvalue)
 
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.centralwidget)
         self.horizontalLayout.setContentsMargins(1, 1, 1, 1)
@@ -95,6 +121,7 @@ class Ui_MainWindow(object):
 
         self.tabWidget_2 = QtWidgets.QTabWidget(self.widget_4)
         self.tabWidget_2.setObjectName("tabWidget_2")
+        self.tabWidget_2.setTabsClosable(True) # 给tab添加删除标志
 
         self.tab_3 = QtWidgets.QWidget()
         self.tab_3.setObjectName("tab_3")
@@ -103,6 +130,14 @@ class Ui_MainWindow(object):
         self.tab_4 = QtWidgets.QWidget()
         self.tab_4.setObjectName("tab_4")
         self.tabWidget_2.addTab(self.tab_4, "")
+
+        self.tab_5 = QtWidgets.QWidget()
+        self.tab_5.setObjectName("tab_5")
+        self.tabWidget_2.addTab(self.tab_5, "")
+
+        self.tab_6 = QtWidgets.QWidget()
+        self.tab_6.setObjectName("tab_6")
+        self.tabWidget_2.addTab(self.tab_6, "")
 
         self.horizontalLayout_3.addWidget(self.tabWidget_2)
         self.verticalLayout.addWidget(self.widget_4)
@@ -177,6 +212,67 @@ class Ui_MainWindow(object):
         self.tableWidget.resizeRowsToContents()
         self.tableWidget.setAlternatingRowColors(True)
 
+    def getvalue(self,m):
+
+        # 获取数据库中的Lensdata数据
+        result, row, vol = connection()
+
+        obj = {'C': 0.0, 't': 10.0, 'n': 1.0}
+        surf1 = {'C': 1.0 / 40.94, 't': 8.74, 'n': 1.617}
+        surf2 = {'C': 0.0, 't': 11.05, 'n': 1.0}
+        surf3 = {'C': -1.0 / 55.65, 't': 2.78, 'n': 1.649}
+        surf4 = {'C': 1.0 / 39.75, 't': 7.63, 'n': 1.0}
+        surf5 = {'C': 1.0 / 107.56, 't': 9.54, 'n': 1.617}
+        surf6 = {'C': -1.0 / 43.33, 't': 0.0, 'n': 1.0}
+        img = {'C': 0, 't': 0, 'n': 1.0}
+        Lens = [obj, surf1, surf2, surf3, surf4, surf5, surf6, img]
+
+        pupilRadius = 18.5  # 入瞳孔径大小
+        pupiltheta = 20  # 最大视场角
+        pupilPosition = 4  # 入瞳位置
+        # 2. 绘制横向像差点列图
+        thetas = np.array([0, 8, 14, 20])  # 视场角
+        apertureRays = 18.5  # 光束孔径设置为18.5
+        # 3. 绘制径向像差曲线
+        apertureRays2 = 2  # 光束孔径设置为2
+
+        if m.text() == "点列图":
+            # 绘制点列图
+            print("点列图")
+            # 创建工具类对象，计算横向像差点列图，径向像差曲线，畸变曲线
+            self.tool = Tool(Lens, pupilRadius, pupiltheta, pupilPosition, thetas, apertureRays, apertureRays2)
+            self.tool.Ppint_diagram()
+            # 在GUI的tabWidget中创建一个布局，用于添加Tool类的实例(实例被看作为一个控件)
+            self.gridlayout = QGridLayout(self.tab_3)
+            self.gridlayout.addWidget(self.tool, 0, 0)  # 将Tool的实例添加到布局中去
+        elif m.text() == "像差曲线":
+            # 绘制像差曲线函数
+            print("像差曲线")
+            # 径向像差曲线
+            self.tool_1 = Tool(Lens, pupilRadius, pupiltheta, pupilPosition, thetas, apertureRays, apertureRays2)
+            self.tool_1.radial_aberration_curve()
+            self.gridlayout_1 = QGridLayout(self.tab_4)
+            self.gridlayout_1.addWidget(self.tool_1, 0, 0)
+        elif m.text() == "畸变曲线":
+            # 绘制畸变曲线
+            print("畸变曲线")
+            # 畸变曲线
+            self.tool_2 = Tool(Lens, pupilRadius, pupiltheta, pupilPosition, thetas, apertureRays, apertureRays2)
+            self.tool_2.distortion_curve()
+            self.gridlayout_2 = QGridLayout(self.tab_5)
+            self.gridlayout_2.addWidget(self.tool_2, 0, 0)
+        elif m.text() == "二维光线图":
+            # 绘制二维光线图
+            print("二维光线图")
+            # 光线追迹
+            self.tool_3 = Tool(Lens, pupilRadius, pupiltheta, pupilPosition, thetas, apertureRays, apertureRays2)
+            self.tool_3.ray_tracing()
+            self.gridLayout_3 = QGridLayout(self.tab_6)
+            self.gridLayout_3.addWidget(self.tool_3, 0, 0)
+        elif m.text() == "图像仿真":
+            # 图像仿真
+            print("图像仿真")
+
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "光学设计系统"))
@@ -197,10 +293,13 @@ class Ui_MainWindow(object):
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("MainWindow", "Tab 2"))
         self.tabWidget_2.setTabText(self.tabWidget_2.indexOf(self.tab_3), _translate("MainWindow", "Tab 1"))
         self.tabWidget_2.setTabText(self.tabWidget_2.indexOf(self.tab_4), _translate("MainWindow", "Tab 2"))
+        self.tabWidget_2.setTabText(self.tabWidget_2.indexOf(self.tab_5), _translate("MainWindow", "Tab 3"))
+        self.tabWidget_2.setTabText(self.tabWidget_2.indexOf(self.tab_6), _translate("MainWindow", "Tab 4"))
         self.menu.setTitle(_translate("MainWindow", "文件"))
         self.menu_2.setTitle(_translate("MainWindow", "编辑"))
         self.menu_3.setTitle(_translate("MainWindow", "设置"))
         self.menu_4.setTitle(_translate("MainWindow", "窗口"))
+        self.toolBar.setWindowTitle(_translate("MainWindow", "toolBar"))
 
 import sys
 #程序入口，程序从此处启动PyQt设计的窗体
