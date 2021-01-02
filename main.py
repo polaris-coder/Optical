@@ -13,7 +13,7 @@ from PyQt5.QtCore import Qt
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import *
 from Geometric_optics.main_aberrationAndDistortion import Tool
-from Geometric_optics_ui.connectDB import connection
+from Geometric_optics_ui.connectDB import connection, connection2
 import numpy as np
 
 class Ui_MainWindow(object):
@@ -207,6 +207,9 @@ class Ui_MainWindow(object):
         self.tableWidget.setRowCount(2)
         self.tableWidget.setHorizontalHeaderLabels(['Surface Type', 'Radius', 'thickness', 'Refractive index', 'Material']) # 设置表格中的水平标题
 
+        for row in range (0, self.tableWidget.rowCount()) :
+            self.addComboBox(row)
+
         self.tab_2 = QtWidgets.QWidget()
         self.tab_2.setObjectName("tab_2")
         self.tabWidget.addTab(self.tab_2, "")
@@ -296,13 +299,20 @@ class Ui_MainWindow(object):
         self.pushButton_2.clicked.connect(self.table_insert)
         self.pushButton_3.clicked.connect(self.table_delete)
 
+    # 增加表格的列
+    def table_insertVol(self):
+        print(self.comobox.currentIndex())
+        column = self.tableWidget.columnCount()
+        for i in range (0,6) :
+            self.tableWidget.insertColumn(column)
+        self.tableWidget.setHorizontalHeaderLabels(
+                    ['Surface Type', 'Radius', 'thickness', 'Refractive index', 'Material', 'r1', 'r2', 'r3', 'r4', 'r5', 'r6'])  # 设置表格中的水平标题
+
     # 删除表格的某一行
     def table_delete(self):
         row_select = self.tableWidget.selectedItems()
         if len(row_select) == 0:
             return
-        id = row_select[0].text()
-        print("id: {}".format(id))
 
         row = row_select[0].row()
         self.tableWidget.removeRow(row)
@@ -312,21 +322,41 @@ class Ui_MainWindow(object):
         # rowCount()获取现有表格控件中的行数,在此基础上插入一行insertRow()
         row = self.tableWidget.rowCount()
         self.tableWidget.insertRow(row)
+        self.addComboBox(row)
 
+    def addComboBox(self, row):
+        # 将表格第1列设置为ComboBox下拉列表
         self.comobox = QComboBox()
-        self.comobox.addItems(['Standard', 'sphere', 'asphere', 'extended polynomial'])
-        self.comobox.setCurrentIndex(0)
-        self.tableWidget.setCellWidget(row, 0, self.comobox)
+        self.comobox.addItems(['Standard', 'sphere', 'asphere', 'extended polynomial'])  # 为下拉列表设置数据源
+        self.comobox.setCurrentIndex(0)  # 默认选中第一项
+        self.tableWidget.setCellWidget(row, 0, self.comobox)  # 将创建的下拉列表显示在表格中
 
-        item_Radius = QTableWidgetItem("0.0000")
-        item_thickness = QTableWidgetItem("0.0000")
-        item_Refractive_index = QTableWidgetItem("0.0000")
+        item_Radius = QTableWidgetItem("0.0")
+        item_thickness = QTableWidgetItem("0.0")
+        item_Refractive_index = QTableWidgetItem("0.0")
         item_Material = QTableWidgetItem("None")
-
+        item_r1 = QTableWidgetItem("0.0")
+        item_r2 = QTableWidgetItem("0.0")
+        item_r3 = QTableWidgetItem("0.0")
+        item_r4 = QTableWidgetItem("0.0")
+        item_r5 = QTableWidgetItem("0.0")
+        item_r6 = QTableWidgetItem("0.0")
+        # 设置单元格中的内容
         self.tableWidget.setItem(row, 1, item_Radius)
         self.tableWidget.setItem(row, 2, item_thickness)
         self.tableWidget.setItem(row, 3, item_Refractive_index)
         self.tableWidget.setItem(row, 4, item_Material)
+        self.tableWidget.setItem(row, 5, item_r1)
+        self.tableWidget.setItem(row, 6, item_r2)
+        self.tableWidget.setItem(row, 7, item_r3)
+        self.tableWidget.setItem(row, 8, item_r4)
+        self.tableWidget.setItem(row, 9, item_r5)
+        self.tableWidget.setItem(row, 10, item_r6)
+
+        # self.comobox.currentIndexChanged.connect(self.connectDB2)
+
+        self.tableWidget.resizeColumnsToContents()  # 使表格列的宽度跟随内容改变
+        self.tableWidget.resizeRowsToContents()  # 使表格行的高度跟随内容改变
 
     # 连接数据库并获取数据
     def connectDB(self):
@@ -335,6 +365,9 @@ class Ui_MainWindow(object):
         # 将数据填入表格
         self.tableWidget.setRowCount(row)
         self.tableWidget.setColumnCount(vol)
+        # self.tableWidget.setHorizontalHeaderLabels(
+        #         ['Surface Type', 'Radius', 'thickness', 'Refractive index', 'Material', 'r1', 'r2', 'r3', 'r4', 'r5', 'r6'])  # 设置表格中的水平标题
+        # self.tableWidget.setHorizontalHeaderLabels(['Surface Type', 'Radius', 'thickness', 'Refractive index', 'Material']) # 设置表格中的水平标题
         for i in range(row):
             for j in range(vol):
                 # 为表格第一列的单元格添加下拉菜单
@@ -348,16 +381,36 @@ class Ui_MainWindow(object):
                     self.tableWidget.setItem(i, j, data)
                 # data.setForeground(QtGui.QBrush(QtGui.QColor("gray"))) # 设置单元格的文本颜色
                 # data.setBackground(QtGui.QBrush(QtGui.QColor("gray"))) # 设置单元格背景颜色
-        self.tableWidget.resizeColumnsToContents() # 使表格列的宽度跟随内容改变
-        self.tableWidget.resizeRowsToContents() # 使表格行的高度跟随内容改变
         # self.tableWidget.setAlternatingRowColors(True) # 设置表格颜色交错显示
 
+    # 连接数据库并获取数据
+    def connectDB2(self):
+        # 连接数据库，获取数据
+        result, row, vol = connection2()
+        # 将数据填入表格
+        self.tableWidget.setRowCount(row)
+        self.tableWidget.setColumnCount(vol)
+        self.tableWidget.setHorizontalHeaderLabels(
+                ['Surface Type', 'Radius', 'thickness', 'Refractive index', 'Material', 'r1', 'r2', 'r3', 'r4', 'r5', 'r6'])  # 设置表格中的水平标题
+        # self.tableWidget.setHorizontalHeaderLabels(['Surface Type', 'Radius', 'thickness', 'Refractive index', 'Material']) # 设置表格中的水平标题
+        for i in range(row):
+            for j in range(vol):
+                # 为表格第一列的单元格添加下拉菜单
+                if j == 0:
+                    self.comobox = QComboBox()
+                    self.comobox.addItems(['Standard', 'sphere','asphere','extended polynomial'])
+                    self.comobox.setCurrentIndex(0)
+                    self.tableWidget.setCellWidget(i,0,self.comobox)
+                    self.comobox.currentIndexChanged.connect(self.table_insertVol)
+                else:
+                    data = QTableWidgetItem(str(result[i][j]))
+                    self.tableWidget.setItem(i, j, data)
+                # data.setForeground(QtGui.QBrush(QtGui.QColor("gray"))) # 设置单元格的文本颜色
+                # data.setBackground(QtGui.QBrush(QtGui.QColor("gray"))) # 设置单元格背景颜色
+        # self.tableWidget.setAlternatingRowColors(True) # 设置表格颜色交错显示
 
-    def showInfo(self):
-        print(self.comobox.currentText())
-
+    # 为工具栏中的控件绑定槽函数
     def getvalue(self,m):
-
         # 获取数据库中的Lensdata数据
         result, row, vol = connection()
 
@@ -390,21 +443,18 @@ class Ui_MainWindow(object):
             self.gridlayout.addWidget(self.tool, 0, 0,QtCore.Qt.AlignCenter)  # 将Tool的实例添加到布局中去
         elif m.text() == "像差曲线":
             # 绘制像差曲线函数
-            # 径向像差曲线
             self.tool_1 = Tool(Lens, pupilRadius, pupiltheta, pupilPosition, thetas, apertureRays, apertureRays2)
             self.tool_1.radial_aberration_curve()
             self.gridlayout_1 = QGridLayout(self.tab_4)
             self.gridlayout_1.addWidget(self.tool_1, 0, 0,QtCore.Qt.AlignCenter)
         elif m.text() == "畸变曲线":
             # 绘制畸变曲线
-            # 畸变曲线
             self.tool_2 = Tool(Lens, pupilRadius, pupiltheta, pupilPosition, thetas, apertureRays, apertureRays2)
             self.tool_2.distortion_curve()
             self.gridlayout_2 = QGridLayout(self.tab_5)
             self.gridlayout_2.addWidget(self.tool_2, 0, 0,QtCore.Qt.AlignCenter)
         elif m.text() == "二维光线图":
             # 绘制二维光线图
-            # 光线追迹
             self.tool_3 = Tool(Lens, pupilRadius, pupiltheta, pupilPosition, thetas, apertureRays, apertureRays2)
             self.tool_3.ray_tracing()
             self.gridLayout_3 = QGridLayout(self.tab_3)
