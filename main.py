@@ -7,13 +7,11 @@
 # WARNING! All changes made in this file will be lost!
 import matplotlib
 matplotlib.use("Qt5Agg")  # 声明使用QT5
-from PyQt5.Qt import (QWidget, QHBoxLayout, QFrame,
-    QSplitter, QStyleFactory, QApplication)
 from PyQt5.QtCore import Qt
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import *
 from Geometric_optics.main_aberrationAndDistortion import Tool
-from Geometric_optics_ui.connectDB import connection, connection2
+from SR.service import connection
 import numpy as np
 
 class Ui_MainWindow(object):
@@ -69,21 +67,21 @@ class Ui_MainWindow(object):
         self.label_6.setObjectName("label_6")
         self.gridLayout_4.addWidget(self.label_6, 0, 0, 1, 1)
 
-        self.pushButton = QtWidgets.QPushButton(self.page_4)
-        self.pushButton.setObjectName("pushButton")
-        self.gridLayout_4.addWidget(self.pushButton, 1, 1, 1, 1)
+        self.btnQuery = QtWidgets.QPushButton(self.page_4)
+        self.btnQuery.setObjectName("pushButton")
+        self.gridLayout_4.addWidget(self.btnQuery, 1, 1, 1, 1)
 
         self.lineEdit_12 = QtWidgets.QLineEdit(self.page_4)
         self.lineEdit_12.setObjectName("lineEdit_12")
         self.gridLayout_4.addWidget(self.lineEdit_12, 0, 1, 1, 1)
 
-        self.pushButton_2 = QtWidgets.QPushButton(self.page_4)
-        self.pushButton_2.setObjectName("pushButton_2")
-        self.gridLayout_4.addWidget(self.pushButton_2, 2, 0, 1, 1)
+        self.btnadd = QtWidgets.QPushButton(self.page_4)
+        self.btnadd.setObjectName("pushButton_2")
+        self.gridLayout_4.addWidget(self.btnadd, 2, 0, 1, 1)
 
-        self.pushButton_3 = QtWidgets.QPushButton(self.page_4)
-        self.pushButton_3.setObjectName("pushButton_3")
-        self.gridLayout_4.addWidget(self.pushButton_3, 2, 1, 1, 1)
+        self.btndel = QtWidgets.QPushButton(self.page_4)
+        self.btndel.setObjectName("pushButton_3")
+        self.gridLayout_4.addWidget(self.btndel, 2, 1, 1, 1)
 
         spacerItem3 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.gridLayout_4.addItem(spacerItem3, 3, 1, 1, 1)
@@ -206,8 +204,8 @@ class Ui_MainWindow(object):
         self.tableWidget.setColumnCount(5)
         self.tableWidget.setRowCount(2)
         self.tableWidget.setHorizontalHeaderLabels(['Surface Type', 'Radius', 'thickness', 'Refractive index', 'Material']) # 设置表格中的水平标题
-
-        for row in range (0, self.tableWidget.rowCount()) :
+        self.L = []
+        for row in range(0, self.tableWidget.rowCount()):
             self.addComboBox(row)
 
         self.tab_2 = QtWidgets.QWidget()
@@ -277,7 +275,6 @@ class Ui_MainWindow(object):
         self.tabWidget_2.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
-
         # 实例化QSplitter控件并设置初始为水平方向布局
         splitter1 = QSplitter(Qt.Horizontal)
         # 向Splitter内添加控件,并设定控件初始比例
@@ -295,9 +292,9 @@ class Ui_MainWindow(object):
         splitter2.setStretchFactor(1,2)
         self.verticalLayout.addWidget(splitter2)
 
-        self.pushButton.clicked.connect(self.connectDB)
-        self.pushButton_2.clicked.connect(self.table_insert)
-        self.pushButton_3.clicked.connect(self.table_delete)
+        self.btnQuery.clicked.connect(self.connectDB) # 显示lensdata的数据
+        self.btnadd.clicked.connect(self.table_insert) # 绑定添加按钮的单击信号
+        self.btndel.clicked.connect(self.table_delete) # 绑定删除按钮的单击信号
 
     # 增加表格的列
     def table_insertVol(self):
@@ -324,12 +321,16 @@ class Ui_MainWindow(object):
         self.tableWidget.insertRow(row)
         self.addComboBox(row)
 
+    # 为表格添加默认值
     def addComboBox(self, row):
         # 将表格第1列设置为ComboBox下拉列表
         self.comobox = QComboBox()
         self.comobox.addItems(['Standard', 'sphere', 'asphere', 'extended polynomial'])  # 为下拉列表设置数据源
         self.comobox.setCurrentIndex(0)  # 默认选中第一项
-        self.tableWidget.setCellWidget(row, 0, self.comobox)  # 将创建的下拉列表显示在表格中
+        self.L.append(self.comobox)
+        self.tableWidget.setCellWidget(row, 0 ,self.L[row])
+        print(len(self.L))
+        # self.tableWidget.setCellWidget(row, 0, self.comobox)  # 将创建的下拉列表显示在表格中
 
         item_Radius = QTableWidgetItem("0.0")
         item_thickness = QTableWidgetItem("0.0")
@@ -358,10 +359,11 @@ class Ui_MainWindow(object):
         self.tableWidget.resizeColumnsToContents()  # 使表格列的宽度跟随内容改变
         self.tableWidget.resizeRowsToContents()  # 使表格行的高度跟随内容改变
 
-    # 连接数据库并获取数据
+    # 连接数据库并获取数据(部分)
     def connectDB(self):
         # 连接数据库，获取数据
-        result, row, vol = connection()
+        sql = "select `Surface Type`,`Radius`,`thickness`,`Refractive index`,`Material` from lensdata2"
+        result, row, vol = connection(sql)
         # 将数据填入表格
         self.tableWidget.setRowCount(row)
         self.tableWidget.setColumnCount(vol)
@@ -383,10 +385,11 @@ class Ui_MainWindow(object):
                 # data.setBackground(QtGui.QBrush(QtGui.QColor("gray"))) # 设置单元格背景颜色
         # self.tableWidget.setAlternatingRowColors(True) # 设置表格颜色交错显示
 
-    # 连接数据库并获取数据
+    # 连接数据库并获取数据(全部)
     def connectDB2(self):
         # 连接数据库，获取数据
-        result, row, vol = connection2()
+        sql = "select * from lensdata2"
+        result, row, vol = connection(sql)
         # 将数据填入表格
         self.tableWidget.setRowCount(row)
         self.tableWidget.setColumnCount(vol)
@@ -476,9 +479,9 @@ class Ui_MainWindow(object):
         self.label_4.setText(_translate("MainWindow", "波长："))
         self.toolBox.setItemText(self.toolBox.indexOf(self.page_3), _translate("MainWindow", "波长"))
         self.label_6.setText(_translate("MainWindow", "镜面个数："))
-        self.pushButton.setText(_translate("MainWindow", "确定"))
-        self.pushButton_2.setText(_translate("MainWindow", "添加"))
-        self.pushButton_3.setText(_translate("MainWindow", "删除"))
+        self.btnQuery.setText(_translate("MainWindow", "确定"))
+        self.btnadd.setText(_translate("MainWindow", "添加"))
+        self.btndel.setText(_translate("MainWindow", "删除"))
         self.toolBox.setItemText(self.toolBox.indexOf(self.page_4), _translate("MainWindow", "Lensdata"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("MainWindow", "lensdata1"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("MainWindow", "Tab 2"))
