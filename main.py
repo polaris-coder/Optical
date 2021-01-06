@@ -298,12 +298,44 @@ class Ui_MainWindow(object):
 
     # 增加表格的列
     def table_insertVol(self):
-        print(self.comobox.currentIndex())
         column = self.tableWidget.columnCount()
-        for i in range (0,6) :
-            self.tableWidget.insertColumn(column)
-        self.tableWidget.setHorizontalHeaderLabels(
+        row = self.tableWidget.rowCount()
+        if (column < 11):
+            for i in range (0,6) :
+                self.tableWidget.insertColumn(column)
+            self.tableWidget.setHorizontalHeaderLabels(
                     ['Surface Type', 'Radius', 'thickness', 'Refractive index', 'Material', 'r1', 'r2', 'r3', 'r4', 'r5', 'r6'])  # 设置表格中的水平标题
+            for i in range(0, row):
+                item_r1 = QTableWidgetItem("0.0")
+                item_r2 = QTableWidgetItem("0.0")
+                item_r3 = QTableWidgetItem("0.0")
+                item_r4 = QTableWidgetItem("0.0")
+                item_r5 = QTableWidgetItem("0.0")
+                item_r6 = QTableWidgetItem("0.0")
+
+                self.tableWidget.setItem(i, 5, item_r1)
+                self.tableWidget.setItem(i, 6, item_r2)
+                self.tableWidget.setItem(i, 7, item_r3)
+                self.tableWidget.setItem(i, 8, item_r4)
+                self.tableWidget.setItem(i, 9, item_r5)
+                self.tableWidget.setItem(i, 10, item_r6)
+
+    # 删除表格的后六列
+    def table_delVol(self):
+        # 统计表格中每一行的Surface Type的类型是Standard的个数
+        ComItems = []
+        m = 0
+        for i in range(0, len(self.L)):
+            ComItems.append(self.L[i].currentText())
+        for j in range(0, len(ComItems)):
+            if ("Standard" == ComItems[j]):
+                m = m + 1
+        # 判断Surface Type的类型是否全为Standard，若是，则执行删除操作
+        if (m == len(ComItems)):
+            n = 10
+            while n > 4:
+                self.tableWidget.removeColumn(n)
+                n = n - 1
 
     # 删除表格的某一行
     def table_delete(self):
@@ -319,7 +351,7 @@ class Ui_MainWindow(object):
         # rowCount()获取现有表格控件中的行数,在此基础上插入一行insertRow()
         row = self.tableWidget.rowCount()
         self.tableWidget.insertRow(row)
-        self.addComboBox(row)
+        self.addComboBox(row) # 为表格的每一项赋初值
 
     # 为表格添加默认值
     def addComboBox(self, row):
@@ -329,35 +361,29 @@ class Ui_MainWindow(object):
         self.comobox.setCurrentIndex(0)  # 默认选中第一项
         self.L.append(self.comobox)
         self.tableWidget.setCellWidget(row, 0 ,self.L[row])
-        print(len(self.L))
-        # self.tableWidget.setCellWidget(row, 0, self.comobox)  # 将创建的下拉列表显示在表格中
+        self.L[row].activated.connect(lambda :self.comBoxItemSel(row)) # 将ComboBox控件的选项选中信号与自定义槽函数绑定，并使用lambda表达式向槽函数传递当前行数索引
+        # print(len(self.L))
 
         item_Radius = QTableWidgetItem("0.0")
         item_thickness = QTableWidgetItem("0.0")
         item_Refractive_index = QTableWidgetItem("0.0")
         item_Material = QTableWidgetItem("None")
-        item_r1 = QTableWidgetItem("0.0")
-        item_r2 = QTableWidgetItem("0.0")
-        item_r3 = QTableWidgetItem("0.0")
-        item_r4 = QTableWidgetItem("0.0")
-        item_r5 = QTableWidgetItem("0.0")
-        item_r6 = QTableWidgetItem("0.0")
+
         # 设置单元格中的内容
         self.tableWidget.setItem(row, 1, item_Radius)
         self.tableWidget.setItem(row, 2, item_thickness)
         self.tableWidget.setItem(row, 3, item_Refractive_index)
         self.tableWidget.setItem(row, 4, item_Material)
-        self.tableWidget.setItem(row, 5, item_r1)
-        self.tableWidget.setItem(row, 6, item_r2)
-        self.tableWidget.setItem(row, 7, item_r3)
-        self.tableWidget.setItem(row, 8, item_r4)
-        self.tableWidget.setItem(row, 9, item_r5)
-        self.tableWidget.setItem(row, 10, item_r6)
-
-        # self.comobox.currentIndexChanged.connect(self.connectDB2)
 
         self.tableWidget.resizeColumnsToContents()  # 使表格列的宽度跟随内容改变
         self.tableWidget.resizeRowsToContents()  # 使表格行的高度跟随内容改变
+
+    def comBoxItemSel(self, row):
+        text = self.L[row].currentText()
+        if (text == "Standard"):
+            self.table_delVol()
+        elif (text == "sphere"):
+            self.table_insertVol()
 
     # 连接数据库并获取数据(部分)
     def connectDB(self):
@@ -367,17 +393,12 @@ class Ui_MainWindow(object):
         # 将数据填入表格
         self.tableWidget.setRowCount(row)
         self.tableWidget.setColumnCount(vol)
-        # self.tableWidget.setHorizontalHeaderLabels(
-        #         ['Surface Type', 'Radius', 'thickness', 'Refractive index', 'Material', 'r1', 'r2', 'r3', 'r4', 'r5', 'r6'])  # 设置表格中的水平标题
-        # self.tableWidget.setHorizontalHeaderLabels(['Surface Type', 'Radius', 'thickness', 'Refractive index', 'Material']) # 设置表格中的水平标题
+        self.L2 = []
         for i in range(row):
             for j in range(vol):
                 # 为表格第一列的单元格添加下拉菜单
                 if j == 0:
-                    self.comobox = QComboBox()
-                    self.comobox.addItems(['Standard', 'sphere','asphere','extended polynomial'])
-                    self.comobox.setCurrentIndex(0)
-                    self.tableWidget.setCellWidget(i,0,self.comobox)
+                    self.addComboBox(i)
                 else:
                     data = QTableWidgetItem(str(result[i][j]))
                     self.tableWidget.setItem(i, j, data)
@@ -396,15 +417,12 @@ class Ui_MainWindow(object):
         self.tableWidget.setHorizontalHeaderLabels(
                 ['Surface Type', 'Radius', 'thickness', 'Refractive index', 'Material', 'r1', 'r2', 'r3', 'r4', 'r5', 'r6'])  # 设置表格中的水平标题
         # self.tableWidget.setHorizontalHeaderLabels(['Surface Type', 'Radius', 'thickness', 'Refractive index', 'Material']) # 设置表格中的水平标题
+        self.L3 = []
         for i in range(row):
             for j in range(vol):
                 # 为表格第一列的单元格添加下拉菜单
                 if j == 0:
-                    self.comobox = QComboBox()
-                    self.comobox.addItems(['Standard', 'sphere','asphere','extended polynomial'])
-                    self.comobox.setCurrentIndex(0)
-                    self.tableWidget.setCellWidget(i,0,self.comobox)
-                    self.comobox.currentIndexChanged.connect(self.table_insertVol)
+                    self.addComboBox(i)
                 else:
                     data = QTableWidgetItem(str(result[i][j]))
                     self.tableWidget.setItem(i, j, data)
