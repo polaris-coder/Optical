@@ -204,9 +204,11 @@ class Ui_MainWindow(object):
         self.tableWidget.setColumnCount(5)
         self.tableWidget.setRowCount(2)
         self.tableWidget.setHorizontalHeaderLabels(['Surface Type', 'Radius', 'thickness', 'Refractive index', 'Material']) # 设置表格中的水平标题
-        self.L = []
-        for row in range(0, self.tableWidget.rowCount()):
-            self.addComboBox(row)
+        # self.tableWidget.setEditTriggers(QAbstractItemView.DoubleClicked) # 设置表格双击时可以编辑单元格
+        self.L = [] # 用来保存表格中每一行的ComboBox控件对象
+        # 初始化表格
+        for i in range(0, self.tableWidget.rowCount()):
+            self.addComboBox(i)
 
         self.tab_2 = QtWidgets.QWidget()
         self.tab_2.setObjectName("tab_2")
@@ -292,16 +294,22 @@ class Ui_MainWindow(object):
         splitter2.setStretchFactor(1,2)
         self.verticalLayout.addWidget(splitter2)
 
-        self.btnQuery.clicked.connect(self.connectDB) # 显示lensdata的数据
         self.btnadd.clicked.connect(self.table_insert) # 绑定添加按钮的单击信号
         self.btndel.clicked.connect(self.table_delete) # 绑定删除按钮的单击信号
+        self.btnQuery.clicked.connect(self.huoq) # 显示lensdata的数据
+
+    # 获取单元格中的内容
+    def huoq(self):
+        for i in range(0, self.tableWidget.rowCount()):
+            for j in range(1, self.tableWidget.columnCount()):
+                print(self.tableWidget.item(i, j).text())
 
     # 增加表格的列
     def table_insertVol(self):
         column = self.tableWidget.columnCount()
         row = self.tableWidget.rowCount()
         if (column < 11):
-            for i in range (0,6) :
+            for i in range (0, 6) :
                 self.tableWidget.insertColumn(column)
             self.tableWidget.setHorizontalHeaderLabels(
                     ['Surface Type', 'Radius', 'thickness', 'Refractive index', 'Material', 'r1', 'r2', 'r3', 'r4', 'r5', 'r6'])  # 设置表格中的水平标题
@@ -319,6 +327,8 @@ class Ui_MainWindow(object):
                 self.tableWidget.setItem(i, 8, item_r4)
                 self.tableWidget.setItem(i, 9, item_r5)
                 self.tableWidget.setItem(i, 10, item_r6)
+
+                self.tableWidget.resizeColumnsToContents()  # 使表格列的宽度跟随内容改变
 
     # 删除表格的后六列
     def table_delVol(self):
@@ -339,6 +349,7 @@ class Ui_MainWindow(object):
 
     # 删除表格的某一行
     def table_delete(self):
+        # 判断行数是否为1，为1则不删除
         row_select = self.tableWidget.selectedItems()
         if len(row_select) == 0:
             return
@@ -349,31 +360,43 @@ class Ui_MainWindow(object):
     # 表格增加一行
     def table_insert(self):
         # rowCount()获取现有表格控件中的行数,在此基础上插入一行insertRow()
-        row = self.tableWidget.rowCount()
-        self.tableWidget.insertRow(row)
-        self.addComboBox(row) # 为表格的每一项赋初值
+        i = self.tableWidget.rowCount()
+        self.tableWidget.insertRow(i)
+        self.addComboBox(i) # 为表格的每一项赋初值
 
     # 为表格添加默认值
-    def addComboBox(self, row):
+    def addComboBox(self, i):
         # 将表格第1列设置为ComboBox下拉列表
         self.comobox = QComboBox()
         self.comobox.addItems(['Standard', 'sphere', 'asphere', 'extended polynomial'])  # 为下拉列表设置数据源
         self.comobox.setCurrentIndex(0)  # 默认选中第一项
         self.L.append(self.comobox)
-        self.tableWidget.setCellWidget(row, 0 ,self.L[row])
-        self.L[row].activated.connect(lambda :self.comBoxItemSel(row)) # 将ComboBox控件的选项选中信号与自定义槽函数绑定，并使用lambda表达式向槽函数传递当前行数索引
-        # print(len(self.L))
+        self.tableWidget.setCellWidget(i, 0 ,self.L[i])
+        self.L[i].activated.connect(lambda :self.comBoxItemSel(i)) # 将ComboBox控件的选项选中信号与自定义槽函数绑定，并使用lambda表达式向槽函数传递当前行数索引
 
+        # 为表格的其他列设置初始值
         item_Radius = QTableWidgetItem("0.0")
         item_thickness = QTableWidgetItem("0.0")
         item_Refractive_index = QTableWidgetItem("0.0")
         item_Material = QTableWidgetItem("None")
+        item_r1 = QTableWidgetItem("0.0")
+        item_r2 = QTableWidgetItem("0.0")
+        item_r3 = QTableWidgetItem("0.0")
+        item_r4 = QTableWidgetItem("0.0")
+        item_r5 = QTableWidgetItem("0.0")
+        item_r6 = QTableWidgetItem("0.0")
 
         # 设置单元格中的内容
-        self.tableWidget.setItem(row, 1, item_Radius)
-        self.tableWidget.setItem(row, 2, item_thickness)
-        self.tableWidget.setItem(row, 3, item_Refractive_index)
-        self.tableWidget.setItem(row, 4, item_Material)
+        self.tableWidget.setItem(i, 1, item_Radius)
+        self.tableWidget.setItem(i, 2, item_thickness)
+        self.tableWidget.setItem(i, 3, item_Refractive_index)
+        self.tableWidget.setItem(i, 4, item_Material)
+        self.tableWidget.setItem(i, 5, item_r1)
+        self.tableWidget.setItem(i, 6, item_r2)
+        self.tableWidget.setItem(i, 7, item_r3)
+        self.tableWidget.setItem(i, 8, item_r4)
+        self.tableWidget.setItem(i, 9, item_r5)
+        self.tableWidget.setItem(i, 10, item_r6)
 
         self.tableWidget.resizeColumnsToContents()  # 使表格列的宽度跟随内容改变
         self.tableWidget.resizeRowsToContents()  # 使表格行的高度跟随内容改变
