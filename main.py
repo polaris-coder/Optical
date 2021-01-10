@@ -38,8 +38,7 @@ class Ui_MainWindow(object):
         self.toolBar.setIconSize(QtCore.QSize(20,20))
         # 设置工具栏可以移动
         self.toolBar.setMovable(True)
-        # 为工具栏中的QAction绑定triggered信号
-        self.toolBar.actionTriggered[QtWidgets.QAction].connect(self.getvalue)
+
 
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.centralwidget)
         self.horizontalLayout.setContentsMargins(1, 1, 1, 1)
@@ -298,6 +297,9 @@ class Ui_MainWindow(object):
         self.btndel.clicked.connect(self.table_delete) # 绑定删除按钮的单击信号
         self.btnQuery.clicked.connect(self.huoq) # 显示lensdata的数据
 
+        # 为工具栏中的QAction绑定triggered信号
+        self.toolBar.actionTriggered[QtWidgets.QAction].connect(self.getvalue)
+
     # 获取单元格中的内容
     def huoq(self):
         for i in range(0, self.tableWidget.rowCount()):
@@ -455,8 +457,6 @@ class Ui_MainWindow(object):
 
     # 为工具栏中的控件绑定槽函数
     def getvalue(self,m):
-        # 获取数据库中的Lensdata数据
-        result, row, vol = connection()
 
         obj = {'C': 0.0, 't': 10.0, 'n': 1.0}
         surf1 = {'C': 1.0 / 40.94, 't': 8.74, 'n': 1.617}
