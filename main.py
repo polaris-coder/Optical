@@ -7,15 +7,11 @@
 # WARNING! All changes made in this file will be lost!
 import matplotlib
 matplotlib.use("Qt5Agg")  # 声明使用QT5
-from PyQt5.Qt import (QWidget, QHBoxLayout, QFrame,
-    QSplitter, QStyleFactory, QApplication)
 from PyQt5.QtCore import Qt
 from PyQt5 import QtCore, QtGui, QtWidgets
-from Geometric_optics_ui.connectDB import connection
 from PyQt5.QtWidgets import *
-from Geometric_optics_ui import aberration
 from Geometric_optics.main_aberrationAndDistortion import Tool
-from Geometric_optics_ui.connectDB import connection
+from SR.service import connection
 import numpy as np
 
 class Ui_MainWindow(object):
@@ -42,8 +38,7 @@ class Ui_MainWindow(object):
         self.toolBar.setIconSize(QtCore.QSize(20,20))
         # 设置工具栏可以移动
         self.toolBar.setMovable(True)
-        # 为工具栏中的QAction绑定triggered信号
-        self.toolBar.actionTriggered[QtWidgets.QAction].connect(self.getvalue)
+
 
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.centralwidget)
         self.horizontalLayout.setContentsMargins(1, 1, 1, 1)
@@ -61,6 +56,35 @@ class Ui_MainWindow(object):
         # 主界面左侧参数栏，添加ToolBox控件
         self.toolBox = QtWidgets.QToolBox(self.widget)
         self.toolBox.setObjectName("toolBox")
+
+        self.page_4 = QtWidgets.QWidget()
+        self.page_4.setObjectName("page_4")
+        self.gridLayout_4 = QtWidgets.QGridLayout(self.page_4)
+        self.gridLayout_4.setContentsMargins(-1, 3, -1, -1)
+        self.gridLayout_4.setObjectName("gridLayout_4")
+        self.label_6 = QtWidgets.QLabel(self.page_4)
+        self.label_6.setObjectName("label_6")
+        self.gridLayout_4.addWidget(self.label_6, 0, 0, 1, 1)
+
+        self.btnQuery = QtWidgets.QPushButton(self.page_4)
+        self.btnQuery.setObjectName("pushButton")
+        self.gridLayout_4.addWidget(self.btnQuery, 1, 1, 1, 1)
+
+        self.lineEdit_12 = QtWidgets.QLineEdit(self.page_4)
+        self.lineEdit_12.setObjectName("lineEdit_12")
+        self.gridLayout_4.addWidget(self.lineEdit_12, 0, 1, 1, 1)
+
+        self.btnadd = QtWidgets.QPushButton(self.page_4)
+        self.btnadd.setObjectName("pushButton_2")
+        self.gridLayout_4.addWidget(self.btnadd, 2, 0, 1, 1)
+
+        self.btndel = QtWidgets.QPushButton(self.page_4)
+        self.btndel.setObjectName("pushButton_3")
+        self.gridLayout_4.addWidget(self.btndel, 2, 1, 1, 1)
+
+        spacerItem3 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.gridLayout_4.addItem(spacerItem3, 3, 1, 1, 1)
+        self.toolBox.addItem(self.page_4, "")
 
         self.page = QtWidgets.QWidget()
         self.page.setGeometry(QtCore.QRect(0, 0, 166, 180))
@@ -139,35 +163,6 @@ class Ui_MainWindow(object):
         self.gridLayout_3.addItem(spacerItem2, 4, 1, 1, 1)
         self.toolBox.addItem(self.page_3, "")
 
-        self.page_4 = QtWidgets.QWidget()
-        self.page_4.setObjectName("page_4")
-        self.gridLayout_4 = QtWidgets.QGridLayout(self.page_4)
-        self.gridLayout_4.setContentsMargins(-1, 3, -1, -1)
-        self.gridLayout_4.setObjectName("gridLayout_4")
-        self.label_6 = QtWidgets.QLabel(self.page_4)
-        self.label_6.setObjectName("label_6")
-        self.gridLayout_4.addWidget(self.label_6, 0, 0, 1, 1)
-
-        self.pushButton = QtWidgets.QPushButton(self.page_4)
-        self.pushButton.setObjectName("pushButton")
-        self.gridLayout_4.addWidget(self.pushButton, 1, 1, 1, 1)
-
-        self.lineEdit_12 = QtWidgets.QLineEdit(self.page_4)
-        self.lineEdit_12.setObjectName("lineEdit_12")
-        self.gridLayout_4.addWidget(self.lineEdit_12, 0, 1, 1, 1)
-
-        self.pushButton_2 = QtWidgets.QPushButton(self.page_4)
-        self.pushButton_2.setObjectName("pushButton_2")
-        self.gridLayout_4.addWidget(self.pushButton_2, 2, 0, 1, 1)
-
-        self.pushButton_3 = QtWidgets.QPushButton(self.page_4)
-        self.pushButton_3.setObjectName("pushButton_3")
-        self.gridLayout_4.addWidget(self.pushButton_3, 2, 1, 1, 1)
-
-        spacerItem3 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.gridLayout_4.addItem(spacerItem3, 3, 1, 1, 1)
-        self.toolBox.addItem(self.page_4, "")
-
         self.verticalLayout_2.addWidget(self.toolBox)
 
         spacerItem4 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
@@ -203,11 +198,16 @@ class Ui_MainWindow(object):
 
         # 给self.tab中添加表格
         self.tableWidget = QtWidgets.QTableWidget(self.tab)
-        self.tableWidget.setGeometry(QtCore.QRect(5, 5, 1015, 425))
+        self.tableWidget.setGeometry(QtCore.QRect(5, 5, 1150, 390))
         self.tableWidget.setObjectName("tableWidget")
-        self.tableWidget.setColumnCount(0)
-        self.tableWidget.setRowCount(0)
-        # self.horizontalLayout_4.addWidget(self.tableWidget)
+        self.tableWidget.setColumnCount(5)
+        self.tableWidget.setRowCount(2)
+        self.tableWidget.setHorizontalHeaderLabels(['Surface Type', 'Radius', 'thickness', 'Refractive index', 'Material']) # 设置表格中的水平标题
+        # self.tableWidget.setEditTriggers(QAbstractItemView.DoubleClicked) # 设置表格双击时可以编辑单元格
+        self.L = [] # 用来保存表格中每一行的ComboBox控件对象
+        # 初始化表格
+        for i in range(0, self.tableWidget.rowCount()):
+            self.addComboBox(i)
 
         self.tab_2 = QtWidgets.QWidget()
         self.tab_2.setObjectName("tab_2")
@@ -276,7 +276,6 @@ class Ui_MainWindow(object):
         self.tabWidget_2.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
-
         # 实例化QSplitter控件并设置初始为水平方向布局
         splitter1 = QSplitter(Qt.Horizontal)
         # 向Splitter内添加控件,并设定控件初始比例
@@ -294,25 +293,170 @@ class Ui_MainWindow(object):
         splitter2.setStretchFactor(1,2)
         self.verticalLayout.addWidget(splitter2)
 
+        self.btnadd.clicked.connect(self.table_insert) # 绑定添加按钮的单击信号
+        self.btndel.clicked.connect(self.table_delete) # 绑定删除按钮的单击信号
+        self.btnQuery.clicked.connect(self.huoq) # 显示lensdata的数据
+
+        # 为工具栏中的QAction绑定triggered信号
+        self.toolBar.actionTriggered[QtWidgets.QAction].connect(self.getvalue)
+
+    # 获取单元格中的内容
+    def huoq(self):
+        for i in range(0, self.tableWidget.rowCount()):
+            for j in range(1, self.tableWidget.columnCount()):
+                print(self.tableWidget.item(i, j).text())
+
+    # 增加表格的列
+    def table_insertVol(self):
+        column = self.tableWidget.columnCount()
+        row = self.tableWidget.rowCount()
+        if (column < 11):
+            for i in range (0, 6) :
+                self.tableWidget.insertColumn(column)
+            self.tableWidget.setHorizontalHeaderLabels(
+                    ['Surface Type', 'Radius', 'thickness', 'Refractive index', 'Material', 'r1', 'r2', 'r3', 'r4', 'r5', 'r6'])  # 设置表格中的水平标题
+            for i in range(0, row):
+                item_r1 = QTableWidgetItem("0.0")
+                item_r2 = QTableWidgetItem("0.0")
+                item_r3 = QTableWidgetItem("0.0")
+                item_r4 = QTableWidgetItem("0.0")
+                item_r5 = QTableWidgetItem("0.0")
+                item_r6 = QTableWidgetItem("0.0")
+
+                self.tableWidget.setItem(i, 5, item_r1)
+                self.tableWidget.setItem(i, 6, item_r2)
+                self.tableWidget.setItem(i, 7, item_r3)
+                self.tableWidget.setItem(i, 8, item_r4)
+                self.tableWidget.setItem(i, 9, item_r5)
+                self.tableWidget.setItem(i, 10, item_r6)
+
+                self.tableWidget.resizeColumnsToContents()  # 使表格列的宽度跟随内容改变
+
+    # 删除表格的后六列
+    def table_delVol(self):
+        # 统计表格中每一行的Surface Type的类型是Standard的个数
+        ComItems = []
+        m = 0
+        for i in range(0, len(self.L)):
+            ComItems.append(self.L[i].currentText())
+        for j in range(0, len(ComItems)):
+            if ("Standard" == ComItems[j]):
+                m = m + 1
+        # 判断Surface Type的类型是否全为Standard，若是，则执行删除操作
+        if (m == len(ComItems)):
+            n = 10
+            while n > 4:
+                self.tableWidget.removeColumn(n)
+                n = n - 1
+
+    # 删除表格的某一行
+    def table_delete(self):
+        # 判断行数是否为1，为1则不删除
+        row_select = self.tableWidget.selectedItems()
+        if len(row_select) == 0:
+            return
+
+        row = row_select[0].row()
+        self.tableWidget.removeRow(row)
+
+    # 表格增加一行
+    def table_insert(self):
+        # rowCount()获取现有表格控件中的行数,在此基础上插入一行insertRow()
+        i = self.tableWidget.rowCount()
+        self.tableWidget.insertRow(i)
+        self.addComboBox(i) # 为表格的每一项赋初值
+
+    # 为表格添加默认值
+    def addComboBox(self, i):
+        # 将表格第1列设置为ComboBox下拉列表
+        self.comobox = QComboBox()
+        self.comobox.addItems(['Standard', 'sphere', 'asphere', 'extended polynomial'])  # 为下拉列表设置数据源
+        self.comobox.setCurrentIndex(0)  # 默认选中第一项
+        self.L.append(self.comobox)
+        self.tableWidget.setCellWidget(i, 0 ,self.L[i])
+        self.L[i].activated.connect(lambda :self.comBoxItemSel(i)) # 将ComboBox控件的选项选中信号与自定义槽函数绑定，并使用lambda表达式向槽函数传递当前行数索引
+
+        # 为表格的其他列设置初始值
+        item_Radius = QTableWidgetItem("0.0")
+        item_thickness = QTableWidgetItem("0.0")
+        item_Refractive_index = QTableWidgetItem("0.0")
+        item_Material = QTableWidgetItem("None")
+        item_r1 = QTableWidgetItem("0.0")
+        item_r2 = QTableWidgetItem("0.0")
+        item_r3 = QTableWidgetItem("0.0")
+        item_r4 = QTableWidgetItem("0.0")
+        item_r5 = QTableWidgetItem("0.0")
+        item_r6 = QTableWidgetItem("0.0")
+
+        # 设置单元格中的内容
+        self.tableWidget.setItem(i, 1, item_Radius)
+        self.tableWidget.setItem(i, 2, item_thickness)
+        self.tableWidget.setItem(i, 3, item_Refractive_index)
+        self.tableWidget.setItem(i, 4, item_Material)
+        self.tableWidget.setItem(i, 5, item_r1)
+        self.tableWidget.setItem(i, 6, item_r2)
+        self.tableWidget.setItem(i, 7, item_r3)
+        self.tableWidget.setItem(i, 8, item_r4)
+        self.tableWidget.setItem(i, 9, item_r5)
+        self.tableWidget.setItem(i, 10, item_r6)
+
+        self.tableWidget.resizeColumnsToContents()  # 使表格列的宽度跟随内容改变
+        self.tableWidget.resizeRowsToContents()  # 使表格行的高度跟随内容改变
+
+    def comBoxItemSel(self, row):
+        text = self.L[row].currentText()
+        if (text == "Standard"):
+            self.table_delVol()
+        elif (text == "sphere"):
+            self.table_insertVol()
+
+    # 连接数据库并获取数据(部分)
     def connectDB(self):
         # 连接数据库，获取数据
-        result, row, vol = connection()
+        sql = "select `Surface Type`,`Radius`,`thickness`,`Refractive index`,`Material` from lensdata2"
+        result, row, vol = connection(sql)
         # 将数据填入表格
         self.tableWidget.setRowCount(row)
         self.tableWidget.setColumnCount(vol)
-        self.tableWidget.setHorizontalHeaderLabels(['id', 'Surface Type', 'Radius', 'thickness', 'Refractive index', 'Material'])
+        self.L2 = []
         for i in range(row):
             for j in range(vol):
-                data = QTableWidgetItem(str(result[i][j]))
-                self.tableWidget.setItem(i, j, data)
-        self.tableWidget.resizeColumnsToContents()
-        self.tableWidget.resizeRowsToContents()
-        self.tableWidget.setAlternatingRowColors(True)
+                # 为表格第一列的单元格添加下拉菜单
+                if j == 0:
+                    self.addComboBox(i)
+                else:
+                    data = QTableWidgetItem(str(result[i][j]))
+                    self.tableWidget.setItem(i, j, data)
+                # data.setForeground(QtGui.QBrush(QtGui.QColor("gray"))) # 设置单元格的文本颜色
+                # data.setBackground(QtGui.QBrush(QtGui.QColor("gray"))) # 设置单元格背景颜色
+        # self.tableWidget.setAlternatingRowColors(True) # 设置表格颜色交错显示
 
+    # 连接数据库并获取数据(全部)
+    def connectDB2(self):
+        # 连接数据库，获取数据
+        sql = "select * from lensdata2"
+        result, row, vol = connection(sql)
+        # 将数据填入表格
+        self.tableWidget.setRowCount(row)
+        self.tableWidget.setColumnCount(vol)
+        self.tableWidget.setHorizontalHeaderLabels(
+                ['Surface Type', 'Radius', 'thickness', 'Refractive index', 'Material', 'r1', 'r2', 'r3', 'r4', 'r5', 'r6'])  # 设置表格中的水平标题
+        # self.tableWidget.setHorizontalHeaderLabels(['Surface Type', 'Radius', 'thickness', 'Refractive index', 'Material']) # 设置表格中的水平标题
+        self.L3 = []
+        for i in range(row):
+            for j in range(vol):
+                # 为表格第一列的单元格添加下拉菜单
+                if j == 0:
+                    self.addComboBox(i)
+                else:
+                    data = QTableWidgetItem(str(result[i][j]))
+                    self.tableWidget.setItem(i, j, data)
+                # data.setForeground(QtGui.QBrush(QtGui.QColor("gray"))) # 设置单元格的文本颜色
+                # data.setBackground(QtGui.QBrush(QtGui.QColor("gray"))) # 设置单元格背景颜色
+        # self.tableWidget.setAlternatingRowColors(True) # 设置表格颜色交错显示
+
+    # 为工具栏中的控件绑定槽函数
     def getvalue(self,m):
-
-        # 获取数据库中的Lensdata数据
-        result, row, vol = connection()
 
         obj = {'C': 0.0, 't': 10.0, 'n': 1.0}
         surf1 = {'C': 1.0 / 40.94, 't': 8.74, 'n': 1.617}
@@ -343,21 +487,18 @@ class Ui_MainWindow(object):
             self.gridlayout.addWidget(self.tool, 0, 0,QtCore.Qt.AlignCenter)  # 将Tool的实例添加到布局中去
         elif m.text() == "像差曲线":
             # 绘制像差曲线函数
-            # 径向像差曲线
             self.tool_1 = Tool(Lens, pupilRadius, pupiltheta, pupilPosition, thetas, apertureRays, apertureRays2)
             self.tool_1.radial_aberration_curve()
             self.gridlayout_1 = QGridLayout(self.tab_4)
             self.gridlayout_1.addWidget(self.tool_1, 0, 0,QtCore.Qt.AlignCenter)
         elif m.text() == "畸变曲线":
             # 绘制畸变曲线
-            # 畸变曲线
             self.tool_2 = Tool(Lens, pupilRadius, pupiltheta, pupilPosition, thetas, apertureRays, apertureRays2)
             self.tool_2.distortion_curve()
             self.gridlayout_2 = QGridLayout(self.tab_5)
             self.gridlayout_2.addWidget(self.tool_2, 0, 0,QtCore.Qt.AlignCenter)
         elif m.text() == "二维光线图":
             # 绘制二维光线图
-            # 光线追迹
             self.tool_3 = Tool(Lens, pupilRadius, pupiltheta, pupilPosition, thetas, apertureRays, apertureRays2)
             self.tool_3.ray_tracing()
             self.gridLayout_3 = QGridLayout(self.tab_3)
@@ -379,9 +520,9 @@ class Ui_MainWindow(object):
         self.label_4.setText(_translate("MainWindow", "波长："))
         self.toolBox.setItemText(self.toolBox.indexOf(self.page_3), _translate("MainWindow", "波长"))
         self.label_6.setText(_translate("MainWindow", "镜面个数："))
-        self.pushButton.setText(_translate("MainWindow", "确定"))
-        self.pushButton_2.setText(_translate("MainWindow", "添加"))
-        self.pushButton_3.setText(_translate("MainWindow", "删除"))
+        self.btnQuery.setText(_translate("MainWindow", "确定"))
+        self.btnadd.setText(_translate("MainWindow", "添加"))
+        self.btndel.setText(_translate("MainWindow", "删除"))
         self.toolBox.setItemText(self.toolBox.indexOf(self.page_4), _translate("MainWindow", "Lensdata"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("MainWindow", "lensdata1"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("MainWindow", "Tab 2"))

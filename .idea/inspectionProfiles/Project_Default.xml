@@ -6,6 +6,7 @@
         <list>
           <option value="Geometric_optics.main_aberrationAndDistortion.Tool" />
           <option value="person_module" />
+          <option value="main.connectDB" />
         </list>
       </option>
     </inspection_tool>
