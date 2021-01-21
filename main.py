@@ -202,6 +202,8 @@ class Ui_MainWindow(object):
         self.tableWidget.setObjectName("tableWidget")
         self.tableWidget.setColumnCount(5)
         self.tableWidget.setRowCount(2)
+        self.tableWidget.setSelectionBehavior(QAbstractItemView.SelectRows)  # 设置表格的选取方式是行选取
+        self.tableWidget.setSelectionMode(QAbstractItemView.SingleSelection)  # 设置选取方式为单个选取
         self.tableWidget.setHorizontalHeaderLabels(['Surface Type', 'Radius', 'thickness', 'Refractive index', 'Material']) # 设置表格中的水平标题
         # self.tableWidget.setEditTriggers(QAbstractItemView.DoubleClicked) # 设置表格双击时可以编辑单元格
         self.L = [] # 用来保存表格中每一行的ComboBox控件对象
@@ -352,12 +354,14 @@ class Ui_MainWindow(object):
     # 删除表格的某一行
     def table_delete(self):
         # 判断行数是否为1，为1则不删除
-        row_select = self.tableWidget.selectedItems()
-        if len(row_select) == 0:
-            return
-
-        row = row_select[0].row()
-        self.tableWidget.removeRow(row)
+        i = self.tableWidget.rowCount()
+        if (i != 1):
+            row_select = self.tableWidget.selectedItems()
+            if len(row_select) == 1:
+                return
+            row = row_select[0].row()
+            self.L.pop(row) #
+            self.tableWidget.removeRow(row)
 
     # 表格增加一行
     def table_insert(self):

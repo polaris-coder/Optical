@@ -31,11 +31,18 @@ class testWindow(QWidget):
         self.table.itemChanged.connect(self.table_update)
 
         self.delete_button = QPushButton(self)
-        self.delete_button.move(230, 350)
+        self.delete_button.move(130, 350)
         self.delete_button.setFixedWidth(100)
         self.delete_button.setFixedHeight(32)
         self.delete_button.clicked.connect(self.table_insert)
-        self.delete_button.setText("Delete")
+        self.delete_button.setText("insert")
+
+        self.delete_button_2 = QPushButton(self)
+        self.delete_button_2.move(330, 350)
+        self.delete_button_2.setFixedWidth(100)
+        self.delete_button_2.setFixedHeight(32)
+        self.delete_button_2.clicked.connect(self.table_delete)
+        self.delete_button_2.setText("Delete")
 
         self.setGeometry(200, 200, 570, 400)
         self.show()
