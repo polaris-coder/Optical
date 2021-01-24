@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7147dcd-fbd7-4620-b809-ddf99bf84aa8" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/Geometric_optics2/Material.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Geometric_optics2/drawDiagram.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Geometric_optics2/main.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Geometric_optics2/opticalSystem.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/Geometric_optics/main_aberrationAndDistortion.py" afterPath="$PROJECT_DIR$/Geometric_optics/main_aberrationAndDistortion.py" />
       <change beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
-      <change beforePath="$PROJECT_DIR$/test/QTabelWidgetTest.py" afterPath="$PROJECT_DIR$/test/QTabelWidgetTest.py" />
+      <change beforePath="$PROJECT_DIR$/光学软件.xmind" afterPath="$PROJECT_DIR$/光学软件.xmind" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,16 +25,17 @@
     <SUITE FILE_PATH="coverage/pythonGui$main_aberrationAndDistortion.coverage" NAME="main_aberrationAndDistortion Coverage Results" MODIFIED="1608864327817" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Geometric_optics" />
     <SUITE FILE_PATH="coverage/pythonGui$tableWidgetTest.coverage" NAME="tableWidgetTest Coverage Results" MODIFIED="1608792598165" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/pythonGui$optical_System.coverage" NAME="optical_System Coverage Results" MODIFIED="1608369608954" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pojo" />
+    <SUITE FILE_PATH="coverage/pythonGui$listTest.coverage" NAME="listTest Coverage Results" MODIFIED="1611472176565" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/pythonGui$longitudalAberrationTest.coverage" NAME="longitudalAberrationTest Coverage Results" MODIFIED="1608628463258" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/pythonGui$pltTest.coverage" NAME="pltTest Coverage Results" MODIFIED="1608639675077" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/pythonGui$single.coverage" NAME="single Coverage Results" MODIFIED="1608170552209" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MDI" />
-    <SUITE FILE_PATH="coverage/pythonGui$QTabelWidgetTest.coverage" NAME="QTabelWidgetTest Coverage Results" MODIFIED="1611237533404" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/pythonGui$QTabelWidgetTest.coverage" NAME="QTabelWidgetTest Coverage Results" MODIFIED="1611280557429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/pythonGui$tableWidgetTest4.coverage" NAME="tableWidgetTest4 Coverage Results" MODIFIED="1608811606570" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/pythonGui$draw.coverage" NAME="draw Coverage Results" MODIFIED="1608639541021" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/pythonGui$layoutTest3.coverage" NAME="layoutTest3 Coverage Results" MODIFIED="1608775087335" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/pythonGui$mysqlTest.coverage" NAME="mysqlTest Coverage Results" MODIFIED="1608712760992" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/pythonGui$treeTest.coverage" NAME="treeTest Coverage Results" MODIFIED="1608799703368" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
-    <SUITE FILE_PATH="coverage/pythonGui$main.coverage" NAME="main Coverage Results" MODIFIED="1611237622985" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/pythonGui$main.coverage" NAME="main Coverage Results" MODIFIED="1611474005992" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pythonGui$layoutTest4.coverage" NAME="layoutTest4 Coverage Results" MODIFIED="1608796967367" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/pythonGui$test.coverage" NAME="test Coverage Results" MODIFIED="1609932620418" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pythonGui$tableWidgetTest2.coverage" NAME="tableWidgetTest2 Coverage Results" MODIFIED="1608801689816" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
@@ -40,6 +46,7 @@
     <SUITE FILE_PATH="coverage/pythonGui$xiaohong.coverage" NAME="xiaohong Coverage Results" MODIFIED="1608281020728" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/pythonGui$ooTest.coverage" NAME="ooTest Coverage Results" MODIFIED="1608639493300" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/pythonGui$xiangcha2.coverage" NAME="xiangcha2 Coverage Results" MODIFIED="1608866345531" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Geometric_optics_ui" />
+    <SUITE FILE_PATH="coverage/pythonGui$listTest__1_.coverage" NAME="listTest (1) Coverage Results" MODIFIED="1611474442674" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/pythonGui$propertyTest.coverage" NAME="propertyTest Coverage Results" MODIFIED="1608374107584" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/pythonGui$aberrationAndDistortion.coverage" NAME="aberrationAndDistortion Coverage Results" MODIFIED="1609053371778" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Geometric_optics_ui" />
     <SUITE FILE_PATH="coverage/pythonGui$dialogTest1.coverage" NAME="dialogTest1 Coverage Results" MODIFIED="1608639517988" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
@@ -72,69 +79,86 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/main.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="141">
-                  <caret line="196" column="43" lean-forward="true" selection-start-line="196" selection-start-column="43" selection-end-line="196" selection-end-column="43" />
-                  <folding>
-                    <marker date="1611237448954" expanded="true" signature="18373:18460" ph="select `Surf... lensdata2" />
-                    <marker date="1611237448954" expanded="true" signature="19262:19285" ph="select * fro... lensdata2" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="QTabelWidgetTest.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/test/QTabelWidgetTest.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="264">
-                  <caret line="19" column="31" lean-forward="true" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="service.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/SR/service.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="198">
-                  <caret line="11" column="27" lean-forward="false" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="main_aberrationAndDistortion.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Geometric_optics/main_aberrationAndDistortion.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="462">
-                  <caret line="26" column="28" lean-forward="false" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="QTabelWidgetTest.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/test/QTabelWidgetTest.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-841">
-                  <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="501">
+              <caret line="311" column="34" lean-forward="false" selection-start-line="311" selection-start-column="29" selection-end-line="311" selection-end-column="34" />
+              <folding>
+                <marker date="1611474005983" expanded="true" signature="20135:20222" ph="select `Surf... lensdata2" />
+                <marker date="1611474005983" expanded="true" signature="21024:21047" ph="select * fro... lensdata2" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="listTest" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/listTest">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="10" column="33" lean-forward="true" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="drawDiagram.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Geometric_optics2/drawDiagram.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="361">
+              <caret line="98" column="24" lean-forward="false" selection-start-line="98" selection-start-column="24" selection-end-line="98" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DrawTool.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Geometric_optics2/DrawTool.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2728">
+              <caret line="129" column="0" lean-forward="false" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#45#0" expanded="true" />
+                <marker date="1611404614326" expanded="true" signature="1331:5565" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="drawDiagram.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Geometric_optics/drawDiagram.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="14" column="32" lean-forward="false" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="opticalSystem.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Geometric_optics2/opticalSystem.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="84" column="30" lean-forward="false" selection-start-line="84" selection-start-column="25" selection-end-line="84" selection-end-column="30" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main_aberrationAndDistortion.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Geometric_optics/main_aberrationAndDistortion.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2046">
+              <caret line="98" column="60" lean-forward="false" selection-start-line="98" selection-start-column="60" selection-end-line="98" selection-end-column="60" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -154,6 +178,18 @@
       <find>self.tableWidget</find>
       <find>ui.tableWidget</find>
       <find>page_4</find>
+      <find>lineEdit_12</find>
+      <find>lineEdit_13</find>
+      <find>label</find>
+      <find>label_3</find>
+      <find>angle_field_view</find>
+      <find>label_6</find>
+      <find>menu_4</find>
+      <find>num_Lens</find>
+      <find>xlim</find>
+      <find>ylim</find>
+      <find>xlabel</find>
+      <find>ylabel</find>
     </findStrings>
     <replaceStrings>
       <replace>actionjilian</replace>
@@ -163,6 +199,15 @@
       <replace>self.tableWidget</replace>
       <replace>table</replace>
       <replace>page</replace>
+      <replace>numOfMirrors</replace>
+      <replace>angle_field_view</replace>
+      <replace>angle_fieldview</replace>
+      <replace>number_mirrors</replace>
+      <replace>menu_window</replace>
+      <replace>set_xlim</replace>
+      <replace>set_ylim</replace>
+      <replace>set_xlabel</replace>
+      <replace>set_ylabel</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -173,13 +218,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/main_aberrationAndDistortion.py" />
-        <option value="$PROJECT_DIR$/start.py" />
-        <option value="$PROJECT_DIR$/test/propertyTest.py" />
-        <option value="$PROJECT_DIR$/test/propertyTest2.py" />
-        <option value="$PROJECT_DIR$/Geometric_optics_ui/main_aberrationAndDistortion.py" />
-        <option value="$PROJECT_DIR$/pojo/Ops.py" />
-        <option value="$PROJECT_DIR$/pojo/optical_System.py" />
         <option value="$PROJECT_DIR$/test/dialogTest.py" />
         <option value="$PROJECT_DIR$/test/groupBoxTest.py" />
         <option value="$PROJECT_DIR$/test/poTest.py" />
@@ -212,7 +250,6 @@
         <option value="$PROJECT_DIR$/Geometric_optics/drawDiagram.py" />
         <option value="$PROJECT_DIR$/Geometric_optics_ui/xiangcha2.py" />
         <option value="$PROJECT_DIR$/进度记录.txt" />
-        <option value="$PROJECT_DIR$/Geometric_optics/main_aberrationAndDistortion.py" />
         <option value="$PROJECT_DIR$/Geometric_optics_ui/aberrationAndDistortion.py" />
         <option value="$PROJECT_DIR$/test/main.py" />
         <option value="$PROJECT_DIR$/test/toolBarTest.py" />
@@ -223,7 +260,15 @@
         <option value="$PROJECT_DIR$/SR/service.py" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/test/QTabelWidgetTest.py" />
+        <option value="$PROJECT_DIR$/test/main4.py" />
+        <option value="$PROJECT_DIR$/Geometric_optics2/opticalSystem.py" />
+        <option value="$PROJECT_DIR$/Geometric_optics2/main.py" />
+        <option value="$PROJECT_DIR$/Geometric_optics2/drawDiagram.py" />
+        <option value="$PROJECT_DIR$/Geometric_optics2/DrawTool.py" />
+        <option value="$PROJECT_DIR$/Geometric_optics/main_aberrationAndDistortion.py" />
+        <option value="$PROJECT_DIR$/test/listTest.py" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/test/listTest" />
       </list>
     </option>
   </component>
@@ -234,8 +279,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="958" />
-    <option name="y" value="7" />
+    <option name="x" value="966" />
     <option name="width" value="974" />
     <option name="height" value="1057" />
   </component>
@@ -281,6 +325,16 @@
             <path>
               <item name="pythonGui" type="b2602c69:ProjectViewProjectNode" />
               <item name="pythonGui" type="462c0819:PsiDirectoryNode" />
+              <item name="Geometric_optics" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pythonGui" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pythonGui" type="462c0819:PsiDirectoryNode" />
+              <item name="Geometric_optics2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pythonGui" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pythonGui" type="462c0819:PsiDirectoryNode" />
               <item name="image" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -297,28 +351,29 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-    <property name="last_opened_file_path" value="D:/software/Git/cmd/git.exe" />
+    <property name="last_opened_file_path" value="E:/光学软件资源/optical-design" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\pythonGui\Geometric_optics2" />
+      <recent name="E:\pythonGui\test" />
+      <recent name="E:\pythonGui\Geometric_optics" />
+      <recent name="E:\pythonGui\Geometric_optics_ui" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\pythonGui\test" />
       <recent name="E:\pythonGui\SR" />
       <recent name="E:\pythonGui\image" />
       <recent name="E:\pythonGui\Geometric_optics_ui" />
       <recent name="E:\pythonGui\Geometric_optics_ui\UI" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\pythonGui\test" />
-      <recent name="E:\pythonGui\Geometric_optics" />
-      <recent name="E:\pythonGui\Geometric_optics_ui" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -333,7 +388,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.listTest (1)">
     <configuration name="QTabelWidgetTest" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -353,20 +408,39 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="aberration" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="listTest (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Geometric_optics_ui" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="pythonGui" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Geometric_optics_ui/aberration.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/listTest" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="listTest" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="pythonGui" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/listTest.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -410,39 +484,20 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="toolBarTest" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="pythonGui" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/toolBarTest.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.main" />
-      <item index="1" class="java.lang.String" itemvalue="Python.toolBarTest" />
-      <item index="2" class="java.lang.String" itemvalue="Python.aberration" />
-      <item index="3" class="java.lang.String" itemvalue="Python.QTabelWidgetTest" />
-      <item index="4" class="java.lang.String" itemvalue="Python.test" />
+      <item index="1" class="java.lang.String" itemvalue="Python.QTabelWidgetTest" />
+      <item index="2" class="java.lang.String" itemvalue="Python.test" />
+      <item index="3" class="java.lang.String" itemvalue="Python.listTest" />
+      <item index="4" class="java.lang.String" itemvalue="Python.listTest (1)" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.main" />
-        <item index="1" class="java.lang.String" itemvalue="Python.QTabelWidgetTest" />
-        <item index="2" class="java.lang.String" itemvalue="Python.test" />
-        <item index="3" class="java.lang.String" itemvalue="Python.aberration" />
-        <item index="4" class="java.lang.String" itemvalue="Python.toolBarTest" />
+        <item index="0" class="java.lang.String" itemvalue="Python.listTest (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Python.main" />
+        <item index="2" class="java.lang.String" itemvalue="Python.listTest" />
+        <item index="3" class="java.lang.String" itemvalue="Python.QTabelWidgetTest" />
+        <item index="4" class="java.lang.String" itemvalue="Python.test" />
       </list>
     </recent_temporary>
   </component>
@@ -473,20 +528,21 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5021322" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29832402" sideWeight="0.4978678" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3039106" sideWeight="0.4978678" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14712153" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15724947" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20255864" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38324022" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -540,19 +596,11 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="51" />
+      <option name="time" value="77" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test/poTest1.py" />
-    <entry file="file://$PROJECT_DIR$/test/dialogTest.py" />
-    <entry file="file://$PROJECT_DIR$/test/fenli.py" />
-    <entry file="file://$PROJECT_DIR$/test/longitudalAberrationTest.py" />
-    <entry file="file://$PROJECT_DIR$/test/poTest.py" />
-    <entry file="file://$PROJECT_DIR$/test/tbTest.py" />
-    <entry file="file://$PROJECT_DIR$/test/dialogTest1.py" />
-    <entry file="file://$PROJECT_DIR$/test/draw.py" />
     <entry file="file://$PROJECT_DIR$/test/groupBoxTest.py" />
     <entry file="file://$PROJECT_DIR$/test/myTypeSingle.py" />
     <entry file="file://$PROJECT_DIR$/test/ooTest.py" />
@@ -593,20 +641,6 @@
     <entry file="file://$PROJECT_DIR$/进度记录.txt" />
     <entry file="file://$PROJECT_DIR$/Geometric_optics_ui/aberrationAndDistortion.py" />
     <entry file="file://$PROJECT_DIR$/Geometric_optics/test.py" />
-    <entry file="file://$PROJECT_DIR$/Geometric_optics/drawDiagram.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="14" column="32" lean-forward="false" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Geometric_optics/opticalSystem.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="68" column="8" lean-forward="false" selection-start-line="68" selection-start-column="8" selection-end-line="68" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/main.ui">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3852">
@@ -651,14 +685,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test.py" />
-    <entry file="file://$PROJECT_DIR$/Geometric_optics/main_aberrationAndDistortion.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="26" column="28" lean-forward="false" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SR/service.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -678,18 +704,107 @@
     <entry file="file://$PROJECT_DIR$/test/QTabelWidgetTest.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
-          <caret line="19" column="31" lean-forward="true" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+          <caret line="19" column="31" lean-forward="false" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/main4.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="114" column="0" lean-forward="false" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Geometric_optics2/Material.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Geometric_optics/opticalSystem.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Geometric_optics2/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1531">
+          <caret line="43" column="18" lean-forward="false" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Geometric_optics/drawDiagram.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="14" column="32" lean-forward="false" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Geometric_optics2/DrawTool.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2728">
+          <caret line="129" column="0" lean-forward="false" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+            <marker date="1611404614326" expanded="true" signature="1331:5565" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Geometric_optics/main_aberrationAndDistortion.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2046">
+          <caret line="98" column="60" lean-forward="false" selection-start-line="98" selection-start-column="60" selection-end-line="98" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/listTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="11" lean-forward="true" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Geometric_optics2/drawDiagram.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="98" column="24" lean-forward="false" selection-start-line="98" selection-start-column="24" selection-end-line="98" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Geometric_optics2/opticalSystem.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="84" column="30" lean-forward="false" selection-start-line="84" selection-start-column="25" selection-end-line="84" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/listTest">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="33" lean-forward="true" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="196" column="43" lean-forward="true" selection-start-line="196" selection-start-column="43" selection-end-line="196" selection-end-column="43" />
+        <state relative-caret-position="501">
+          <caret line="311" column="34" lean-forward="false" selection-start-line="311" selection-start-column="29" selection-end-line="311" selection-end-column="34" />
           <folding>
-            <marker date="1611237448954" expanded="true" signature="18373:18460" ph="select `Surf... lensdata2" />
-            <marker date="1611237448954" expanded="true" signature="19262:19285" ph="select * fro... lensdata2" />
+            <marker date="1611474005983" expanded="true" signature="20135:20222" ph="select `Surf... lensdata2" />
+            <marker date="1611474005983" expanded="true" signature="21024:21047" ph="select * fro... lensdata2" />
           </folding>
         </state>
       </provider>

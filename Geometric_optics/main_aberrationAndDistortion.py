@@ -24,6 +24,7 @@ class Tool(FigureCanvas):
         for i in range(self.lensSys.pupilPosition):
             self.L_OEP = self.L_OEP + self.lensSys.Lens[i]['t']
 
+    # 横向像差点列图
     def Ppint_diagram(self):
         # 2. 绘制横向像差点列图
         x0, y0 = self.lensSys.centralLocationInImage(self.thetas)
@@ -95,8 +96,9 @@ class Tool(FigureCanvas):
         self.axes4.set_xlabel("z/mm")
         self.axes4.set_ylabel("y/mm")
 
-        self.fig.tight_layout(pad=0.2, w_pad=0.5, h_pad=0.5)
+        self.fig.tight_layout(pad=0.1, w_pad=0.1, h_pad=0.1)
 
+    # 径向像差曲线
     def radial_aberration_curve(self):
         #第一步：创建一个创建Figure
         self.fig = Figure(figsize=(6,5), dpi=100)
@@ -122,6 +124,7 @@ class Tool(FigureCanvas):
         self.axes.set_xlabel('range/mm')
         self.axes.set_ylabel('angle/degree')
 
+    # 畸变曲线
     def distortion_curve(self):
         #第一步：创建一个创建Figure
         self.fig = Figure(figsize=(6,5), dpi=100)
@@ -146,6 +149,7 @@ class Tool(FigureCanvas):
         self.axes.set_xlabel('percent/%')
         self.axes.set_ylabel('angle/degree')
 
+    # 光线追迹示意图
     def ray_tracing(self):
         # 5. 绘制光线追迹示意图
         theta = 10  # 光线的角度

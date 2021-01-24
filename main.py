@@ -11,6 +11,7 @@ from PyQt5.QtCore import Qt
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import *
 from Geometric_optics.main_aberrationAndDistortion import Tool
+from Geometric_optics2.DrawTool import DrawTool
 from SR.service import connection
 import numpy as np
 
@@ -62,17 +63,17 @@ class Ui_MainWindow(object):
         self.gridLayout_4 = QtWidgets.QGridLayout(self.page_4)
         self.gridLayout_4.setContentsMargins(-1, 3, -1, -1)
         self.gridLayout_4.setObjectName("gridLayout_4")
-        self.label_6 = QtWidgets.QLabel(self.page_4)
-        self.label_6.setObjectName("label_6")
-        self.gridLayout_4.addWidget(self.label_6, 0, 0, 1, 1)
+        self.number_mirrors = QtWidgets.QLabel(self.page_4)
+        self.number_mirrors.setObjectName("number_mirrors")
+        self.gridLayout_4.addWidget(self.number_mirrors, 0, 0, 1, 1)
 
         self.btnQuery = QtWidgets.QPushButton(self.page_4)
         self.btnQuery.setObjectName("pushButton")
         self.gridLayout_4.addWidget(self.btnQuery, 1, 1, 1, 1)
 
-        self.lineEdit_12 = QtWidgets.QLineEdit(self.page_4)
-        self.lineEdit_12.setObjectName("lineEdit_12")
-        self.gridLayout_4.addWidget(self.lineEdit_12, 0, 1, 1, 1)
+        self.lineEdit_numOfMirrors = QtWidgets.QLineEdit(self.page_4)
+        self.lineEdit_numOfMirrors.setObjectName("lineEdit_numOfMirrors")
+        self.gridLayout_4.addWidget(self.lineEdit_numOfMirrors, 0, 1, 1, 1)
 
         self.btnadd = QtWidgets.QPushButton(self.page_4)
         self.btnadd.setObjectName("pushButton_2")
@@ -92,18 +93,18 @@ class Ui_MainWindow(object):
         self.gridLayout = QtWidgets.QGridLayout(self.page)
         self.gridLayout.setContentsMargins(-1, 3, -1, -1)
         self.gridLayout.setObjectName("gridLayout")
-        self.lineEdit_11 = QtWidgets.QLineEdit(self.page)
-        self.lineEdit_11.setObjectName("lineEdit_11")
-        self.gridLayout.addWidget(self.lineEdit_11, 1, 1, 1, 1)
-        self.label_5 = QtWidgets.QLabel(self.page)
-        self.label_5.setObjectName("label_5")
-        self.gridLayout.addWidget(self.label_5, 1, 0, 1, 1)
-        self.label = QtWidgets.QLabel(self.page)
-        self.label.setObjectName("label")
-        self.gridLayout.addWidget(self.label, 0, 0, 1, 1)
-        self.lineEdit = QtWidgets.QLineEdit(self.page)
-        self.lineEdit.setObjectName("lineEdit")
-        self.gridLayout.addWidget(self.lineEdit, 0, 1, 1, 1)
+        # self.lineEdit_11 = QtWidgets.QLineEdit(self.page)
+        # self.lineEdit_11.setObjectName("lineEdit_11")
+        # self.gridLayout.addWidget(self.lineEdit_11, 1, 1, 1, 1)
+        # self.label_5 = QtWidgets.QLabel(self.page)
+        # self.label_5.setObjectName("label_5")
+        # self.gridLayout.addWidget(self.label_5, 1, 0, 1, 1)
+        self.entr_pupildia = QtWidgets.QLabel(self.page)
+        self.entr_pupildia.setObjectName("label")
+        self.gridLayout.addWidget(self.entr_pupildia, 0, 0, 1, 1)
+        self.lineEdit_pupilRadius = QtWidgets.QLineEdit(self.page)
+        self.lineEdit_pupilRadius.setObjectName("lineEdit_entr_pupildia")
+        self.gridLayout.addWidget(self.lineEdit_pupilRadius, 0, 1, 1, 1)
         spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.gridLayout.addItem(spacerItem, 2, 1, 1, 1)
         self.toolBox.addItem(self.page, "")
@@ -114,27 +115,27 @@ class Ui_MainWindow(object):
         self.gridLayout_2 = QtWidgets.QGridLayout(self.page_2)
         self.gridLayout_2.setContentsMargins(-1, 3, -1, -1)
         self.gridLayout_2.setObjectName("gridLayout_2")
-        self.lineEdit_4 = QtWidgets.QLineEdit(self.page_2)
-        self.lineEdit_4.setObjectName("lineEdit_4")
-        self.gridLayout_2.addWidget(self.lineEdit_4, 2, 1, 1, 1)
-        self.label_3 = QtWidgets.QLabel(self.page_2)
-        self.label_3.setObjectName("label_3")
-        self.gridLayout_2.addWidget(self.label_3, 1, 0, 1, 1)
-        self.lineEdit_3 = QtWidgets.QLineEdit(self.page_2)
-        self.lineEdit_3.setObjectName("lineEdit_3")
-        self.gridLayout_2.addWidget(self.lineEdit_3, 1, 1, 1, 1)
-        self.label_2 = QtWidgets.QLabel(self.page_2)
-        self.label_2.setObjectName("label_2")
-        self.gridLayout_2.addWidget(self.label_2, 0, 0, 1, 1)
-        self.lineEdit_5 = QtWidgets.QLineEdit(self.page_2)
-        self.lineEdit_5.setObjectName("lineEdit_5")
-        self.gridLayout_2.addWidget(self.lineEdit_5, 3, 1, 1, 1)
-        self.lineEdit_2 = QtWidgets.QLineEdit(self.page_2)
-        self.lineEdit_2.setObjectName("lineEdit_2")
-        self.gridLayout_2.addWidget(self.lineEdit_2, 0, 1, 1, 1)
-        self.lineEdit_6 = QtWidgets.QLineEdit(self.page_2)
-        self.lineEdit_6.setObjectName("lineEdit_6")
-        self.gridLayout_2.addWidget(self.lineEdit_6, 4, 1, 1, 1)
+        self.lineEdit_angle_fieldview2 = QtWidgets.QLineEdit(self.page_2)
+        self.lineEdit_angle_fieldview2.setObjectName("lineEdit_angle_fieldview2")
+        self.gridLayout_2.addWidget(self.lineEdit_angle_fieldview2, 2, 1, 1, 1)
+        self.angle_fieldview = QtWidgets.QLabel(self.page_2)
+        self.angle_fieldview.setObjectName("angle_fieldview")
+        self.gridLayout_2.addWidget(self.angle_fieldview, 1, 0, 1, 1)
+        self.lineEdit_angle_fieldview1 = QtWidgets.QLineEdit(self.page_2)
+        self.lineEdit_angle_fieldview1.setObjectName("lineEdit_angle_fieldview1")
+        self.gridLayout_2.addWidget(self.lineEdit_angle_fieldview1, 1, 1, 1, 1)
+        self.max_angle_fieldview = QtWidgets.QLabel(self.page_2)
+        self.max_angle_fieldview.setObjectName("max_angle_fieldview")
+        self.gridLayout_2.addWidget(self.max_angle_fieldview, 0, 0, 1, 1)
+        self.lineEdit_angle_fieldview3 = QtWidgets.QLineEdit(self.page_2)
+        self.lineEdit_angle_fieldview3.setObjectName("lineEdit_angle_fieldview3")
+        self.gridLayout_2.addWidget(self.lineEdit_angle_fieldview3, 3, 1, 1, 1)
+        self.lineEdit_pupiltheta = QtWidgets.QLineEdit(self.page_2)
+        self.lineEdit_pupiltheta.setObjectName("lineEdit_2")
+        self.gridLayout_2.addWidget(self.lineEdit_pupiltheta, 0, 1, 1, 1)
+        self.lineEdit_angle_fieldview4 = QtWidgets.QLineEdit(self.page_2)
+        self.lineEdit_angle_fieldview4.setObjectName("lineEdit_angle_fieldview4")
+        self.gridLayout_2.addWidget(self.lineEdit_angle_fieldview4, 4, 1, 1, 1)
         spacerItem1 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.gridLayout_2.addItem(spacerItem1, 5, 1, 1, 1)
         self.toolBox.addItem(self.page_2, "")
@@ -144,23 +145,29 @@ class Ui_MainWindow(object):
         self.gridLayout_3 = QtWidgets.QGridLayout(self.page_3)
         self.gridLayout_3.setContentsMargins(-1, 3, -1, -1)
         self.gridLayout_3.setObjectName("gridLayout_3")
-        self.label_4 = QtWidgets.QLabel(self.page_3)
-        self.label_4.setObjectName("label_4")
-        self.gridLayout_3.addWidget(self.label_4, 0, 0, 1, 1)
-        self.lineEdit_7 = QtWidgets.QLineEdit(self.page_3)
-        self.lineEdit_7.setObjectName("lineEdit_7")
-        self.gridLayout_3.addWidget(self.lineEdit_7, 0, 1, 1, 1)
-        self.lineEdit_8 = QtWidgets.QLineEdit(self.page_3)
-        self.lineEdit_8.setObjectName("lineEdit_8")
-        self.gridLayout_3.addWidget(self.lineEdit_8, 1, 1, 1, 1)
-        self.lineEdit_9 = QtWidgets.QLineEdit(self.page_3)
-        self.lineEdit_9.setObjectName("lineEdit_9")
-        self.gridLayout_3.addWidget(self.lineEdit_9, 2, 1, 1, 1)
-        self.lineEdit_10 = QtWidgets.QLineEdit(self.page_3)
-        self.lineEdit_10.setObjectName("lineEdit_10")
-        self.gridLayout_3.addWidget(self.lineEdit_10, 3, 1, 1, 1)
+        self.central_wavelength = QtWidgets.QLabel(self.page_3)
+        self.central_wavelength.setObjectName("central_wavelength")
+        self.gridLayout_3.addWidget(self.central_wavelength, 0, 0, 1, 1)
+        self.lineEdit_central_wavelength = QtWidgets.QLineEdit(self.page_3)
+        self.lineEdit_central_wavelength.setObjectName("lineEdit_central_wavelength")
+        self.gridLayout_3.addWidget(self.lineEdit_central_wavelength, 0, 1, 1, 1)
+        self.wavelength = QtWidgets.QLabel(self.page_3)
+        self.wavelength.setObjectName("wavelength")
+        self.gridLayout_3.addWidget(self.wavelength, 1, 0, 1, 1)
+        self.lineEdit_wavelength1 = QtWidgets.QLineEdit(self.page_3)
+        self.lineEdit_wavelength1.setObjectName("lineEdit_wavelength1")
+        self.gridLayout_3.addWidget(self.lineEdit_wavelength1, 1, 1, 1, 1)
+        self.lineEdit_wavelength2 = QtWidgets.QLineEdit(self.page_3)
+        self.lineEdit_wavelength2.setObjectName("lineEdit_wavelength2")
+        self.gridLayout_3.addWidget(self.lineEdit_wavelength2, 2, 1, 1, 1)
+        self.lineEdit_wavelength3 = QtWidgets.QLineEdit(self.page_3)
+        self.lineEdit_wavelength3.setObjectName("lineEdit_wavelength3")
+        self.gridLayout_3.addWidget(self.lineEdit_wavelength3, 3, 1, 1, 1)
+        self.lineEdit_wavelength4 = QtWidgets.QLineEdit(self.page_3)
+        self.lineEdit_wavelength4.setObjectName("lineEdit_wavelength4")
+        self.gridLayout_3.addWidget(self.lineEdit_wavelength4, 4, 1, 1, 1)
         spacerItem2 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.gridLayout_3.addItem(spacerItem2, 4, 1, 1, 1)
+        self.gridLayout_3.addItem(spacerItem2, 5, 1, 1, 1)
         self.toolBox.addItem(self.page_3, "")
 
         self.verticalLayout_2.addWidget(self.toolBox)
@@ -200,15 +207,13 @@ class Ui_MainWindow(object):
         self.tableWidget = QtWidgets.QTableWidget(self.tab)
         self.tableWidget.setGeometry(QtCore.QRect(5, 5, 1150, 390))
         self.tableWidget.setObjectName("tableWidget")
-        self.tableWidget.setColumnCount(5)
+        self.tableWidget.setColumnCount(6)
         self.tableWidget.setRowCount(2)
-        self.tableWidget.setSelectionBehavior(QAbstractItemView.SelectRows)  # 设置表格的选取方式是行选取
-        self.tableWidget.setSelectionMode(QAbstractItemView.SingleSelection)  # 设置选取方式为单个选取
-        self.tableWidget.setHorizontalHeaderLabels(['Surface Type', 'Radius', 'thickness', 'Refractive index', 'Material']) # 设置表格中的水平标题
+        self.tableWidget.setHorizontalHeaderLabels(['Surface Type', 'Radius', 'thickness', 'Refractive index', 'Material','备注']) # 设置表格中的水平标题
         # self.tableWidget.setEditTriggers(QAbstractItemView.DoubleClicked) # 设置表格双击时可以编辑单元格
         self.L = [] # 用来保存表格中每一行的ComboBox控件对象
         # 初始化表格
-        for i in range(0, self.tableWidget.rowCount()):
+        for i in range(self.tableWidget.rowCount()):
             self.addComboBox(i)
 
         self.tab_2 = QtWidgets.QWidget()
@@ -259,19 +264,19 @@ class Ui_MainWindow(object):
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 1165, 23))
         self.menubar.setObjectName("menubar")
-        self.menu = QtWidgets.QMenu(self.menubar)
-        self.menu.setObjectName("menu")
-        self.menu_2 = QtWidgets.QMenu(self.menubar)
-        self.menu_2.setObjectName("menu_2")
-        self.menu_3 = QtWidgets.QMenu(self.menubar)
-        self.menu_3.setObjectName("menu_3")
-        self.menu_4 = QtWidgets.QMenu(self.menubar)
-        self.menu_4.setObjectName("menu_4")
+        self.menu_file = QtWidgets.QMenu(self.menubar)
+        self.menu_file.setObjectName("menu")
+        self.menu_edit = QtWidgets.QMenu(self.menubar)
+        self.menu_edit.setObjectName("menu_edit")
+        self.menu_setup = QtWidgets.QMenu(self.menubar)
+        self.menu_setup.setObjectName("menu_setup")
+        self.menu_window = QtWidgets.QMenu(self.menubar)
+        self.menu_window.setObjectName("menu_window")
         MainWindow.setMenuBar(self.menubar)
-        self.menubar.addAction(self.menu.menuAction())
-        self.menubar.addAction(self.menu_2.menuAction())
-        self.menubar.addAction(self.menu_3.menuAction())
-        self.menubar.addAction(self.menu_4.menuAction())
+        self.menubar.addAction(self.menu_file.menuAction())
+        self.menubar.addAction(self.menu_edit.menuAction())
+        self.menubar.addAction(self.menu_setup.menuAction())
+        self.menubar.addAction(self.menu_window.menuAction())
 
         self.retranslateUi(MainWindow)
         self.toolBox.setCurrentIndex(0)
@@ -297,26 +302,29 @@ class Ui_MainWindow(object):
 
         self.btnadd.clicked.connect(self.table_insert) # 绑定添加按钮的单击信号
         self.btndel.clicked.connect(self.table_delete) # 绑定删除按钮的单击信号
-        self.btnQuery.clicked.connect(self.huoq) # 显示lensdata的数据
+        self.btnQuery.clicked.connect(self.set_mirrors) # 绑定设置镜面个数的单击信号
 
         # 为工具栏中的QAction绑定triggered信号
         self.toolBar.actionTriggered[QtWidgets.QAction].connect(self.getvalue)
 
     # 获取单元格中的内容
     def huoq(self):
+        self.table_data = np.zeros()
         for i in range(0, self.tableWidget.rowCount()):
             for j in range(1, self.tableWidget.columnCount()):
-                print(self.tableWidget.item(i, j).text())
+                if (j < 4):
+                    print(self.tableWidget.item(i, j).text())
+                    self.table_data[i, j] = float(self.tableWidget.item(i, j).text())
 
     # 增加表格的列
     def table_insertVol(self):
         column = self.tableWidget.columnCount()
         row = self.tableWidget.rowCount()
-        if (column < 11):
+        if (column < 12):
             for i in range (0, 6) :
                 self.tableWidget.insertColumn(column)
             self.tableWidget.setHorizontalHeaderLabels(
-                    ['Surface Type', 'Radius', 'thickness', 'Refractive index', 'Material', 'r1', 'r2', 'r3', 'r4', 'r5', 'r6'])  # 设置表格中的水平标题
+                    ['Surface Type', 'Radius', 'thickness', 'Refractive index', 'Material', '备注','r1', 'r2', 'r3', 'r4', 'r5', 'r6'])  # 设置表格中的水平标题
             for i in range(0, row):
                 item_r1 = QTableWidgetItem("0.0")
                 item_r2 = QTableWidgetItem("0.0")
@@ -325,12 +333,12 @@ class Ui_MainWindow(object):
                 item_r5 = QTableWidgetItem("0.0")
                 item_r6 = QTableWidgetItem("0.0")
 
-                self.tableWidget.setItem(i, 5, item_r1)
-                self.tableWidget.setItem(i, 6, item_r2)
-                self.tableWidget.setItem(i, 7, item_r3)
-                self.tableWidget.setItem(i, 8, item_r4)
-                self.tableWidget.setItem(i, 9, item_r5)
-                self.tableWidget.setItem(i, 10, item_r6)
+                self.tableWidget.setItem(i, 6, item_r1)
+                self.tableWidget.setItem(i, 7, item_r2)
+                self.tableWidget.setItem(i, 8, item_r3)
+                self.tableWidget.setItem(i, 9, item_r4)
+                self.tableWidget.setItem(i, 10, item_r5)
+                self.tableWidget.setItem(i, 11, item_r6)
 
                 self.tableWidget.resizeColumnsToContents()  # 使表格列的宽度跟随内容改变
 
@@ -346,8 +354,8 @@ class Ui_MainWindow(object):
                 m = m + 1
         # 判断Surface Type的类型是否全为Standard，若是，则执行删除操作
         if (m == len(ComItems)):
-            n = 10
-            while n > 4:
+            n = 11
+            while n > 5:
                 self.tableWidget.removeColumn(n)
                 n = n - 1
 
@@ -357,18 +365,19 @@ class Ui_MainWindow(object):
         i = self.tableWidget.rowCount()
         if (i != 1):
             row_select = self.tableWidget.selectedItems()
-            if len(row_select) == 1:
+            if len(row_select) == 0:
                 return
             row = row_select[0].row()
-            self.L.pop(row) #
-            self.tableWidget.removeRow(row)
+            if (self.tableWidget.item(row, 5).text() != "光阑面"): # 固定光阑面
+                self.L.pop(row) #
+                self.tableWidget.removeRow(row)
 
     # 表格增加一行
     def table_insert(self):
         # rowCount()获取现有表格控件中的行数,在此基础上插入一行insertRow()
-        i = self.tableWidget.rowCount()
-        self.tableWidget.insertRow(i)
-        self.addComboBox(i) # 为表格的每一项赋初值
+        rowCount = self.tableWidget.rowCount()
+        self.tableWidget.insertRow(rowCount)
+        self.addComboBox(rowCount) # 为表格的每一项赋初值
 
     # 为表格添加默认值
     def addComboBox(self, i):
@@ -385,6 +394,9 @@ class Ui_MainWindow(object):
         item_thickness = QTableWidgetItem("0.0")
         item_Refractive_index = QTableWidgetItem("0.0")
         item_Material = QTableWidgetItem("None")
+        item_remark = QTableWidgetItem("")
+        # if (i == 0):
+        #     item_remark = QTableWidgetItem("光阑面")
         item_r1 = QTableWidgetItem("0.0")
         item_r2 = QTableWidgetItem("0.0")
         item_r3 = QTableWidgetItem("0.0")
@@ -397,12 +409,13 @@ class Ui_MainWindow(object):
         self.tableWidget.setItem(i, 2, item_thickness)
         self.tableWidget.setItem(i, 3, item_Refractive_index)
         self.tableWidget.setItem(i, 4, item_Material)
-        self.tableWidget.setItem(i, 5, item_r1)
-        self.tableWidget.setItem(i, 6, item_r2)
-        self.tableWidget.setItem(i, 7, item_r3)
-        self.tableWidget.setItem(i, 8, item_r4)
-        self.tableWidget.setItem(i, 9, item_r5)
-        self.tableWidget.setItem(i, 10, item_r6)
+        self.tableWidget.setItem(i, 5, item_remark)
+        self.tableWidget.setItem(i, 6, item_r1)
+        self.tableWidget.setItem(i, 7, item_r2)
+        self.tableWidget.setItem(i, 8, item_r3)
+        self.tableWidget.setItem(i, 9, item_r4)
+        self.tableWidget.setItem(i, 10, item_r5)
+        self.tableWidget.setItem(i, 11, item_r6)
 
         self.tableWidget.resizeColumnsToContents()  # 使表格列的宽度跟随内容改变
         self.tableWidget.resizeRowsToContents()  # 使表格行的高度跟随内容改变
@@ -413,6 +426,13 @@ class Ui_MainWindow(object):
             self.table_delVol()
         elif (text == "sphere"):
             self.table_insertVol()
+
+    # 根据输入的镜面个数设置表格的行数
+    def set_mirrors(self):
+        num_mirrors = int(self.lineEdit_numOfMirrors.text()) # 添加的镜面个数，类型转换：string-->int
+        rowCount = self.tableWidget.rowCount() # 获取当前行数
+        for i in range(num_mirrors - rowCount):
+            self.table_insert()
 
     # 连接数据库并获取数据(部分)
     def connectDB(self):
@@ -462,68 +482,158 @@ class Ui_MainWindow(object):
     # 为工具栏中的控件绑定槽函数
     def getvalue(self,m):
 
-        obj = {'C': 0.0, 't': 10.0, 'n': 1.0}
-        surf1 = {'C': 1.0 / 40.94, 't': 8.74, 'n': 1.617}
-        surf2 = {'C': 0.0, 't': 11.05, 'n': 1.0}
-        surf3 = {'C': -1.0 / 55.65, 't': 2.78, 'n': 1.649}
-        surf4 = {'C': 1.0 / 39.75, 't': 7.63, 'n': 1.0}
-        surf5 = {'C': 1.0 / 107.56, 't': 9.54, 'n': 1.617}
-        surf6 = {'C': -1.0 / 43.33, 't': 0.0, 'n': 1.0}
-        img = {'C': 0, 't': 0, 'n': 1.0}
-        Lens = [obj, surf1, surf2, surf3, surf4, surf5, surf6, img]
+        # 光学系统1参数
+        # obj = {'C': 0.0, 't': 10.0, 'n': 1.0}
+        # surf1 = {'C': 1.0 / 40.94, 't': 8.74, 'n': 1.617}
+        # surf2 = {'C': 0.0, 't': 11.05, 'n': 1.0}
+        # surf3 = {'C': -1.0 / 55.65, 't': 2.78, 'n': 1.649}
+        # surf4 = {'C': 1.0 / 39.75, 't': 7.63, 'n': 1.0}
+        # surf5 = {'C': 1.0 / 107.56, 't': 9.54, 'n': 1.617}
+        # surf6 = {'C': -1.0 / 43.33, 't': 0.0, 'n': 1.0}
+        # img = {'C': 0, 't': 0, 'n': 1.0}
+        # Lens = [obj, surf1, surf2, surf3, surf4, surf5, surf6, img]
+        #
+        # pupilRadius = 18.5  # 入瞳孔径大小
+        # pupiltheta = 20  # 最大视场角
+        # pupilPosition = 4  # 入瞳位置
+        # # 2. 绘制横向像差点列图
+        # thetas = np.array([0, 8, 14, 20])  # 视场角
+        # apertureRays = 18.5  # 光束孔径设置为18.5
+        # # 3. 绘制径向像差曲线
+        # apertureRays2 = 2  # 光束孔径设置为2
 
-        pupilRadius = 18.5  # 入瞳孔径大小
-        pupiltheta = 20  # 最大视场角
-        pupilPosition = 4  # 入瞳位置
-        # 2. 绘制横向像差点列图
-        thetas = np.array([0, 8, 14, 20])  # 视场角
-        apertureRays = 18.5  # 光束孔径设置为18.5
-        # 3. 绘制径向像差曲线
-        apertureRays2 = 2  # 光束孔径设置为2
+        # 光学系统2参数
+        # 1) 光学系统透镜信息(曲率半径，厚度，材料)
+        num_Lens = 3
+        OriginalLens = []  # 参数一
+        # 目前是给定的，所以直接写出来，该部分'm'如果为空格，表示透镜的第二个面
+        OriginalLens.append({'C': 0.0, 't': 100.0, 'm': 'vacuum'})
+        OriginalLens.append({'C': 1.0 / 40.94, 't': 8.74, 'm': 'SSK4A'})  # 将第一个透镜面添加进去
+        OriginalLens.append({'C': 0.0, 't': 11.05, 'm': ' '})
+        OriginalLens.append({'C': -1.0 / 55.65, 't': 2.78, 'm': 'SF12'})
+        OriginalLens.append({'C': 1.0 / 39.75, 't': 7.63, 'm': ' '})
+        OriginalLens.append({'C': 1.0 / 107.56, 't': 9.54, 'm': 'SSK4A'})
+        OriginalLens.append({'C': -1.0 / 43.33, 't': 0.0, 'm': ' ', 'n': 35})
+        OriginalLens.append({'C': 0, 't': 0, 'm': 'vacuum'})
 
-        if m.text() == "点列图":
-            # 绘制点列图
-            # 创建工具类对象，计算横向像差点列图，径向像差曲线，畸变曲线
-            self.tool = Tool(Lens, pupilRadius, pupiltheta, pupilPosition, thetas, apertureRays, apertureRays2)
-            self.tool.Ppint_diagram()
-            # 在GUI的tabWidget中创建一个布局，用于添加Tool类的实例(实例被看作为一个控件)
-            self.gridlayout = QGridLayout(self.tab_6)
-            self.gridlayout.addWidget(self.tool, 0, 0,QtCore.Qt.AlignCenter)  # 将Tool的实例添加到布局中去
-        elif m.text() == "像差曲线":
-            # 绘制像差曲线函数
-            self.tool_1 = Tool(Lens, pupilRadius, pupiltheta, pupilPosition, thetas, apertureRays, apertureRays2)
-            self.tool_1.radial_aberration_curve()
-            self.gridlayout_1 = QGridLayout(self.tab_4)
-            self.gridlayout_1.addWidget(self.tool_1, 0, 0,QtCore.Qt.AlignCenter)
-        elif m.text() == "畸变曲线":
-            # 绘制畸变曲线
-            self.tool_2 = Tool(Lens, pupilRadius, pupiltheta, pupilPosition, thetas, apertureRays, apertureRays2)
-            self.tool_2.distortion_curve()
-            self.gridlayout_2 = QGridLayout(self.tab_5)
-            self.gridlayout_2.addWidget(self.tool_2, 0, 0,QtCore.Qt.AlignCenter)
-        elif m.text() == "二维光线图":
-            # 绘制二维光线图
-            self.tool_3 = Tool(Lens, pupilRadius, pupiltheta, pupilPosition, thetas, apertureRays, apertureRays2)
-            self.tool_3.ray_tracing()
-            self.gridLayout_3 = QGridLayout(self.tab_3)
-            self.gridLayout_3.addWidget(self.tool_3, 0, 0,QtCore.Qt.AlignCenter)
-        elif m.text() == "图像仿真":
-            # 图像仿真
-            print("图像仿真")
+        self.huoq()
+        print(self.table_data)
+        # OriginalLens.append({'C': 0.0 / self.table_data[0, 1], 't': self.table_data[0, 2], 'm': 'vacuum'})
+        # OriginalLens.append({'C': 1.0 / self.table_data[1, 1], 't': self.table_data[1, 2], 'm': 'SSK4A'})  # 将第一个透镜面添加进去
+        # OriginalLens.append({'C': 0.0 / self.table_data[2, 1], 't': self.table_data[2, 2], 'm': ' '})
+        # OriginalLens.append({'C': -1.0 / self.table_data[3, 1], 't': self.table_data[3, 2], 'm': 'SF12'})
+        # OriginalLens.append({'C': 1.0 / self.table_data[4, 1], 't': self.table_data[4, 2], 'm': ' '})
+        # OriginalLens.append({'C': 1.0 / self.table_data[5, 1], 't': self.table_data[5, 2], 'm': 'SSK4A'})
+        # OriginalLens.append({'C': -1.0 / self.table_data[6, 1], 't': self.table_data[6, 2], 'm': ' ', 'n': self.table_data[6, 3]})
+        # OriginalLens.append({'C': 0 / self.table_data[7, 1], 't': self.table_data[7, 2], 'm': 'vacuum'})
+
+        # 实际中，我们需要根据透镜的个数添加透镜面的信息
+        '''
+        for nL in range(num_Lens):
+            surf1 = {'C': 1.0 / 40.94, 't': 8.74, 'm': 'SSK4A'}    # 根据需求添加
+            surf2 = {'C': 0.0, 't': 11.05, 'm': ' '}
+        '''
+        # 2) 光学系统的基本参数
+        pupilRadius = 18.5  # 入瞳孔径大小 参数二
+        # pupilRadius = 0
+        # if self.lineEdit_pupilRadius.text() != "":
+        #     pupilRadius = float(self.lineEdit_pupilRadius.text())  # 入瞳孔径大小 参数二
+        pupiltheta = 20  # 最大视场角 参数三
+        # pupiltheta = 0
+        # if (self.lineEdit_pupiltheta.text() != ""):
+        #     pupiltheta = int(self.lineEdit_pupiltheta.text())  # 最大视场角 参数三
+        # 3) 光线波长
+        wavelength = []  # 建立wavelength列表用来存储波长 参数四
+        # if (self.lineEdit_wavelength1.text() != "") and (self.lineEdit_wavelength2.text() != "") and (self.lineEdit_wavelength3.text() != ""):
+        #     wavelength.append(float(self.lineEdit_wavelength1.text())) # 将所需第一个波长的光添加进去
+        #     wavelength.append(float(self.lineEdit_wavelength2.text()))
+        #     wavelength.append(float(self.lineEdit_wavelength3.text()))
+        wavelength.append(0.4861)  # 将所需第一个波长的光添加进去
+        wavelength.append(0.5876)
+        wavelength.append(0.6563)
+
+        if (len(OriginalLens) != 0) and (pupilRadius != 0) and (pupiltheta != 0) and (len(wavelength) != 0) :
+            if m.text() == "点列图":
+                # 绘制点列图
+
+                # 光学系统一
+                # 创建工具类对象，计算横向像差点列图，径向像差曲线，畸变曲线
+                # self.tool = Tool(Lens, pupilRadius, pupiltheta, pupilPosition, thetas, apertureRays, apertureRays2)
+                # self.tool.Ppint_diagram()
+                # # 在GUI的tabWidget中创建一个布局，用于添加Tool类的实例(实例被看作为一个控件)
+                # self.gridlayout = QGridLayout(self.tab_6)
+                # self.gridlayout.addWidget(self.tool, 0, 0,QtCore.Qt.AlignCenter)  # 将Tool的实例添加到布局中去
+
+                # 光学系统二
+                self.drawTool = DrawTool(OriginalLens, pupilRadius, pupiltheta, wavelength)
+                self.drawTool.Ppint_diagram()
+                # 在GUI的tabWidget中创建一个布局，用于添加Tool类的实例(实例被看作为一个控件)
+                self.gridlayout = QGridLayout(self.tab_6)
+                self.gridlayout.addWidget(self.drawTool, 0, 0, QtCore.Qt.AlignCenter)  # 将Tool的实例添加到布局中去
+
+            elif m.text() == "像差曲线":
+                # 绘制像差曲线函数
+
+                # 光学系统一
+                # self.tool_1 = Tool(Lens, pupilRadius, pupiltheta, pupilPosition, thetas, apertureRays, apertureRays2)
+                # self.tool_1.radial_aberration_curve()
+                # self.gridlayout_1 = QGridLayout(self.tab_4)
+                # self.gridlayout_1.addWidget(self.tool_1, 0, 0,QtCore.Qt.AlignCenter)
+
+                # 光学系统二
+                self.drawTool_1 = DrawTool(OriginalLens, pupilRadius, pupiltheta, wavelength)
+                self.drawTool_1.radial_aberration_curve()
+                self.gridlayout_1 = QGridLayout(self.tab_4)
+                self.gridlayout_1.addWidget(self.drawTool_1, 0, 0,QtCore.Qt.AlignCenter)
+
+            elif m.text() == "畸变曲线":
+                # 绘制畸变曲线
+
+                # 光学系统一
+                # self.tool_2 = Tool(Lens, pupilRadius, pupiltheta, pupilPosition, thetas, apertureRays, apertureRays2)
+                # self.tool_2.distortion_curve()
+                # self.gridlayout_2 = QGridLayout(self.tab_5)
+                # self.gridlayout_2.addWidget(self.tool_2, 0, 0,QtCore.Qt.AlignCenter)
+
+                # 光学系统二
+                self.drawTool_2 = DrawTool(OriginalLens, pupilRadius, pupiltheta, wavelength)
+                self.drawTool_2.distortion_curve()
+                self.gridlayout_2 = QGridLayout(self.tab_5)
+                self.gridlayout_2.addWidget(self.drawTool_2, 0, 0, QtCore.Qt.AlignCenter)
+
+            elif m.text() == "二维光线图":
+                # 绘制二维光线图
+
+                # 光学系统一
+                # self.tool_3 = Tool(Lens, pupilRadius, pupiltheta, pupilPosition, thetas, apertureRays, apertureRays2)
+                # self.tool_3.ray_tracing()
+                # self.gridLayout_3 = QGridLayout(self.tab_3)
+                # self.gridLayout_3.addWidget(self.tool_3, 0, 0,QtCore.Qt.AlignCenter)
+
+                # 光学系统二
+                self.drawTool_3 = DrawTool(OriginalLens, pupilRadius, pupiltheta, wavelength)
+                self.drawTool_3.ray_tracing()
+                self.gridLayout_3 = QGridLayout(self.tab_3)
+                self.gridLayout_3.addWidget(self.drawTool_3, 0, 0, QtCore.Qt.AlignCenter)
+
+            elif m.text() == "图像仿真":
+                # 图像仿真
+                print("图像仿真")
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "光学设计系统"))
 
-        self.label_5.setText(_translate("MainWindow", "入瞳位置："))
-        self.label.setText(_translate("MainWindow", "入瞳孔径："))
-        self.toolBox.setItemText(self.toolBox.indexOf(self.page), _translate("MainWindow", "入瞳孔径与位置"))
-        self.label_3.setText(_translate("MainWindow", "视场角："))
-        self.label_2.setText(_translate("MainWindow", "最大视场角："))
+        # self.label_5.setText(_translate("MainWindow", "入瞳位置："))
+        self.entr_pupildia.setText(_translate("MainWindow", "入瞳孔径："))
+        self.toolBox.setItemText(self.toolBox.indexOf(self.page), _translate("MainWindow", "入瞳孔径"))
+        self.angle_fieldview.setText(_translate("MainWindow", "视场角："))
+        self.max_angle_fieldview.setText(_translate("MainWindow", "最大视场角："))
         self.toolBox.setItemText(self.toolBox.indexOf(self.page_2), _translate("MainWindow", "视场角"))
-        self.label_4.setText(_translate("MainWindow", "波长："))
+        self.wavelength.setText(_translate("MainWindow", "波长："))
+        self.central_wavelength.setText(_translate("MainWindow", "中心波长："))
         self.toolBox.setItemText(self.toolBox.indexOf(self.page_3), _translate("MainWindow", "波长"))
-        self.label_6.setText(_translate("MainWindow", "镜面个数："))
+        self.number_mirrors.setText(_translate("MainWindow", "镜面个数："))
         self.btnQuery.setText(_translate("MainWindow", "确定"))
         self.btnadd.setText(_translate("MainWindow", "添加"))
         self.btndel.setText(_translate("MainWindow", "删除"))
@@ -534,10 +644,10 @@ class Ui_MainWindow(object):
         self.tabWidget_2.setTabText(self.tabWidget_2.indexOf(self.tab_4), _translate("MainWindow", "像差曲线"))
         self.tabWidget_2.setTabText(self.tabWidget_2.indexOf(self.tab_5), _translate("MainWindow", "畸变曲线"))
         self.tabWidget_2.setTabText(self.tabWidget_2.indexOf(self.tab_6), _translate("MainWindow", "点列图"))
-        self.menu.setTitle(_translate("MainWindow", "文件"))
-        self.menu_2.setTitle(_translate("MainWindow", "编辑"))
-        self.menu_3.setTitle(_translate("MainWindow", "设置"))
-        self.menu_4.setTitle(_translate("MainWindow", "窗口"))
+        self.menu_file.setTitle(_translate("MainWindow", "文件"))
+        self.menu_edit.setTitle(_translate("MainWindow", "编辑"))
+        self.menu_setup.setTitle(_translate("MainWindow", "设置"))
+        self.menu_window.setTitle(_translate("MainWindow", "窗口"))
         self.toolBar.setWindowTitle(_translate("MainWindow", "toolBar"))
 
 import sys
