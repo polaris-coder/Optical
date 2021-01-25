@@ -33,8 +33,10 @@ class Ui_MainWindow(object):
         self.qaction3 = QtWidgets.QAction(QtGui.QIcon("image/img2.ico"),"畸变曲线") # 创建畸变曲线按钮对象
         self.qaction4 = QtWidgets.QAction(QtGui.QIcon("image/img2.ico"),"点列图") # 创建二维光线图按钮对象
         self.qaction5 = QtWidgets.QAction(QtGui.QIcon("image/img2.ico"),"图像仿真") # 创建图像仿真按钮对象
+        self.qaction6 = QtWidgets.QAction(QtGui.QIcon("image/img2.ico"),"光线追迹") # 创建光线追迹按钮对象
+        self.qaction7 = QtWidgets.QAction(QtGui.QIcon("image/img2.ico"),"材料库") # 创建材料库按钮对象
         # 将创建的QAction添加到工具栏中
-        self.toolBar.addActions([self.qaction1,self.qaction2,self.qaction3,self.qaction4,self.qaction5])
+        self.toolBar.addActions([self.qaction1,self.qaction2,self.qaction3,self.qaction4,self.qaction5,self.qaction6,self.qaction7])
         # 设置工具栏按钮的大小
         self.toolBar.setIconSize(QtCore.QSize(20,20))
         # 设置工具栏可以移动
@@ -309,7 +311,7 @@ class Ui_MainWindow(object):
 
     # 获取单元格中的内容
     def huoq(self):
-        self.table_data = np.zeros()
+        self.table_data = np.zeros(shape=(self.tableWidget.rowCount(),self.tableWidget.columnCount()))
         for i in range(0, self.tableWidget.rowCount()):
             for j in range(1, self.tableWidget.columnCount()):
                 if (j < 4):
@@ -517,7 +519,6 @@ class Ui_MainWindow(object):
         OriginalLens.append({'C': 0, 't': 0, 'm': 'vacuum'})
 
         self.huoq()
-        print(self.table_data)
         # OriginalLens.append({'C': 0.0 / self.table_data[0, 1], 't': self.table_data[0, 2], 'm': 'vacuum'})
         # OriginalLens.append({'C': 1.0 / self.table_data[1, 1], 't': self.table_data[1, 2], 'm': 'SSK4A'})  # 将第一个透镜面添加进去
         # OriginalLens.append({'C': 0.0 / self.table_data[2, 1], 't': self.table_data[2, 2], 'm': ' '})
