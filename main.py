@@ -12,7 +12,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import *
 from Geometric_optics.main_aberrationAndDistortion import Tool
 from Geometric_optics2.DrawTool import DrawTool
-from SR.service import connection
+from SR.service import connection, getLensdata3, updateLen3
 import numpy as np
 
 class Ui_MainWindow(object):
@@ -310,13 +310,25 @@ class Ui_MainWindow(object):
         self.toolBar.actionTriggered[QtWidgets.QAction].connect(self.getvalue)
 
     # 获取单元格中的内容
-    def huoq(self):
+    def getTableData(self):
         self.table_data = np.zeros(shape=(self.tableWidget.rowCount(),self.tableWidget.columnCount()))
         for i in range(0, self.tableWidget.rowCount()):
             for j in range(1, self.tableWidget.columnCount()):
                 if (j < 4):
-                    print(self.tableWidget.item(i, j).text())
+                    # print(self.tableWidget.item(i, j).text())
                     self.table_data[i, j] = float(self.tableWidget.item(i, j).text())
+
+        OriginalLensTem = []  # 参数一
+        OriginalLensTem.append({'C': 0.0 / self.table_data[0, 1], 't': self.table_data[0, 2], 'm': 'vacuum'})
+        OriginalLensTem.append({'C': 1.0 / self.table_data[1, 1], 't': self.table_data[1, 2], 'm': 'SSK4A'})  # 将第一个透镜面添加进去
+        OriginalLensTem.append({'C': 0.0 / self.table_data[2, 1], 't': self.table_data[2, 2], 'm': ' '})
+        OriginalLensTem.append({'C': -1.0 / self.table_data[3, 1], 't': self.table_data[3, 2], 'm': 'SF12'})
+        OriginalLensTem.append({'C': 1.0 / self.table_data[4, 1], 't': self.table_data[4, 2], 'm': ' '})
+        OriginalLensTem.append({'C': 1.0 / self.table_data[5, 1], 't': self.table_data[5, 2], 'm': 'SSK4A'})
+        OriginalLensTem.append(
+            {'C': -1.0 / self.table_data[6, 1], 't': self.table_data[6, 2], 'm': ' ', 'n': self.table_data[6, 3]})
+        OriginalLensTem.append({'C': 0 / self.table_data[7, 1], 't': self.table_data[7, 2], 'm': 'vacuum'})
+        return OriginalLensTem
 
     # 增加表格的列
     def table_insertVol(self):
@@ -385,7 +397,7 @@ class Ui_MainWindow(object):
     def addComboBox(self, i):
         # 将表格第1列设置为ComboBox下拉列表
         self.comobox = QComboBox()
-        self.comobox.addItems(['Standard', 'sphere', 'asphere', 'extended polynomial'])  # 为下拉列表设置数据源
+        self.comobox.addItems(['Standard', 'Even asphere', 'Extended polynomial'])  # 为下拉列表设置数据源
         self.comobox.setCurrentIndex(0)  # 默认选中第一项
         self.L.append(self.comobox)
         self.tableWidget.setCellWidget(i, 0 ,self.L[i])
@@ -435,12 +447,28 @@ class Ui_MainWindow(object):
         rowCount = self.tableWidget.rowCount() # 获取当前行数
         for i in range(num_mirrors - rowCount):
             self.table_insert()
+        self.connLensdata3()
+
+    #获取数据表Lensdata3的数据
+    def connLensdata3(self):
+        # 连接数据库，获取数据
+        result, row, vol = getLensdata3()
+        # 将数据填入表格
+        self.tableWidget.setRowCount(row)
+        self.tableWidget.setColumnCount(vol)
+        for i in range(row):
+            for j in range(vol):
+                # 为表格第一列的单元格添加下拉菜单
+                if j == 0:
+                    self.addComboBox(i)
+                else:
+                    data = QTableWidgetItem(str(result[i][j]))
+                    self.tableWidget.setItem(i, j, data)
 
     # 连接数据库并获取数据(部分)
     def connectDB(self):
         # 连接数据库，获取数据
-        sql = "select `Surface Type`,`Radius`,`thickness`,`Refractive index`,`Material` from lensdata2"
-        result, row, vol = connection(sql)
+        result, row, vol = connection()
         # 将数据填入表格
         self.tableWidget.setRowCount(row)
         self.tableWidget.setColumnCount(vol)
@@ -460,8 +488,7 @@ class Ui_MainWindow(object):
     # 连接数据库并获取数据(全部)
     def connectDB2(self):
         # 连接数据库，获取数据
-        sql = "select * from lensdata2"
-        result, row, vol = connection(sql)
+        result, row, vol = connection()
         # 将数据填入表格
         self.tableWidget.setRowCount(row)
         self.tableWidget.setColumnCount(vol)
@@ -508,25 +535,17 @@ class Ui_MainWindow(object):
         # 1) 光学系统透镜信息(曲率半径，厚度，材料)
         num_Lens = 3
         OriginalLens = []  # 参数一
+        # 从表格读取数据
+        OriginalLens = self.getTableData()
         # 目前是给定的，所以直接写出来，该部分'm'如果为空格，表示透镜的第二个面
-        OriginalLens.append({'C': 0.0, 't': 100.0, 'm': 'vacuum'})
-        OriginalLens.append({'C': 1.0 / 40.94, 't': 8.74, 'm': 'SSK4A'})  # 将第一个透镜面添加进去
-        OriginalLens.append({'C': 0.0, 't': 11.05, 'm': ' '})
-        OriginalLens.append({'C': -1.0 / 55.65, 't': 2.78, 'm': 'SF12'})
-        OriginalLens.append({'C': 1.0 / 39.75, 't': 7.63, 'm': ' '})
-        OriginalLens.append({'C': 1.0 / 107.56, 't': 9.54, 'm': 'SSK4A'})
-        OriginalLens.append({'C': -1.0 / 43.33, 't': 0.0, 'm': ' ', 'n': 35})
-        OriginalLens.append({'C': 0, 't': 0, 'm': 'vacuum'})
-
-        self.huoq()
-        # OriginalLens.append({'C': 0.0 / self.table_data[0, 1], 't': self.table_data[0, 2], 'm': 'vacuum'})
-        # OriginalLens.append({'C': 1.0 / self.table_data[1, 1], 't': self.table_data[1, 2], 'm': 'SSK4A'})  # 将第一个透镜面添加进去
-        # OriginalLens.append({'C': 0.0 / self.table_data[2, 1], 't': self.table_data[2, 2], 'm': ' '})
-        # OriginalLens.append({'C': -1.0 / self.table_data[3, 1], 't': self.table_data[3, 2], 'm': 'SF12'})
-        # OriginalLens.append({'C': 1.0 / self.table_data[4, 1], 't': self.table_data[4, 2], 'm': ' '})
-        # OriginalLens.append({'C': 1.0 / self.table_data[5, 1], 't': self.table_data[5, 2], 'm': 'SSK4A'})
-        # OriginalLens.append({'C': -1.0 / self.table_data[6, 1], 't': self.table_data[6, 2], 'm': ' ', 'n': self.table_data[6, 3]})
-        # OriginalLens.append({'C': 0 / self.table_data[7, 1], 't': self.table_data[7, 2], 'm': 'vacuum'})
+        # OriginalLens.append({'C': 0.0, 't': 100.0, 'm': 'vacuum'})
+        # OriginalLens.append({'C': 1.0 / 40.94, 't': 8.74, 'm': 'SSK4A'})  # 将第一个透镜面添加进去
+        # OriginalLens.append({'C': 0.0, 't': 11.05, 'm': ' '})
+        # OriginalLens.append({'C': -1.0 / 55.65, 't': 2.78, 'm': 'SF12'})
+        # OriginalLens.append({'C': 1.0 / 39.75, 't': 7.63, 'm': ' '})
+        # OriginalLens.append({'C': 1.0 / 107.56, 't': 9.54, 'm': 'SSK4A'})
+        # OriginalLens.append({'C': -1.0 / 43.33, 't': 0.0, 'm': ' ', 'n': 35})
+        # OriginalLens.append({'C': 0, 't': 0, 'm': 'vacuum'})
 
         # 实际中，我们需要根据透镜的个数添加透镜面的信息
         '''
@@ -617,9 +636,73 @@ class Ui_MainWindow(object):
                 self.gridLayout_3 = QGridLayout(self.tab_3)
                 self.gridLayout_3.addWidget(self.drawTool_3, 0, 0, QtCore.Qt.AlignCenter)
 
+                # # 光学系统二,点列图
+                # self.drawTool = DrawTool(OriginalLens, pupilRadius, pupiltheta, wavelength)
+                # self.drawTool.Ppint_diagram()
+                # # 在GUI的tabWidget中创建一个布局，用于添加Tool类的实例(实例被看作为一个控件)
+                # self.gridlayout = QGridLayout(self.tab_6)
+                # self.gridlayout.addWidget(self.drawTool, 0, 0, QtCore.Qt.AlignCenter)  # 将Tool的实例添加到布局中去
+                #
+                # # 光学系统二，像差曲线
+                # self.drawTool_1 = DrawTool(OriginalLens, pupilRadius, pupiltheta, wavelength)
+                # self.drawTool_1.radial_aberration_curve()
+                # self.gridlayout_1 = QGridLayout(self.tab_4)
+                # self.gridlayout_1.addWidget(self.drawTool_1, 0, 0, QtCore.Qt.AlignCenter)
+                #
+                # # 光学系统二，畸变曲线
+                # self.drawTool_2 = DrawTool(OriginalLens, pupilRadius, pupiltheta, wavelength)
+                # self.drawTool_2.distortion_curve()
+                # self.gridlayout_2 = QGridLayout(self.tab_5)
+                # self.gridlayout_2.addWidget(self.drawTool_2, 0, 0, QtCore.Qt.AlignCenter)
+
             elif m.text() == "图像仿真":
                 # 图像仿真
+                #获取表格数据
+                self.tableWidget.item(0, 2).text()
                 print("图像仿真")
+
+            elif m.text() == "光线追迹":
+                #重新追迹光线
+                print("光线追迹")
+                #获取修改后的表格数据
+                self.table_Lensdata3 = np.zeros(shape=(self.tableWidget.rowCount(), self.tableWidget.columnCount()))
+                for i in range(0, self.tableWidget.rowCount()):
+                    for j in range(1, self.tableWidget.columnCount()):
+                        if (j < 4):
+                            self.table_Lensdata3[i, j] = float(self.tableWidget.item(i, j).text())
+                #将修改后表格的数据保存到数据库中
+                row,vol = self.table_Lensdata3.shape
+                updateLen3(self.table_Lensdata3,row,vol)
+                #重新进行光线追迹
+                OriginalLens2 = self.getTableData()
+                pupilRadius2 = 18.5  # 入瞳孔径大小 参数二
+                pupiltheta2 = 20  # 最大视场角 参数三
+                wavelength2 = []  # 建立wavelength列表用来存储波长 参数四
+                wavelength2.append(0.4861)
+                wavelength2.append(0.5876)
+                wavelength2.append(0.6563)
+                if (len(OriginalLens2) != 0) and (pupilRadius2 != 0) and (pupiltheta2 != 0) and (len(wavelength2) != 0):
+                    # 光学系统二(二维光线图)
+                    self.drawTool_32 = DrawTool(OriginalLens, pupilRadius, pupiltheta, wavelength)
+                    self.drawTool_32.ray_tracing()
+                    self.gridLayout_3.addWidget(self.drawTool_32, 0, 0, QtCore.Qt.AlignCenter)
+                    # 光学系统二（点列图）
+                    self.drawTool2 = DrawTool(OriginalLens, pupilRadius, pupiltheta, wavelength)
+                    self.drawTool2.Ppint_diagram()
+                    # 在GUI的tabWidget中创建一个布局，用于添加Tool类的实例(实例被看作为一个控件)
+                    self.gridlayout.addWidget(self.drawTool2, 0, 0, QtCore.Qt.AlignCenter)  # 将Tool的实例添加到布局中去
+                    # 光学系统二（像差曲线）
+                    self.drawTool_12 = DrawTool(OriginalLens, pupilRadius, pupiltheta, wavelength)
+                    self.drawTool_12.radial_aberration_curve()
+                    self.gridlayout_1.addWidget(self.drawTool_12, 0, 0, QtCore.Qt.AlignCenter)
+                    # 光学系统二（畸变曲线）
+                    self.drawTool_22 = DrawTool(OriginalLens, pupilRadius, pupiltheta, wavelength)
+                    self.drawTool_22.distortion_curve()
+                    self.gridlayout_2.addWidget(self.drawTool_22, 0, 0, QtCore.Qt.AlignCenter)
+
+            elif m.text() == "材料库":
+                #加载材料库
+                print("加载材料库")
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
