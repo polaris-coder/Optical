@@ -721,198 +721,198 @@ class Ui_MainWindow(QMainWindow):
     # 为工具栏中的控件绑定槽函数
     def getvalue(self,m):
 
-        if m.text() == "材料库":
-            # 加载材料库界面
-            self.m = materials.Ui_Dialog()
-            self.m.show()
-        else:
-            # 光学系统1参数
-            # obj = {'C': 0.0, 't': 10.0, 'n': 1.0}
-            # surf1 = {'C': 1.0 / 40.94, 't': 8.74, 'n': 1.617}
-            # surf2 = {'C': 0.0, 't': 11.05, 'n': 1.0}
-            # surf3 = {'C': -1.0 / 55.65, 't': 2.78, 'n': 1.649}
-            # surf4 = {'C': 1.0 / 39.75, 't': 7.63, 'n': 1.0}
-            # surf5 = {'C': 1.0 / 107.56, 't': 9.54, 'n': 1.617}
-            # surf6 = {'C': -1.0 / 43.33, 't': 0.0, 'n': 1.0}
-            # img = {'C': 0, 't': 0, 'n': 1.0}
-            # Lens = [obj, surf1, surf2, surf3, surf4, surf5, surf6, img]
-            #
-            # pupilRadius = 18.5  # 入瞳孔径大小
-            # pupiltheta = 20  # 最大视场角
-            # pupilPosition = 4  # 入瞳位置
-            # # 2. 绘制横向像差点列图
-            # thetas = np.array([0, 8, 14, 20])  # 视场角
-            # apertureRays = 18.5  # 光束孔径设置为18.5
-            # # 3. 绘制径向像差曲线
-            # apertureRays2 = 2  # 光束孔径设置为2
+        # if m.text() == "材料库":
+        #     # 加载材料库界面
+        #     self.m = materials.Ui_Dialog()
+        #     self.m.show()
+        # elif(m.text() != "材料库"):
+        # 光学系统1参数
+        # obj = {'C': 0.0, 't': 10.0, 'n': 1.0}
+        # surf1 = {'C': 1.0 / 40.94, 't': 8.74, 'n': 1.617}
+        # surf2 = {'C': 0.0, 't': 11.05, 'n': 1.0}
+        # surf3 = {'C': -1.0 / 55.65, 't': 2.78, 'n': 1.649}
+        # surf4 = {'C': 1.0 / 39.75, 't': 7.63, 'n': 1.0}
+        # surf5 = {'C': 1.0 / 107.56, 't': 9.54, 'n': 1.617}
+        # surf6 = {'C': -1.0 / 43.33, 't': 0.0, 'n': 1.0}
+        # img = {'C': 0, 't': 0, 'n': 1.0}
+        # Lens = [obj, surf1, surf2, surf3, surf4, surf5, surf6, img]
+        #
+        # pupilRadius = 18.5  # 入瞳孔径大小
+        # pupiltheta = 20  # 最大视场角
+        # pupilPosition = 4  # 入瞳位置
+        # # 2. 绘制横向像差点列图
+        # thetas = np.array([0, 8, 14, 20])  # 视场角
+        # apertureRays = 18.5  # 光束孔径设置为18.5
+        # # 3. 绘制径向像差曲线
+        # apertureRays2 = 2  # 光束孔径设置为2
 
-            # 光学系统2参数
-            # 1) 光学系统透镜信息(曲率半径，厚度，材料)
-            num_Lens = 3
-            OriginalLens = []  # 参数一
-            # 从表格读取数据
-            OriginalLens = self.getTableData()
-            # 目前是给定的，所以直接写出来，该部分'm'如果为空格，表示透镜的第二个面
-            # OriginalLens.append({'C': 0.0, 't': 100.0, 'm': 'vacuum'})
-            # OriginalLens.append({'C': 1.0 / 40.94, 't': 8.74, 'm': 'SSK4A'})  # 将第一个透镜面添加进去
-            # OriginalLens.append({'C': 0.0, 't': 11.05, 'm': ' '})
-            # OriginalLens.append({'C': -1.0 / 55.65, 't': 2.78, 'm': 'SF12'})
-            # OriginalLens.append({'C': 1.0 / 39.75, 't': 7.63, 'm': ' '})
-            # OriginalLens.append({'C': 1.0 / 107.56, 't': 9.54, 'm': 'SSK4A'})
-            # OriginalLens.append({'C': -1.0 / 43.33, 't': 0.0, 'm': ' ', 'n': 35})
-            # OriginalLens.append({'C': 0, 't': 0, 'm': 'vacuum'})
+        # 光学系统2参数
+        # 1) 光学系统透镜信息(曲率半径，厚度，材料)
+        num_Lens = 3
+        OriginalLens = []  # 参数一
+        # 从表格读取数据
+        # OriginalLens = self.getTableData()
+        # 目前是给定的，所以直接写出来，该部分'm'如果为空格，表示透镜的第二个面
+        OriginalLens.append({'C': 0.0, 't': 100.0, 'm': 'vacuum'})
+        OriginalLens.append({'C': 1.0 / 40.94, 't': 8.74, 'm': 'SSK4A'})  # 将第一个透镜面添加进去
+        OriginalLens.append({'C': 0.0, 't': 11.05, 'm': ' '})
+        OriginalLens.append({'C': -1.0 / 55.65, 't': 2.78, 'm': 'SF12'})
+        OriginalLens.append({'C': 1.0 / 39.75, 't': 7.63, 'm': ' '})
+        OriginalLens.append({'C': 1.0 / 107.56, 't': 9.54, 'm': 'SSK4A'})
+        OriginalLens.append({'C': -1.0 / 43.33, 't': 0.0, 'm': ' ', 'n': 35})
+        OriginalLens.append({'C': 0, 't': 0, 'm': 'vacuum'})
 
-            # 实际中，我们需要根据透镜的个数添加透镜面的信息
-            '''
-            for nL in range(num_Lens):
-                surf1 = {'C': 1.0 / 40.94, 't': 8.74, 'm': 'SSK4A'}    # 根据需求添加
-                surf2 = {'C': 0.0, 't': 11.05, 'm': ' '}
-            '''
-            # 2) 光学系统的基本参数
-            # pupilRadius = 18.5  # 入瞳孔径大小 参数二
-            pupilRadius = 0
-            if self.lineEdit_pupilRadius.text() != "":
-                pupilRadius = float(self.lineEdit_pupilRadius.text())  # 入瞳孔径大小 参数二
-            # pupiltheta = 20  # 最大视场角 参数三
-            pupiltheta = 0
-            if (self.lineEdit_pupiltheta.text() != ""):
-                pupiltheta = int(self.lineEdit_pupiltheta.text())  # 最大视场角 参数三
-            # 3) 光线波长
-            wavelength = []  # 建立wavelength列表用来存储波长 参数四
-            if (self.lineEdit_wavelength1.text() != "") and (self.lineEdit_wavelength2.text() != "") and (self.lineEdit_wavelength3.text() != ""):
-                wavelength.append(float(self.lineEdit_wavelength1.text())) # 将所需第一个波长的光添加进去
-                wavelength.append(float(self.lineEdit_wavelength2.text()))
-                wavelength.append(float(self.lineEdit_wavelength3.text()))
-            # wavelength.append(0.4861)  # 将所需第一个波长的光添加进去
-            # wavelength.append(0.5876)
-            # wavelength.append(0.6563)
+        # 实际中，我们需要根据透镜的个数添加透镜面的信息
+        '''
+        for nL in range(num_Lens):
+            surf1 = {'C': 1.0 / 40.94, 't': 8.74, 'm': 'SSK4A'}    # 根据需求添加
+            surf2 = {'C': 0.0, 't': 11.05, 'm': ' '}
+        '''
+        # 2) 光学系统的基本参数
+        # pupilRadius = 18.5  # 入瞳孔径大小 参数二
+        pupilRadius = 0
+        if self.lineEdit_pupilRadius.text() != "":
+            pupilRadius = float(self.lineEdit_pupilRadius.text()) / 2  # 入瞳孔径大小 参数二
+        # pupiltheta = 20  # 最大视场角 参数三
+        pupiltheta = 0
+        if (self.lineEdit_pupiltheta.text() != ""):
+            pupiltheta = int(self.lineEdit_pupiltheta.text())  # 最大视场角 参数三
+        # 3) 光线波长
+        wavelength = []  # 建立wavelength列表用来存储波长 参数四
+        if (self.lineEdit_wavelength1.text() != "") and (self.lineEdit_wavelength2.text() != "") and (self.lineEdit_wavelength3.text() != ""):
+            wavelength.append(float(self.lineEdit_wavelength1.text())) # 将所需第一个波长的光添加进去
+            wavelength.append(float(self.lineEdit_wavelength2.text()))
+            wavelength.append(float(self.lineEdit_wavelength3.text()))
+        # wavelength.append(0.4861)  # 将所需第一个波长的光添加进去
+        # wavelength.append(0.5876)
+        # wavelength.append(0.6563)
 
-            if (len(OriginalLens) != 0) and (pupilRadius != 0) and (pupiltheta != 0) and (len(wavelength) != 0) :
-                if m.text() == "点列图":
-                    # 绘制点列图
+        if (len(OriginalLens) != 0) and (pupilRadius != 0) and (pupiltheta != 0) and (len(wavelength) != 0) :
+            if m.text() == "点列图":
+                # 绘制点列图
 
-                    # 光学系统一
-                    # 创建工具类对象，计算横向像差点列图，径向像差曲线，畸变曲线
-                    # self.tool = Tool(Lens, pupilRadius, pupiltheta, pupilPosition, thetas, apertureRays, apertureRays2)
-                    # self.tool.Ppint_diagram()
-                    # # 在GUI的tabWidget中创建一个布局，用于添加Tool类的实例(实例被看作为一个控件)
-                    # self.gridlayout = QGridLayout(self.tab_6)
-                    # self.gridlayout.addWidget(self.tool, 0, 0,QtCore.Qt.AlignCenter)  # 将Tool的实例添加到布局中去
+                # 光学系统一
+                # 创建工具类对象，计算横向像差点列图，径向像差曲线，畸变曲线
+                # self.tool = Tool(Lens, pupilRadius, pupiltheta, pupilPosition, thetas, apertureRays, apertureRays2)
+                # self.tool.Ppint_diagram()
+                # # 在GUI的tabWidget中创建一个布局，用于添加Tool类的实例(实例被看作为一个控件)
+                # self.gridlayout = QGridLayout(self.tab_6)
+                # self.gridlayout.addWidget(self.tool, 0, 0,QtCore.Qt.AlignCenter)  # 将Tool的实例添加到布局中去
 
-                    # 光学系统二
-                    self.drawTool = DrawTool(OriginalLens, pupilRadius, pupiltheta, wavelength)
-                    self.drawTool.Ppint_diagram()
+                # 光学系统二
+                self.drawTool = DrawTool(OriginalLens, pupilRadius, pupiltheta, wavelength)
+                self.drawTool.Ppint_diagram()
+                # 在GUI的tabWidget中创建一个布局，用于添加Tool类的实例(实例被看作为一个控件)
+                self.gridlayout = QGridLayout(self.tab_6)
+                self.gridlayout.addWidget(self.drawTool, 0, 0, QtCore.Qt.AlignCenter)  # 将Tool的实例添加到布局中去
+
+            elif m.text() == "像差曲线":
+                # 绘制像差曲线函数
+
+                # 光学系统一
+                # self.tool_1 = Tool(Lens, pupilRadius, pupiltheta, pupilPosition, thetas, apertureRays, apertureRays2)
+                # self.tool_1.radial_aberration_curve()
+                # self.gridlayout_1 = QGridLayout(self.tab_4)
+                # self.gridlayout_1.addWidget(self.tool_1, 0, 0,QtCore.Qt.AlignCenter)
+
+                # 光学系统二
+                self.drawTool_1 = DrawTool(OriginalLens, pupilRadius, pupiltheta, wavelength)
+                self.drawTool_1.radial_aberration_curve()
+                self.gridlayout_1 = QGridLayout(self.tab_4)
+                self.gridlayout_1.addWidget(self.drawTool_1, 0, 0,QtCore.Qt.AlignCenter)
+
+            elif m.text() == "畸变曲线":
+                # 绘制畸变曲线
+
+                # 光学系统一
+                # self.tool_2 = Tool(Lens, pupilRadius, pupiltheta, pupilPosition, thetas, apertureRays, apertureRays2)
+                # self.tool_2.distortion_curve()
+                # self.gridlayout_2 = QGridLayout(self.tab_5)
+                # self.gridlayout_2.addWidget(self.tool_2, 0, 0,QtCore.Qt.AlignCenter)
+
+                # 光学系统二
+                self.drawTool_2 = DrawTool(OriginalLens, pupilRadius, pupiltheta, wavelength)
+                self.drawTool_2.distortion_curve()
+                self.gridlayout_2 = QGridLayout(self.tab_5)
+                self.gridlayout_2.addWidget(self.drawTool_2, 0, 0, QtCore.Qt.AlignCenter)
+
+            elif m.text() == "二维光线图":
+                # 绘制二维光线图
+
+                # 光学系统一
+                # self.tool_3 = Tool(Lens, pupilRadius, pupiltheta, pupilPosition, thetas, apertureRays, apertureRays2)
+                # self.tool_3.ray_tracing()
+                # self.gridLayout_3 = QGridLayout(self.tab_3)
+                # self.gridLayout_3.addWidget(self.tool_3, 0, 0,QtCore.Qt.AlignCenter)
+
+                # 光学系统二
+                self.drawTool_3 = DrawTool(OriginalLens, pupilRadius, pupiltheta, wavelength)
+                self.drawTool_3.ray_tracing()
+                self.gridLayout_3 = QGridLayout(self.tab_3)
+                self.gridLayout_3.addWidget(self.drawTool_3, 0, 0, QtCore.Qt.AlignCenter)
+
+                # # 光学系统二,点列图
+                # self.drawTool = DrawTool(OriginalLens, pupilRadius, pupiltheta, wavelength)
+                # self.drawTool.Ppint_diagram()
+                # # 在GUI的tabWidget中创建一个布局，用于添加Tool类的实例(实例被看作为一个控件)
+                # self.gridlayout = QGridLayout(self.tab_6)
+                # self.gridlayout.addWidget(self.drawTool, 0, 0, QtCore.Qt.AlignCenter)  # 将Tool的实例添加到布局中去
+                #
+                # # 光学系统二，像差曲线
+                # self.drawTool_1 = DrawTool(OriginalLens, pupilRadius, pupiltheta, wavelength)
+                # self.drawTool_1.radial_aberration_curve()
+                # self.gridlayout_1 = QGridLayout(self.tab_4)
+                # self.gridlayout_1.addWidget(self.drawTool_1, 0, 0, QtCore.Qt.AlignCenter)
+                #
+                # # 光学系统二，畸变曲线
+                # self.drawTool_2 = DrawTool(OriginalLens, pupilRadius, pupiltheta, wavelength)
+                # self.drawTool_2.distortion_curve()
+                # self.gridlayout_2 = QGridLayout(self.tab_5)
+                # self.gridlayout_2.addWidget(self.drawTool_2, 0, 0, QtCore.Qt.AlignCenter)
+
+            elif m.text() == "图像仿真":
+                # 图像仿真
+                #获取表格数据
+                self.tableWidget.item(0, 2).text()
+                print("图像仿真")
+
+            elif m.text() == "光线追迹":
+                #重新追迹光线
+                print("光线追迹")
+                #获取修改后的表格数据
+                # self.table_Lensdata3 = []
+                # for i in range(0, self.tableWidget.rowCount()):
+                #     self.table_Lensdata3.append([float(self.tableWidget.item(i, 1).text()),float(self.tableWidget.item(i, 2).text()),float(self.tableWidget.item(i, 3).text()),self.tableWidget.item(i, 4).text()])
+                #将修改后表格的数据保存到数据库中
+                # row,vol = self.table_Lensdata3.shape
+                # updateLen3(self.table_Lensdata3,row)
+                #重新进行光线追迹
+                OriginalLens2 = self.getTableData()
+                updateLen3(self.table_data, len(self.table_data))
+                pupilRadius2 = 18.5  # 入瞳孔径大小 参数二
+                pupiltheta2 = 20  # 最大视场角 参数三
+                wavelength2 = []  # 建立wavelength列表用来存储波长 参数四
+                wavelength2.append(0.4861)
+                wavelength2.append(0.5876)
+                wavelength2.append(0.6563)
+                if (len(OriginalLens2) != 0) and (pupilRadius2 != 0) and (pupiltheta2 != 0) and (len(wavelength2) != 0):
+                    # 光学系统二(二维光线图)
+                    self.drawTool_32 = DrawTool(OriginalLens, pupilRadius, pupiltheta, wavelength)
+                    self.drawTool_32.ray_tracing()
+                    self.gridLayout_3.addWidget(self.drawTool_32, 0, 0, QtCore.Qt.AlignCenter)
+                    # 光学系统二（点列图）
+                    self.drawTool2 = DrawTool(OriginalLens, pupilRadius, pupiltheta, wavelength)
+                    self.drawTool2.Ppint_diagram()
                     # 在GUI的tabWidget中创建一个布局，用于添加Tool类的实例(实例被看作为一个控件)
-                    self.gridlayout = QGridLayout(self.tab_6)
-                    self.gridlayout.addWidget(self.drawTool, 0, 0, QtCore.Qt.AlignCenter)  # 将Tool的实例添加到布局中去
-
-                elif m.text() == "像差曲线":
-                    # 绘制像差曲线函数
-
-                    # 光学系统一
-                    # self.tool_1 = Tool(Lens, pupilRadius, pupiltheta, pupilPosition, thetas, apertureRays, apertureRays2)
-                    # self.tool_1.radial_aberration_curve()
-                    # self.gridlayout_1 = QGridLayout(self.tab_4)
-                    # self.gridlayout_1.addWidget(self.tool_1, 0, 0,QtCore.Qt.AlignCenter)
-
-                    # 光学系统二
-                    self.drawTool_1 = DrawTool(OriginalLens, pupilRadius, pupiltheta, wavelength)
-                    self.drawTool_1.radial_aberration_curve()
-                    self.gridlayout_1 = QGridLayout(self.tab_4)
-                    self.gridlayout_1.addWidget(self.drawTool_1, 0, 0,QtCore.Qt.AlignCenter)
-
-                elif m.text() == "畸变曲线":
-                    # 绘制畸变曲线
-
-                    # 光学系统一
-                    # self.tool_2 = Tool(Lens, pupilRadius, pupiltheta, pupilPosition, thetas, apertureRays, apertureRays2)
-                    # self.tool_2.distortion_curve()
-                    # self.gridlayout_2 = QGridLayout(self.tab_5)
-                    # self.gridlayout_2.addWidget(self.tool_2, 0, 0,QtCore.Qt.AlignCenter)
-
-                    # 光学系统二
-                    self.drawTool_2 = DrawTool(OriginalLens, pupilRadius, pupiltheta, wavelength)
-                    self.drawTool_2.distortion_curve()
-                    self.gridlayout_2 = QGridLayout(self.tab_5)
-                    self.gridlayout_2.addWidget(self.drawTool_2, 0, 0, QtCore.Qt.AlignCenter)
-
-                elif m.text() == "二维光线图":
-                    # 绘制二维光线图
-
-                    # 光学系统一
-                    # self.tool_3 = Tool(Lens, pupilRadius, pupiltheta, pupilPosition, thetas, apertureRays, apertureRays2)
-                    # self.tool_3.ray_tracing()
-                    # self.gridLayout_3 = QGridLayout(self.tab_3)
-                    # self.gridLayout_3.addWidget(self.tool_3, 0, 0,QtCore.Qt.AlignCenter)
-
-                    # 光学系统二
-                    self.drawTool_3 = DrawTool(OriginalLens, pupilRadius, pupiltheta, wavelength)
-                    self.drawTool_3.ray_tracing()
-                    self.gridLayout_3 = QGridLayout(self.tab_3)
-                    self.gridLayout_3.addWidget(self.drawTool_3, 0, 0, QtCore.Qt.AlignCenter)
-
-                    # # 光学系统二,点列图
-                    # self.drawTool = DrawTool(OriginalLens, pupilRadius, pupiltheta, wavelength)
-                    # self.drawTool.Ppint_diagram()
-                    # # 在GUI的tabWidget中创建一个布局，用于添加Tool类的实例(实例被看作为一个控件)
-                    # self.gridlayout = QGridLayout(self.tab_6)
-                    # self.gridlayout.addWidget(self.drawTool, 0, 0, QtCore.Qt.AlignCenter)  # 将Tool的实例添加到布局中去
-                    #
-                    # # 光学系统二，像差曲线
-                    # self.drawTool_1 = DrawTool(OriginalLens, pupilRadius, pupiltheta, wavelength)
-                    # self.drawTool_1.radial_aberration_curve()
-                    # self.gridlayout_1 = QGridLayout(self.tab_4)
-                    # self.gridlayout_1.addWidget(self.drawTool_1, 0, 0, QtCore.Qt.AlignCenter)
-                    #
-                    # # 光学系统二，畸变曲线
-                    # self.drawTool_2 = DrawTool(OriginalLens, pupilRadius, pupiltheta, wavelength)
-                    # self.drawTool_2.distortion_curve()
-                    # self.gridlayout_2 = QGridLayout(self.tab_5)
-                    # self.gridlayout_2.addWidget(self.drawTool_2, 0, 0, QtCore.Qt.AlignCenter)
-
-                elif m.text() == "图像仿真":
-                    # 图像仿真
-                    #获取表格数据
-                    self.tableWidget.item(0, 2).text()
-                    print("图像仿真")
-
-                elif m.text() == "光线追迹":
-                    #重新追迹光线
-                    print("光线追迹")
-                    #获取修改后的表格数据
-                    # self.table_Lensdata3 = []
-                    # for i in range(0, self.tableWidget.rowCount()):
-                    #     self.table_Lensdata3.append([float(self.tableWidget.item(i, 1).text()),float(self.tableWidget.item(i, 2).text()),float(self.tableWidget.item(i, 3).text()),self.tableWidget.item(i, 4).text()])
-                    #将修改后表格的数据保存到数据库中
-                    # row,vol = self.table_Lensdata3.shape
-                    # updateLen3(self.table_Lensdata3,row)
-                    #重新进行光线追迹
-                    OriginalLens2 = self.getTableData()
-                    updateLen3(self.table_data, len(self.table_data))
-                    pupilRadius2 = 18.5  # 入瞳孔径大小 参数二
-                    pupiltheta2 = 20  # 最大视场角 参数三
-                    wavelength2 = []  # 建立wavelength列表用来存储波长 参数四
-                    wavelength2.append(0.4861)
-                    wavelength2.append(0.5876)
-                    wavelength2.append(0.6563)
-                    if (len(OriginalLens2) != 0) and (pupilRadius2 != 0) and (pupiltheta2 != 0) and (len(wavelength2) != 0):
-                        # 光学系统二(二维光线图)
-                        self.drawTool_32 = DrawTool(OriginalLens, pupilRadius, pupiltheta, wavelength)
-                        self.drawTool_32.ray_tracing()
-                        self.gridLayout_3.addWidget(self.drawTool_32, 0, 0, QtCore.Qt.AlignCenter)
-                        # 光学系统二（点列图）
-                        self.drawTool2 = DrawTool(OriginalLens, pupilRadius, pupiltheta, wavelength)
-                        self.drawTool2.Ppint_diagram()
-                        # 在GUI的tabWidget中创建一个布局，用于添加Tool类的实例(实例被看作为一个控件)
-                        self.gridlayout.addWidget(self.drawTool2, 0, 0, QtCore.Qt.AlignCenter)  # 将Tool的实例添加到布局中去
-                        # 光学系统二（像差曲线）
-                        self.drawTool_12 = DrawTool(OriginalLens, pupilRadius, pupiltheta, wavelength)
-                        self.drawTool_12.radial_aberration_curve()
-                        self.gridlayout_1.addWidget(self.drawTool_12, 0, 0, QtCore.Qt.AlignCenter)
-                        # 光学系统二（畸变曲线）
-                        self.drawTool_22 = DrawTool(OriginalLens, pupilRadius, pupiltheta, wavelength)
-                        self.drawTool_22.distortion_curve()
-                        self.gridlayout_2.addWidget(self.drawTool_22, 0, 0, QtCore.Qt.AlignCenter)
+                    self.gridlayout.addWidget(self.drawTool2, 0, 0, QtCore.Qt.AlignCenter)  # 将Tool的实例添加到布局中去
+                    # 光学系统二（像差曲线）
+                    self.drawTool_12 = DrawTool(OriginalLens, pupilRadius, pupiltheta, wavelength)
+                    self.drawTool_12.radial_aberration_curve()
+                    self.gridlayout_1.addWidget(self.drawTool_12, 0, 0, QtCore.Qt.AlignCenter)
+                    # 光学系统二（畸变曲线）
+                    self.drawTool_22 = DrawTool(OriginalLens, pupilRadius, pupiltheta, wavelength)
+                    self.drawTool_22.distortion_curve()
+                    self.gridlayout_2.addWidget(self.drawTool_22, 0, 0, QtCore.Qt.AlignCenter)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
