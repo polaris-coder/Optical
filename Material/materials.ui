@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>780</width>
+    <height>239</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>材料库</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0" colspan="4">
+    <widget class="QTableWidget" name="tableWidget">
+     <row>
+      <property name="text">
+       <string>SSK4A</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>SF12</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>Sk2</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>SK16</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>F5</string>
+      </property>
+     </row>
+     <column>
+      <property name="text">
+       <string>material</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>K1</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>L1</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>K2</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>L2</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>K3</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>L3</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item row="1" column="3">
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="text">
+      <string>取  消</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="1" column="2">
+    <widget class="QPushButton" name="pushButton">
+     <property name="text">
+      <string>确  定</string>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>16</width>
+       <height>16</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

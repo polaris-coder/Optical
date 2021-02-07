@@ -34,12 +34,42 @@ def getLensdata3():
     db.close()  # 关闭数据库连接
     return result, row, vol  # 返回查询结果
 
+#获取materials的数据
+def queryMaterials():
+    sql = "select `material`,`K1`,`L1`,`K2`,`L2`,`K3`,`L3` from materials"
+    db = open()  # 连接数据库
+    cursor = db.cursor()  # 使用cursor()方法获取操作游标
+    cursor.execute(sql)  # 执行查询SQL语句
+    result = cursor.fetchall()  # 记录查询结果
+    row = cursor.rowcount
+    vol = len(result[0])
+    cursor.close()  # 关闭游标
+    db.close()  # 关闭数据库连接
+    return result, row, vol  # 返回查询结果
+
+#查询表lensdata3的记录数
+def queryCoun():
+    sql = "select count(*) from lensdata3"
+    db = open()  # 连接数据库
+    cursor = db.cursor()  # 使用cursor()方法获取操作游标
+    cursor.execute(sql)  # 执行查询SQL语句
+    result = cursor.fetchall()  # 记录查询结果
+    count = result[0][0]
+    return count
+
+#向lensdata3中插入数据
+def insertLen3(data,row):
+    count = queryCoun()
+    if(count < 8):
+        for i in range(row):
+            sql = "insert into lensdata3(`Radius`,`thickness`,`Refractive index`,`Material`) values (%s,%s,%s,%s)"
+            exec(sql,(data[i][0],data[i][1],data[i][2],data[i][3]))
+
 #将修改后的表格数据保存到数据库中
-def updateLen3(data,row,vol):
-    print(data)
+def updateLen3(data,row):
     for i in range(row):
-        sql = "update lensdata3 set `Radius`=%s,`thickness`=%s,`Refractive index`=%s where `id`=%s";
-        exec(sql,(float(data[i,1]),float(data[i,2]),float(data[i,3]),i+1))
+        sql = "update lensdata3 set `Radius`=%s,`thickness`=%s,`Refractive index`=%s,`Material`=%s where `id`=%s";
+        exec(sql,(data[i][0],data[i][1],data[i][2],data[i][3],i+1))
 
 # 执行数据的增删改操作
 def exec(sql, values):
