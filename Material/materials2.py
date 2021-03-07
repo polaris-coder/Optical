@@ -1,0 +1,103 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'materials2.ui'
+#
+# Created by: PyQt5 UI code generator 5.12.1
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+
+class Ui_Dialog(object):
+    def setupUi(self, Dialog):
+        Dialog.setObjectName("Dialog")
+        Dialog.resize(780, 239)
+        self.gridLayout = QtWidgets.QGridLayout(Dialog)
+        self.gridLayout.setObjectName("gridLayout")
+        self.pushButton_2 = QtWidgets.QPushButton(Dialog)
+        self.pushButton_2.setObjectName("pushButton_2")
+        self.gridLayout.addWidget(self.pushButton_2, 1, 5, 1, 1)
+        self.pushButton_3 = QtWidgets.QPushButton(Dialog)
+        self.pushButton_3.setObjectName("pushButton_3")
+        self.gridLayout.addWidget(self.pushButton_3, 1, 0, 1, 1)
+        self.pushButton_4 = QtWidgets.QPushButton(Dialog)
+        self.pushButton_4.setObjectName("pushButton_4")
+        self.gridLayout.addWidget(self.pushButton_4, 1, 1, 1, 1)
+        spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.gridLayout.addItem(spacerItem, 1, 3, 1, 1)
+        self.tableWidget = QtWidgets.QTableWidget(Dialog)
+        self.tableWidget.setObjectName("tableWidget")
+        self.tableWidget.setColumnCount(7)
+        self.tableWidget.setRowCount(5)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget.setVerticalHeaderItem(0, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget.setVerticalHeaderItem(1, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget.setVerticalHeaderItem(2, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget.setVerticalHeaderItem(3, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget.setVerticalHeaderItem(4, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(0, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(1, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(2, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(3, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(4, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(5, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(6, item)
+        self.gridLayout.addWidget(self.tableWidget, 0, 0, 1, 6)
+        self.pushButton = QtWidgets.QPushButton(Dialog)
+        self.pushButton.setIconSize(QtCore.QSize(16, 16))
+        self.pushButton.setObjectName("pushButton")
+        self.gridLayout.addWidget(self.pushButton, 1, 4, 1, 1)
+        self.pushButton_5 = QtWidgets.QPushButton(Dialog)
+        self.pushButton_5.setObjectName("pushButton_5")
+        self.gridLayout.addWidget(self.pushButton_5, 1, 2, 1, 1)
+
+        self.retranslateUi(Dialog)
+        self.pushButton_2.clicked.connect(Dialog.close)
+        QtCore.QMetaObject.connectSlotsByName(Dialog)
+
+    def retranslateUi(self, Dialog):
+        _translate = QtCore.QCoreApplication.translate
+        Dialog.setWindowTitle(_translate("Dialog", "材料库"))
+        self.pushButton_2.setText(_translate("Dialog", "取  消"))
+        self.pushButton_3.setText(_translate("Dialog", "添加材料"))
+        self.pushButton_4.setText(_translate("Dialog", "批量添加材料"))
+        item = self.tableWidget.verticalHeaderItem(0)
+        item.setText(_translate("Dialog", "SSK4A"))
+        item = self.tableWidget.verticalHeaderItem(1)
+        item.setText(_translate("Dialog", "SF12"))
+        item = self.tableWidget.verticalHeaderItem(2)
+        item.setText(_translate("Dialog", "Sk2"))
+        item = self.tableWidget.verticalHeaderItem(3)
+        item.setText(_translate("Dialog", "SK16"))
+        item = self.tableWidget.verticalHeaderItem(4)
+        item.setText(_translate("Dialog", "F5"))
+        item = self.tableWidget.horizontalHeaderItem(0)
+        item.setText(_translate("Dialog", "material"))
+        item = self.tableWidget.horizontalHeaderItem(1)
+        item.setText(_translate("Dialog", "K1"))
+        item = self.tableWidget.horizontalHeaderItem(2)
+        item.setText(_translate("Dialog", "L1"))
+        item = self.tableWidget.horizontalHeaderItem(3)
+        item.setText(_translate("Dialog", "K2"))
+        item = self.tableWidget.horizontalHeaderItem(4)
+        item.setText(_translate("Dialog", "L2"))
+        item = self.tableWidget.horizontalHeaderItem(5)
+        item.setText(_translate("Dialog", "K3"))
+        item = self.tableWidget.horizontalHeaderItem(6)
+        item.setText(_translate("Dialog", "L3"))
+        self.pushButton.setText(_translate("Dialog", "确  定"))
+        self.pushButton_5.setText(_translate("Dialog", "保存"))
+
+
