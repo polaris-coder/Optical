@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e7147dcd-fbd7-4620-b809-ddf99bf84aa8" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/Geometric_optics2/DrawTool.py" afterPath="$PROJECT_DIR$/Geometric_optics2/DrawTool.py" />
+      <change beforePath="$PROJECT_DIR$/Material/materials.py" afterPath="$PROJECT_DIR$/Material/materials.py" />
+      <change beforePath="$PROJECT_DIR$/SR/service.py" afterPath="$PROJECT_DIR$/SR/service.py" />
       <change beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
       <change beforePath="$PROJECT_DIR$/光学软件.xmind" afterPath="$PROJECT_DIR$/光学软件.xmind" />
     </list>
@@ -16,6 +19,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/pythonGui$guiTest.coverage" NAME="guiTest Coverage Results" MODIFIED="1608360346984" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pythonGui$layoutTest.coverage" NAME="layoutTest Coverage Results" MODIFIED="1608730742271" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/pythonGui$table.coverage" NAME="table Coverage Results" MODIFIED="1614931641733" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pythonGui$main_aberrationAndDistortion.coverage" NAME="main_aberrationAndDistortion Coverage Results" MODIFIED="1608864327817" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Geometric_optics" />
     <SUITE FILE_PATH="coverage/pythonGui$tableWidgetTest.coverage" NAME="tableWidgetTest Coverage Results" MODIFIED="1608792598165" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/pythonGui$longitudalAberrationTest.coverage" NAME="longitudalAberrationTest Coverage Results" MODIFIED="1608628463258" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
@@ -28,9 +32,11 @@
     <SUITE FILE_PATH="coverage/pythonGui$layoutTest4.coverage" NAME="layoutTest4 Coverage Results" MODIFIED="1608796967367" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/pythonGui$test.coverage" NAME="test Coverage Results" MODIFIED="1609932620418" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pythonGui$xiaohong.coverage" NAME="xiaohong Coverage Results" MODIFIED="1608281020728" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/pythonGui$buju2.coverage" NAME="buju2 Coverage Results" MODIFIED="1614863398551" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pythonGui$ooTest.coverage" NAME="ooTest Coverage Results" MODIFIED="1608639493300" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/pythonGui$xiangcha2.coverage" NAME="xiangcha2 Coverage Results" MODIFIED="1608866345531" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Geometric_optics_ui" />
     <SUITE FILE_PATH="coverage/pythonGui$dialogTest1.coverage" NAME="dialogTest1 Coverage Results" MODIFIED="1608639517988" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/pythonGui$yanghui.coverage" NAME="yanghui Coverage Results" MODIFIED="1614769974769" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/pythonGui$poTest.coverage" NAME="poTest Coverage Results" MODIFIED="1608639502253" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/pythonGui$poTest1.coverage" NAME="poTest1 Coverage Results" MODIFIED="1608514405893" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/pythonGui$myTypeSingle.coverage" NAME="myTypeSingle Coverage Results" MODIFIED="1608170758184" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
@@ -39,17 +45,18 @@
     <SUITE FILE_PATH="coverage/pythonGui$draw__1_.coverage" NAME="draw (1) Coverage Results" MODIFIED="1608367583036" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/pythonGui$groupBoxTest.coverage" NAME="groupBoxTest Coverage Results" MODIFIED="1608378659957" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/pythonGui$main2.coverage" NAME="main2 Coverage Results" MODIFIED="1608867905009" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/pythonGui$materials.coverage" NAME="materials Coverage Results" MODIFIED="1612675800325" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Material" />
+    <SUITE FILE_PATH="coverage/pythonGui$materials.coverage" NAME="materials Coverage Results" MODIFIED="1614859742415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Material" />
     <SUITE FILE_PATH="coverage/pythonGui$QSplitterTest.coverage" NAME="QSplitterTest Coverage Results" MODIFIED="1608730273770" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/pythonGui$optical_System.coverage" NAME="optical_System Coverage Results" MODIFIED="1608369608954" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pojo" />
     <SUITE FILE_PATH="coverage/pythonGui$listTest.coverage" NAME="listTest Coverage Results" MODIFIED="1612670200082" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/pythonGui$py_test_for_testGetLensdata3_test1.coverage" NAME="py.test for testGetLensdata3.test1 Coverage Results" MODIFIED="1611826792015" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/pythonGui$buju.coverage" NAME="buju Coverage Results" MODIFIED="1614863411175" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pythonGui$single.coverage" NAME="single Coverage Results" MODIFIED="1608170552209" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MDI" />
     <SUITE FILE_PATH="coverage/pythonGui$QTabelWidgetTest.coverage" NAME="QTabelWidgetTest Coverage Results" MODIFIED="1611280557429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/pythonGui$mouseTest.coverage" NAME="mouseTest Coverage Results" MODIFIED="1612665439530" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/pythonGui$treeTest.coverage" NAME="treeTest Coverage Results" MODIFIED="1608799703368" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/pythonGui$tableTest.coverage" NAME="tableTest Coverage Results" MODIFIED="1612676328178" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
-    <SUITE FILE_PATH="coverage/pythonGui$main.coverage" NAME="main Coverage Results" MODIFIED="1612687448693" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/pythonGui$main.coverage" NAME="main Coverage Results" MODIFIED="1614935227013" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pythonGui$tableWidgetTest2.coverage" NAME="tableWidgetTest2 Coverage Results" MODIFIED="1608801689816" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/pythonGui$toolBarTest.coverage" NAME="toolBarTest Coverage Results" MODIFIED="1609227233938" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/pythonGui$aberration.coverage" NAME="aberration Coverage Results" MODIFIED="1609294921369" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Geometric_optics_ui" />
@@ -84,33 +91,30 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="771" column="42" lean-forward="true" selection-start-line="771" selection-start-column="42" selection-end-line="771" selection-end-column="42" />
+            <state relative-caret-position="286">
+              <caret line="651" column="0" lean-forward="false" selection-start-line="651" selection-start-column="0" selection-end-line="651" selection-end-column="0" />
               <folding>
-                <element signature="e#21348#21520#0" expanded="false" />
-                <element signature="e#21586#22930#0" expanded="false" />
-                <element signature="e#23016#24229#0" expanded="false" />
-                <element signature="e#24304#25199#0" expanded="false" />
-                <element signature="e#25298#26008#0" expanded="false" />
-                <element signature="e#26095#27022#0" expanded="false" />
-                <element signature="e#27125#28582#0" expanded="false" />
-                <element signature="e#28635#29023#0" expanded="false" />
-                <element signature="e#29074#29259#0" expanded="false" />
-                <element signature="e#31298#31562#0" expanded="false" />
-                <element signature="e#32592#33317#0" expanded="false" />
-                <element signature="e#33374#34429#0" expanded="false" />
-                <element signature="e#44367#46544#0" expanded="false" />
+                <element signature="e#14887#17244#0" expanded="false" />
+                <element signature="e#17309#20418#0" expanded="false" />
+                <element signature="e#21020#21192#0" expanded="false" />
+                <element signature="e#21092#21146#0" expanded="false" />
+                <element signature="e#21258#22602#0" expanded="false" />
+                <element signature="e#22688#23921#0" expanded="false" />
+                <element signature="e#23996#24891#0" expanded="false" />
+                <element signature="e#24990#25718#0" expanded="false" />
+                <element signature="e#25805#26732#0" expanded="false" />
+                <element signature="e#26835#28296#0" expanded="false" />
+                <element signature="e#27055#27314#0" expanded="false" />
+                <element signature="e#28349#28737#0" expanded="false" />
+                <element signature="e#28788#28973#0" expanded="false" />
+                <element signature="e#29028#31188#0" expanded="false" />
+                <element signature="e#31256#31520#0" expanded="false" />
+                <element signature="e#32331#32818#0" expanded="false" />
+                <element signature="e#32874#33599#0" expanded="false" />
+                <element signature="e#33656#34711#0" expanded="false" />
+                <element signature="e#34768#45708#0" expanded="false" />
+                <element signature="e#45759#47936#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tableTest.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/tableTest.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2002">
-              <caret line="91" column="14" lean-forward="false" selection-start-line="91" selection-start-column="7" selection-end-line="91" selection-end-column="14" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -118,15 +122,17 @@
       <file leaf-file-name="service.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SR/service.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="770">
-              <caret line="37" column="18" lean-forward="false" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="18" />
+            <state relative-caret-position="1914">
+              <caret line="89" column="4" lean-forward="false" selection-start-line="89" selection-start-column="4" selection-end-line="89" selection-end-column="4" />
               <folding>
-                <marker date="1612675359255" expanded="true" signature="240:327" ph="select `Surf... lensdata2" />
-                <marker date="1612675359255" expanded="true" signature="662:749" ph="select `Radi... lensdata3" />
-                <marker date="1612675359255" expanded="true" signature="1093:1155" ph="select `mate... materials" />
-                <marker date="1612675359255" expanded="true" signature="1496:1526" ph="select count... lensdata3" />
-                <marker date="1612675359255" expanded="true" signature="1855:1949" ph="insert into lenddata3... " />
-                <marker date="1612675359255" expanded="true" signature="2104:2201" ph="update lensdata3... " />
+                <element signature="e#0#29#0" expanded="true" />
+                <marker date="1614780286584" expanded="true" signature="240:327" ph="select `Surf... lensdata2" />
+                <marker date="1614780286584" expanded="true" signature="662:749" ph="select `Radi... lensdata3" />
+                <marker date="1614780286584" expanded="true" signature="1093:1165" ph="select `mate... materials" />
+                <marker date="1614780286584" expanded="true" signature="1506:1536" ph="select count... lensdata3" />
+                <marker date="1614780286584" expanded="true" signature="1865:1959" ph="insert into lenddata3... " />
+                <marker date="1614780286584" expanded="true" signature="2114:2211" ph="update lensdata3... " />
+                <marker date="1614780286584" expanded="true" signature="2669:2778" ph="insert into materials... " />
               </folding>
             </state>
           </provider>
@@ -135,21 +141,11 @@
       <file leaf-file-name="materials.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Material/materials.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1518">
-              <caret line="73" column="58" lean-forward="false" selection-start-line="73" selection-start-column="58" selection-end-line="73" selection-end-column="58" />
+            <state relative-caret-position="1760">
+              <caret line="86" column="25" lean-forward="false" selection-start-line="86" selection-start-column="25" selection-end-line="86" selection-end-column="25" />
               <folding>
                 <element signature="e#198#240#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Material.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Geometric_optics2/Material.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -187,6 +183,13 @@
       <find>xlabel</find>
       <find>ylabel</find>
       <find>gridlayout2</find>
+      <find>pushButton_3</find>
+      <find>pushButton_5</find>
+      <find>pushButton_4</find>
+      <find>determine_2</find>
+      <find>pushButton</find>
+      <find>self.table_data</find>
+      <find>horizontalLayout</find>
     </findStrings>
     <replaceStrings>
       <replace>actionjilian</replace>
@@ -205,6 +208,13 @@
       <replace>set_ylim</replace>
       <replace>set_xlabel</replace>
       <replace>set_ylabel</replace>
+      <replace>addMaterial</replace>
+      <replace>save</replace>
+      <replace>batch_addition</replace>
+      <replace>concel</replace>
+      <replace>determine</replace>
+      <replace>data</replace>
+      <replace>gridLayout</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -215,10 +225,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/test/ooTest.py" />
-        <option value="$PROJECT_DIR$/test/dialogTest1.py" />
-        <option value="$PROJECT_DIR$/tbTest.py" />
-        <option value="$PROJECT_DIR$/test/fenli.py" />
         <option value="$PROJECT_DIR$/mian.py" />
         <option value="$PROJECT_DIR$/test/longitudalAberrationTest.py" />
         <option value="$PROJECT_DIR$/Geometric_optics/opticalSystem.py" />
@@ -254,8 +260,6 @@
         <option value="$PROJECT_DIR$/Geometric_optics2/opticalSystem.py" />
         <option value="$PROJECT_DIR$/Geometric_optics2/main.py" />
         <option value="$PROJECT_DIR$/Geometric_optics2/drawDiagram.py" />
-        <option value="$PROJECT_DIR$/Geometric_optics2/DrawTool.py" />
-        <option value="$PROJECT_DIR$/Geometric_optics/main_aberrationAndDistortion.py" />
         <option value="$PROJECT_DIR$/test/listTest.py" />
         <option value="$PROJECT_DIR$/test/testGetLensdata3.py" />
         <option value="$PROJECT_DIR$/materials.py" />
@@ -263,7 +267,13 @@
         <option value="$PROJECT_DIR$/test/mouseTest.py" />
         <option value="$PROJECT_DIR$/test/tableTest.py" />
         <option value="$PROJECT_DIR$/test/listTest" />
+        <option value="$PROJECT_DIR$/Geometric_optics/main_aberrationAndDistortion.py" />
+        <option value="$PROJECT_DIR$/Geometric_optics2/DrawTool.py" />
+        <option value="$PROJECT_DIR$/test/yanghui.py" />
         <option value="$PROJECT_DIR$/SR/service.py" />
+        <option value="$PROJECT_DIR$/buju2.py" />
+        <option value="$PROJECT_DIR$/buju.py" />
+        <option value="$PROJECT_DIR$/table.py" />
         <option value="$PROJECT_DIR$/Material/materials.py" />
         <option value="$PROJECT_DIR$/main.py" />
       </list>
@@ -276,6 +286,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="912" />
+    <option name="y" value="4" />
     <option name="width" value="974" />
     <option name="height" value="1057" />
   </component>
@@ -313,7 +325,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -324,40 +335,31 @@
             <path>
               <item name="pythonGui" type="b2602c69:ProjectViewProjectNode" />
               <item name="pythonGui" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
+              <item name="Geometric_optics2" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pythonGui" type="b2602c69:ProjectViewProjectNode" />
               <item name="pythonGui" type="462c0819:PsiDirectoryNode" />
-              <item name="Geometric_optics2" type="462c0819:PsiDirectoryNode" />
+              <item name="image" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pythonGui" type="b2602c69:ProjectViewProjectNode" />
               <item name="pythonGui" type="462c0819:PsiDirectoryNode" />
               <item name="Material" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="pythonGui" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pythonGui" type="462c0819:PsiDirectoryNode" />
-              <item name="SR" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pythonGui" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pythonGui" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="last_opened_file_path" value="E:/光学软件/optical-design" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -368,10 +370,11 @@
       <recent name="E:\pythonGui\Geometric_optics_ui" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\pythonGui" />
+      <recent name="E:\pythonGui\image" />
       <recent name="E:\pythonGui\Geometric_optics2" />
       <recent name="E:\pythonGui\test" />
       <recent name="E:\pythonGui\Geometric_optics" />
-      <recent name="E:\pythonGui\Geometric_optics_ui" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -387,20 +390,39 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.main">
-    <configuration name="listTest" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="buju" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="pythonGui" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/listTest" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/buju.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="buju2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="pythonGui" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/buju2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -444,39 +466,20 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="mouseTest" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="table" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="pythonGui" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/mouseTest.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="tableTest" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="pythonGui" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/tableTest.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/table.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -484,18 +487,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.main" />
-      <item index="1" class="java.lang.String" itemvalue="Python.tableTest" />
-      <item index="2" class="java.lang.String" itemvalue="Python.mouseTest" />
-      <item index="3" class="java.lang.String" itemvalue="Python.materials" />
-      <item index="4" class="java.lang.String" itemvalue="Python.listTest" />
+      <item index="1" class="java.lang.String" itemvalue="Python.materials" />
+      <item index="2" class="java.lang.String" itemvalue="Python.buju" />
+      <item index="3" class="java.lang.String" itemvalue="Python.buju2" />
+      <item index="4" class="java.lang.String" itemvalue="Python.table" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.main" />
-        <item index="1" class="java.lang.String" itemvalue="Python.tableTest" />
-        <item index="2" class="java.lang.String" itemvalue="Python.materials" />
-        <item index="3" class="java.lang.String" itemvalue="Python.listTest" />
-        <item index="4" class="java.lang.String" itemvalue="Python.mouseTest" />
+        <item index="1" class="java.lang.String" itemvalue="Python.table" />
+        <item index="2" class="java.lang.String" itemvalue="Python.buju" />
+        <item index="3" class="java.lang.String" itemvalue="Python.buju2" />
+        <item index="4" class="java.lang.String" itemvalue="Python.materials" />
       </list>
     </recent_temporary>
   </component>
@@ -562,7 +565,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37206703" sideWeight="0.4978678" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28118163" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14179105" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28944564" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -626,21 +629,11 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="117" />
+      <option name="time" value="121" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test/tableWidgetTest3.py" />
-    <entry file="file://$PROJECT_DIR$/test/MyLabel.py" />
-    <entry file="file://$PROJECT_DIR$/test/layoutTest2.py" />
-    <entry file="file://$PROJECT_DIR$/test/layoutTest4.py" />
-    <entry file="file://$PROJECT_DIR$/test/treeTest.py" />
-    <entry file="file://$PROJECT_DIR$/test/tableWidgetTest.py" />
-    <entry file="file://$PROJECT_DIR$/test/tableWidgetTest2.py" />
-    <entry file="file://$PROJECT_DIR$/test/layoutTest5.py" />
-    <entry file="file://$PROJECT_DIR$/test/tableWidgetTest4.py" />
-    <entry file="file://$PROJECT_DIR$/test/layoutTest6.py" />
     <entry file="file://$PROJECT_DIR$/test/connectDB.py" />
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -725,32 +718,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Geometric_optics/opticalSystem.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Geometric_optics/drawDiagram.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="14" column="32" lean-forward="false" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/listTest.py" />
     <entry file="file://$PROJECT_DIR$/Geometric_optics2/drawDiagram.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2112">
           <caret line="98" column="24" lean-forward="false" selection-start-line="98" selection-start-column="24" selection-end-line="98" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Geometric_optics/main_aberrationAndDistortion.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2046">
-          <caret line="98" column="60" lean-forward="false" selection-start-line="98" selection-start-column="60" selection-end-line="98" selection-end-column="60" />
         </state>
       </provider>
     </entry>
@@ -804,30 +776,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Geometric_optics2/DrawTool.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4158">
-          <caret line="194" column="8" lean-forward="false" selection-start-line="194" selection-start-column="8" selection-end-line="194" selection-end-column="8" />
-          <folding>
-            <marker date="1611404614326" expanded="true" signature="1331:5565" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Geometric_optics2/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="53" column="34" lean-forward="false" selection-start-line="53" selection-start-column="34" selection-end-line="53" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Geometric_optics2/opticalSystem.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="27" column="58" lean-forward="false" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/mouseTest.py" />
     <entry file="file://$PROJECT_DIR$/test/listTest">
       <provider selected="true" editor-type-id="text-editor">
@@ -836,41 +784,140 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/tableTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2002">
+          <caret line="91" column="14" lean-forward="false" selection-start-line="91" selection-start-column="7" selection-end-line="91" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/光线追迹.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/图像仿真.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/img1.ico">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/img2.ico">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Geometric_optics2/opticalSystem.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="27" column="58" lean-forward="false" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Geometric_optics2/Material.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Geometric_optics2/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1078">
+          <caret line="53" column="34" lean-forward="false" selection-start-line="53" selection-start-column="34" selection-end-line="53" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Geometric_optics/opticalSystem.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1188">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Geometric_optics/drawDiagram.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-506">
+          <caret line="14" column="32" lean-forward="false" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Geometric_optics/main_aberrationAndDistortion.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="33" column="36" lean-forward="false" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/yanghui.py" />
+    <entry file="file://$PROJECT_DIR$/Geometric_optics2/DrawTool.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="71" column="37" lean-forward="false" selection-start-line="71" selection-start-column="37" selection-end-line="71" selection-end-column="37" />
+          <folding>
+            <marker date="1614759068422" expanded="true" signature="1331:5564" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Material/materials2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="66" column="42" lean-forward="false" selection-start-line="66" selection-start-column="42" selection-end-line="66" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buju2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="556">
+          <caret line="38" column="46" lean-forward="true" selection-start-line="38" selection-start-column="46" selection-end-line="39" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buju.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="537">
+          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="55" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/材料库.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/table.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SR/service.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="770">
-          <caret line="37" column="18" lean-forward="false" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="18" />
+        <state relative-caret-position="1914">
+          <caret line="89" column="4" lean-forward="false" selection-start-line="89" selection-start-column="4" selection-end-line="89" selection-end-column="4" />
           <folding>
-            <marker date="1612675359255" expanded="true" signature="240:327" ph="select `Surf... lensdata2" />
-            <marker date="1612675359255" expanded="true" signature="662:749" ph="select `Radi... lensdata3" />
-            <marker date="1612675359255" expanded="true" signature="1093:1155" ph="select `mate... materials" />
-            <marker date="1612675359255" expanded="true" signature="1496:1526" ph="select count... lensdata3" />
-            <marker date="1612675359255" expanded="true" signature="1855:1949" ph="insert into lenddata3... " />
-            <marker date="1612675359255" expanded="true" signature="2104:2201" ph="update lensdata3... " />
+            <element signature="e#0#29#0" expanded="true" />
+            <marker date="1614780286584" expanded="true" signature="240:327" ph="select `Surf... lensdata2" />
+            <marker date="1614780286584" expanded="true" signature="662:749" ph="select `Radi... lensdata3" />
+            <marker date="1614780286584" expanded="true" signature="1093:1165" ph="select `mate... materials" />
+            <marker date="1614780286584" expanded="true" signature="1506:1536" ph="select count... lensdata3" />
+            <marker date="1614780286584" expanded="true" signature="1865:1959" ph="insert into lenddata3... " />
+            <marker date="1614780286584" expanded="true" signature="2114:2211" ph="update lensdata3... " />
+            <marker date="1614780286584" expanded="true" signature="2669:2778" ph="insert into materials... " />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/tableTest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2002">
-          <caret line="91" column="14" lean-forward="false" selection-start-line="91" selection-start-column="7" selection-end-line="91" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Material/materials.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1518">
-          <caret line="73" column="58" lean-forward="false" selection-start-line="73" selection-start-column="58" selection-end-line="73" selection-end-column="58" />
+        <state relative-caret-position="1760">
+          <caret line="86" column="25" lean-forward="false" selection-start-line="86" selection-start-column="25" selection-end-line="86" selection-end-column="25" />
           <folding>
             <element signature="e#198#240#0" expanded="true" />
           </folding>
@@ -879,22 +926,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="771" column="42" lean-forward="true" selection-start-line="771" selection-start-column="42" selection-end-line="771" selection-end-column="42" />
+        <state relative-caret-position="286">
+          <caret line="651" column="0" lean-forward="false" selection-start-line="651" selection-start-column="0" selection-end-line="651" selection-end-column="0" />
           <folding>
-            <element signature="e#21348#21520#0" expanded="false" />
-            <element signature="e#21586#22930#0" expanded="false" />
-            <element signature="e#23016#24229#0" expanded="false" />
-            <element signature="e#24304#25199#0" expanded="false" />
-            <element signature="e#25298#26008#0" expanded="false" />
-            <element signature="e#26095#27022#0" expanded="false" />
-            <element signature="e#27125#28582#0" expanded="false" />
-            <element signature="e#28635#29023#0" expanded="false" />
-            <element signature="e#29074#29259#0" expanded="false" />
-            <element signature="e#31298#31562#0" expanded="false" />
-            <element signature="e#32592#33317#0" expanded="false" />
-            <element signature="e#33374#34429#0" expanded="false" />
-            <element signature="e#44367#46544#0" expanded="false" />
+            <element signature="e#14887#17244#0" expanded="false" />
+            <element signature="e#17309#20418#0" expanded="false" />
+            <element signature="e#21020#21192#0" expanded="false" />
+            <element signature="e#21092#21146#0" expanded="false" />
+            <element signature="e#21258#22602#0" expanded="false" />
+            <element signature="e#22688#23921#0" expanded="false" />
+            <element signature="e#23996#24891#0" expanded="false" />
+            <element signature="e#24990#25718#0" expanded="false" />
+            <element signature="e#25805#26732#0" expanded="false" />
+            <element signature="e#26835#28296#0" expanded="false" />
+            <element signature="e#27055#27314#0" expanded="false" />
+            <element signature="e#28349#28737#0" expanded="false" />
+            <element signature="e#28788#28973#0" expanded="false" />
+            <element signature="e#29028#31188#0" expanded="false" />
+            <element signature="e#31256#31520#0" expanded="false" />
+            <element signature="e#32331#32818#0" expanded="false" />
+            <element signature="e#32874#33599#0" expanded="false" />
+            <element signature="e#33656#34711#0" expanded="false" />
+            <element signature="e#34768#45708#0" expanded="false" />
+            <element signature="e#45759#47936#0" expanded="false" />
           </folding>
         </state>
       </provider>

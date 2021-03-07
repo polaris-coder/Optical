@@ -47,7 +47,7 @@ class DrawTool(FigureCanvas):
         xymax = math.ceil(max(XYmax) / 0.5) * 0.5
 
         # 第一步：创建一个创建Figure
-        self.fig = Figure(figsize=(5, 5), dpi=100)
+        self.fig = Figure(figsize=(5, 5), dpi=90)
         # 第二步：在父类中激活Figure窗口
         super(DrawTool, self).__init__(self.fig)  # 此句必不可少，否则不能显示图形
         # 第三步：创建一个子图，用于绘制图形用，111表示子图编号，如matlab的subplot(1,1,1)
@@ -128,7 +128,7 @@ class DrawTool(FigureCanvas):
         self.axes4.set_xlabel("z/mm")
         self.axes4.set_ylabel("y/mm")
 
-        self.fig.tight_layout(pad=0.1, w_pad=0.2, h_pad=0.2)
+        self.fig.tight_layout(pad=0.01, w_pad=0.02, h_pad=0.02)
 
     # 绘制径向像差曲线
     def radial_aberration_curve(self):

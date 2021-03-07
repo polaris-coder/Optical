@@ -36,7 +36,7 @@ def getLensdata3():
 
 #获取materials的数据
 def queryMaterials():
-    sql = "select `material`,`K1`,`L1`,`K2`,`L2`,`K3`,`L3` from materials"
+    sql = "select `material`,`K1`,`L1`,`K2`,`L2`,`K3`,`L3`,`nd`,`vd` from materials"
     db = open()  # 连接数据库
     cursor = db.cursor()  # 使用cursor()方法获取操作游标
     cursor.execute(sql)  # 执行查询SQL语句
@@ -85,3 +85,8 @@ def exec(sql, values):
     finally:
         cursor.close() # 关闭游标
         db.close() # 关闭数据库连接
+
+#向materials中插入数据
+def insertMate(data):
+    sql = "insert into materials(`material`,`K1`,`L1`,`K2`,`L2`,`K3`,`L3`,`nd`,`vd`) values (%s,%s,%s,%s,%s,%s,%s,%s,%s)"
+    exec(sql, (data[0], data[1], data[2], data[3], data[4],data[5], data[6], data[7], data[8]))
