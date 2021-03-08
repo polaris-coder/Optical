@@ -3,6 +3,41 @@
   <component name="ChangeListManager">
     <list default="true" id="e7147dcd-fbd7-4620-b809-ddf99bf84aa8" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/Material/materials.py" afterPath="$PROJECT_DIR$/Material/materials.py" />
+      <change beforePath="$PROJECT_DIR$/README.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/buju.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/buju.ui" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/buju2.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/buju2.ui" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dao/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
+      <change beforePath="$PROJECT_DIR$/table.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/table.ui" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/test/.pytest_cache/README.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/test/.pytest_cache/v/cache/lastfailed" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/test/.pytest_cache/v/cache/nodeids" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/test/Geometric_optics_ui/UI/aberrationAndDistortion.ui" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/test/Geometric_optics_ui/UI/jingmian.ui" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/test/Geometric_optics_ui/UI/xiangcha.ui" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/test/Geometric_optics_ui/UI/xiangcha2.ui" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/test/QTabelWidgetTest.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/test/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/test/listTest" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/test/main.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/test/main.ui" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/test/main2.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/test/main2.ui" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/test/main3.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/test/main3.ui" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/test/main4.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/test/main4.ui" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/test/tableTest.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/test/tableTest.ui" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/test/testGetLensdata3.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/test/toolBarTest.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/test/toolBarTest.ui" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/test/tupletest.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/光学软件.xmind" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -40,7 +75,7 @@
     <SUITE FILE_PATH="coverage/pythonGui$draw__1_.coverage" NAME="draw (1) Coverage Results" MODIFIED="1608367583036" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/pythonGui$groupBoxTest.coverage" NAME="groupBoxTest Coverage Results" MODIFIED="1608378659957" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/pythonGui$main2.coverage" NAME="main2 Coverage Results" MODIFIED="1608867905009" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/pythonGui$materials.coverage" NAME="materials Coverage Results" MODIFIED="1614859742415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Material" />
+    <SUITE FILE_PATH="coverage/pythonGui$materials.coverage" NAME="materials Coverage Results" MODIFIED="1615194936443" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Material" />
     <SUITE FILE_PATH="coverage/pythonGui$QSplitterTest.coverage" NAME="QSplitterTest Coverage Results" MODIFIED="1608730273770" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/pythonGui$optical_System.coverage" NAME="optical_System Coverage Results" MODIFIED="1608369608954" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pojo" />
     <SUITE FILE_PATH="coverage/pythonGui$listTest.coverage" NAME="listTest Coverage Results" MODIFIED="1612670200082" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
@@ -51,7 +86,7 @@
     <SUITE FILE_PATH="coverage/pythonGui$mouseTest.coverage" NAME="mouseTest Coverage Results" MODIFIED="1612665439530" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/pythonGui$treeTest.coverage" NAME="treeTest Coverage Results" MODIFIED="1608799703368" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/pythonGui$tableTest.coverage" NAME="tableTest Coverage Results" MODIFIED="1612676328178" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
-    <SUITE FILE_PATH="coverage/pythonGui$main.coverage" NAME="main Coverage Results" MODIFIED="1614935227013" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/pythonGui$main.coverage" NAME="main Coverage Results" MODIFIED="1615210489344" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pythonGui$tableWidgetTest2.coverage" NAME="tableWidgetTest2 Coverage Results" MODIFIED="1608801689816" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/pythonGui$toolBarTest.coverage" NAME="toolBarTest Coverage Results" MODIFIED="1609227233938" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/pythonGui$aberration.coverage" NAME="aberration Coverage Results" MODIFIED="1609294921369" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Geometric_optics_ui" />
@@ -86,60 +121,30 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="638">
-              <caret line="698" column="69" lean-forward="true" selection-start-line="698" selection-start-column="69" selection-end-line="698" selection-end-column="69" />
+            <state relative-caret-position="-643">
+              <caret line="378" column="72" lean-forward="true" selection-start-line="378" selection-start-column="72" selection-end-line="378" selection-end-column="72" />
               <folding>
-                <element signature="e#14887#17244#0" expanded="false" />
-                <element signature="e#17309#20418#0" expanded="false" />
-                <element signature="e#21020#21192#0" expanded="false" />
-                <element signature="e#21092#21146#0" expanded="false" />
-                <element signature="e#21258#22602#0" expanded="false" />
-                <element signature="e#22688#23921#0" expanded="false" />
-                <element signature="e#23996#24891#0" expanded="false" />
-                <element signature="e#24990#25718#0" expanded="false" />
-                <element signature="e#25805#26732#0" expanded="false" />
-                <element signature="e#26835#28296#0" expanded="false" />
-                <element signature="e#27055#27314#0" expanded="false" />
-                <element signature="e#28349#28737#0" expanded="false" />
-                <element signature="e#28788#28973#0" expanded="false" />
-                <element signature="e#29028#31188#0" expanded="false" />
-                <element signature="e#31256#31520#0" expanded="false" />
-                <element signature="e#32331#32818#0" expanded="false" />
-                <element signature="e#32874#33599#0" expanded="false" />
-                <element signature="e#33656#34711#0" expanded="false" />
-                <element signature="e#34768#45708#0" expanded="false" />
-                <element signature="e#45759#47936#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="service.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SR/service.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1914">
-              <caret line="89" column="4" lean-forward="false" selection-start-line="89" selection-start-column="4" selection-end-line="89" selection-end-column="4" />
-              <folding>
-                <element signature="e#0#29#0" expanded="true" />
-                <marker date="1614780286584" expanded="true" signature="240:327" ph="select `Surf... lensdata2" />
-                <marker date="1614780286584" expanded="true" signature="662:749" ph="select `Radi... lensdata3" />
-                <marker date="1614780286584" expanded="true" signature="1093:1165" ph="select `mate... materials" />
-                <marker date="1614780286584" expanded="true" signature="1506:1536" ph="select count... lensdata3" />
-                <marker date="1614780286584" expanded="true" signature="1865:1959" ph="insert into lenddata3... " />
-                <marker date="1614780286584" expanded="true" signature="2114:2211" ph="update lensdata3... " />
-                <marker date="1614780286584" expanded="true" signature="2669:2778" ph="insert into materials... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="materials.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Material/materials.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1760">
-              <caret line="86" column="25" lean-forward="false" selection-start-line="86" selection-start-column="25" selection-end-line="86" selection-end-column="25" />
-              <folding>
-                <element signature="e#198#240#0" expanded="true" />
+                <element signature="e#14971#17328#0" expanded="false" />
+                <element signature="e#17393#19893#0" expanded="false" />
+                <element signature="e#19938#20110#0" expanded="false" />
+                <element signature="e#20010#20064#0" expanded="false" />
+                <element signature="e#20176#21520#0" expanded="false" />
+                <element signature="e#21606#22839#0" expanded="false" />
+                <element signature="e#22914#23809#0" expanded="false" />
+                <element signature="e#23908#24636#0" expanded="false" />
+                <element signature="e#24723#25650#0" expanded="false" />
+                <element signature="e#25753#27214#0" expanded="false" />
+                <element signature="e#25973#26232#0" expanded="false" />
+                <element signature="e#27267#27655#0" expanded="false" />
+                <element signature="e#27706#27891#0" expanded="false" />
+                <element signature="e#27946#30106#0" expanded="false" />
+                <element signature="e#30174#30438#0" expanded="false" />
+                <element signature="e#30521#31221#0" expanded="false" />
+                <element signature="e#31284#31779#0" expanded="false" />
+                <element signature="e#31835#32560#0" expanded="false" />
+                <element signature="e#32617#33672#0" expanded="false" />
+                <element signature="e#33729#44662#0" expanded="false" />
+                <element signature="e#44713#46890#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -185,6 +190,7 @@
       <find>pushButton</find>
       <find>self.table_data</find>
       <find>horizontalLayout</find>
+      <find>judge_mate</find>
     </findStrings>
     <replaceStrings>
       <replace>actionjilian</replace>
@@ -267,8 +273,8 @@
         <option value="$PROJECT_DIR$/test/yanghui.py" />
         <option value="$PROJECT_DIR$/SR/service.py" />
         <option value="$PROJECT_DIR$/buju2.py" />
-        <option value="$PROJECT_DIR$/buju.py" />
         <option value="$PROJECT_DIR$/table.py" />
+        <option value="$PROJECT_DIR$/buju.py" />
         <option value="$PROJECT_DIR$/Material/materials.py" />
         <option value="$PROJECT_DIR$/main.py" />
       </list>
@@ -280,9 +286,8 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="912" />
-    <option name="y" value="4" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-20" />
     <option name="width" value="974" />
     <option name="height" value="1057" />
   </component>
@@ -330,46 +335,36 @@
             <path>
               <item name="pythonGui" type="b2602c69:ProjectViewProjectNode" />
               <item name="pythonGui" type="462c0819:PsiDirectoryNode" />
-              <item name="Geometric_optics2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pythonGui" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pythonGui" type="462c0819:PsiDirectoryNode" />
               <item name="image" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pythonGui" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pythonGui" type="462c0819:PsiDirectoryNode" />
-              <item name="Material" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="last_opened_file_path" value="E:/光学软件/optical-design" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\pythonGui\Material" />
-      <recent name="E:\pythonGui\test" />
-      <recent name="E:\pythonGui\SR" />
-      <recent name="E:\pythonGui\image" />
-      <recent name="E:\pythonGui\Geometric_optics_ui" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\pythonGui" />
       <recent name="E:\pythonGui\image" />
       <recent name="E:\pythonGui\Geometric_optics2" />
       <recent name="E:\pythonGui\test" />
       <recent name="E:\pythonGui\Geometric_optics" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\pythonGui\Material" />
+      <recent name="E:\pythonGui\test" />
+      <recent name="E:\pythonGui\SR" />
+      <recent name="E:\pythonGui\image" />
+      <recent name="E:\pythonGui\Geometric_optics_ui" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -490,10 +485,10 @@
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.main" />
-        <item index="1" class="java.lang.String" itemvalue="Python.table" />
-        <item index="2" class="java.lang.String" itemvalue="Python.buju" />
-        <item index="3" class="java.lang.String" itemvalue="Python.buju2" />
-        <item index="4" class="java.lang.String" itemvalue="Python.materials" />
+        <item index="1" class="java.lang.String" itemvalue="Python.materials" />
+        <item index="2" class="java.lang.String" itemvalue="Python.table" />
+        <item index="3" class="java.lang.String" itemvalue="Python.buju" />
+        <item index="4" class="java.lang.String" itemvalue="Python.buju2" />
       </list>
     </recent_temporary>
   </component>
@@ -560,16 +555,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5021322" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37206703" sideWeight="0.4978678" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37094972" sideWeight="0.4978678" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14179105" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.123667374" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28944564" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -592,20 +586,21 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5021322" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.4978678" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37206703" sideWeight="0.4978678" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15565032" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1433902" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32849163" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28944564" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Concurrent Activities Diagram" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32960895" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39955848" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38324022" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -637,26 +632,11 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="121" />
+      <option name="time" value="127" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test/connectDB.py" />
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1058">
-          <caret line="11" column="42" lean-forward="true" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/software/Anaconda3/Lib/site-packages/matplotlib/backends/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/光学设计系统.xmind" />
     <entry file="file://$PROJECT_DIR$/进度记录.txt" />
     <entry file="file://$PROJECT_DIR$/Geometric_optics_ui/aberrationAndDistortion.py" />
@@ -809,16 +789,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/image/img1.ico">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/image/img2.ico">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Geometric_optics2/opticalSystem.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="550">
@@ -886,18 +856,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/buju.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="537">
-          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="55" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/image/材料库.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/table.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="427">
@@ -922,41 +880,95 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/buju.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1188">
+          <caret line="54" column="54" lean-forward="false" selection-start-line="54" selection-start-column="54" selection-end-line="54" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/光学软件.xmind">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/img2.ico">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/img1.ico">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/材料库.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Material/materials.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1760">
-          <caret line="86" column="25" lean-forward="false" selection-start-line="86" selection-start-column="25" selection-end-line="86" selection-end-column="25" />
+        <state relative-caret-position="506">
+          <caret line="25" column="30" lean-forward="false" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
           <folding>
             <element signature="e#198#240#0" expanded="true" />
+            <element signature="e#446#506#0" expanded="false" />
+            <element signature="e#547#3742#0" expanded="false" />
+            <element signature="e#3799#4023#0" expanded="false" />
+            <element signature="e#4072#4252#0" expanded="false" />
+            <element signature="e#4296#5283#0" expanded="false" />
+            <element signature="e#5330#5343#0" expanded="false" />
+            <element signature="e#5394#5409#0" expanded="false" />
+            <element signature="e#5456#6060#0" expanded="false" />
+            <element signature="e#6107#7990#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/main.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="698" column="69" lean-forward="true" selection-start-line="698" selection-start-column="69" selection-end-line="698" selection-end-column="69" />
+        <state relative-caret-position="-643">
+          <caret line="378" column="72" lean-forward="true" selection-start-line="378" selection-start-column="72" selection-end-line="378" selection-end-column="72" />
           <folding>
-            <element signature="e#14887#17244#0" expanded="false" />
-            <element signature="e#17309#20418#0" expanded="false" />
-            <element signature="e#21020#21192#0" expanded="false" />
-            <element signature="e#21092#21146#0" expanded="false" />
-            <element signature="e#21258#22602#0" expanded="false" />
-            <element signature="e#22688#23921#0" expanded="false" />
-            <element signature="e#23996#24891#0" expanded="false" />
-            <element signature="e#24990#25718#0" expanded="false" />
-            <element signature="e#25805#26732#0" expanded="false" />
-            <element signature="e#26835#28296#0" expanded="false" />
-            <element signature="e#27055#27314#0" expanded="false" />
-            <element signature="e#28349#28737#0" expanded="false" />
-            <element signature="e#28788#28973#0" expanded="false" />
-            <element signature="e#29028#31188#0" expanded="false" />
-            <element signature="e#31256#31520#0" expanded="false" />
-            <element signature="e#32331#32818#0" expanded="false" />
-            <element signature="e#32874#33599#0" expanded="false" />
-            <element signature="e#33656#34711#0" expanded="false" />
-            <element signature="e#34768#45708#0" expanded="false" />
-            <element signature="e#45759#47936#0" expanded="false" />
+            <element signature="e#14971#17328#0" expanded="false" />
+            <element signature="e#17393#19893#0" expanded="false" />
+            <element signature="e#19938#20110#0" expanded="false" />
+            <element signature="e#20010#20064#0" expanded="false" />
+            <element signature="e#20176#21520#0" expanded="false" />
+            <element signature="e#21606#22839#0" expanded="false" />
+            <element signature="e#22914#23809#0" expanded="false" />
+            <element signature="e#23908#24636#0" expanded="false" />
+            <element signature="e#24723#25650#0" expanded="false" />
+            <element signature="e#25753#27214#0" expanded="false" />
+            <element signature="e#25973#26232#0" expanded="false" />
+            <element signature="e#27267#27655#0" expanded="false" />
+            <element signature="e#27706#27891#0" expanded="false" />
+            <element signature="e#27946#30106#0" expanded="false" />
+            <element signature="e#30174#30438#0" expanded="false" />
+            <element signature="e#30521#31221#0" expanded="false" />
+            <element signature="e#31284#31779#0" expanded="false" />
+            <element signature="e#31835#32560#0" expanded="false" />
+            <element signature="e#32617#33672#0" expanded="false" />
+            <element signature="e#33729#44662#0" expanded="false" />
+            <element signature="e#44713#46890#0" expanded="false" />
           </folding>
         </state>
       </provider>

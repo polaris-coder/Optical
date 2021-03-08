@@ -1,2 +1,0 @@
-# Optical
-optical software

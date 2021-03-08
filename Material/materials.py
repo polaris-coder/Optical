@@ -78,6 +78,11 @@ class Ui_Dialog(QDialog):
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
+        # 设置窗口的图标
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("../image/材料库.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        Dialog.setWindowIcon(icon)
+
         self.addMaterial.clicked.connect(self.add_mate)
         self.save.clicked.connect(self.save_mate)
         self.concel.clicked.connect(Dialog.close)
@@ -129,6 +134,8 @@ class Ui_Dialog(QDialog):
         print("删除材料")
 
     #批量添加材料
+    def add_materials(self):
+        print("批量添加材料")
 
     #保存到数据库
     def save_mate(self):
@@ -145,7 +152,6 @@ class Ui_Dialog(QDialog):
                     self.table_data.append(float(self.tableWidget.item(n,i).text()))
             insertMate(self.table_data)#向数据库中插入数据
             self.queryMate()
-
 
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate

@@ -204,7 +204,6 @@ class Ui_MainWindow(QMainWindow):
         self.tableWidget.setColumnCount(7)
         self.tableWidget.setRowCount(2)
         self.tableWidget.setHorizontalHeaderLabels(['Surface Type','Radius', 'Thickness', 'Thickness Solve', 'Refractive index', 'Material','Comment']) # 设置表格中的水平标题
-        # self.tableWidget.setEditTriggers(QAbstractItemView.DoubleClicked) # 设置表格双击时可以编辑单元格
         self.L = [] # 用来保存表格中每一行的ComboBox控件对象
         # 初始化表格
         for i in range(self.tableWidget.rowCount()):
@@ -294,6 +293,11 @@ class Ui_MainWindow(QMainWindow):
         splitter2.setStretchFactor(1,2)
         self.verticalLayout.addWidget(splitter2)
 
+        #设置窗口的图标
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("image/main.png"),QtGui.QIcon.Normal,QtGui.QIcon.Off)
+        MainWindow.setWindowIcon(icon)
+
         self.btnadd.clicked.connect(self.table_insert) # 绑定添加按钮的单击信号
         self.btndel.clicked.connect(self.table_delete) # 绑定删除按钮的单击信号
         self.btnQuery.clicked.connect(self.set_mirrors) # 绑定设置镜面个数的单击信号
@@ -342,52 +346,37 @@ class Ui_MainWindow(QMainWindow):
 
     # 获取单元格中的内容,并把数据保存到数据库
     def getTableData(self):
-        self.table_data = []
-        for i in range(0, self.tableWidget.rowCount()):
-            self.table_data.append([float(self.tableWidget.item(i,1).text()),float(self.tableWidget.item(i,2).text()),float(self.tableWidget.item(i,3).text()),self.tableWidget.item(i,4).text()])
-        insertLen3(self.table_data,self.num_mirrors)#将数据保存到数据库
+        if (float(self.tableWidget.item(0, 2).text()) != 0.0):
+            self.table_data = []
+            for i in range(0, self.tableWidget.rowCount()):
+                    self.table_data.append([float(self.tableWidget.item(i,1).text()),float(self.tableWidget.item(i,2).text()),float(self.tableWidget.item(i,4).text()),self.tableWidget.item(i,5).text()])
+            insertLen3(self.table_data,self.num_mirrors)#将数据保存到数据库
 
-        OriginalLensTem = []  # 参数一
-        OriginalLensTem.append({'C': 0.0, 't': self.table_data[0][1], 'm': self.table_data[0][3]})
-        OriginalLensTem.append({'C': 1.0 / self.table_data[1][0], 't': self.table_data[1][1], 'm': self.table_data[1][3]})  # 将第一个透镜面添加进去
-        OriginalLensTem.append({'C': 0.0, 't': self.table_data[2][1], 'm': ' '})
-        OriginalLensTem.append({'C': 1.0 / self.table_data[3][0], 't': self.table_data[3][1], 'm': self.table_data[3][3]})
-        OriginalLensTem.append({'C': 1.0 / self.table_data[4][0], 't': self.table_data[4][1], 'm': ' '})
-        OriginalLensTem.append({'C': 1.0 / self.table_data[5][0], 't': self.table_data[5][1], 'm': self.table_data[5][3]})
-        OriginalLensTem.append(
-            {'C': 1.0 / self.table_data[6][0], 't': self.table_data[6][1], 'm': ' ', 'n': self.table_data[6][2]})
-        OriginalLensTem.append({'C': 0.0, 't': self.table_data[7][1], 'm': self.table_data[7][3]})
+            OriginalLensTem = []  # 参数一
+            OriginalLensTem.append({'C': 0.0, 't': self.table_data[0][1], 'm': self.table_data[0][3]})
+            OriginalLensTem.append({'C': 1.0 / self.table_data[1][0], 't': self.table_data[1][1], 'm': self.table_data[1][3]})  # 将第一个透镜面添加进去
+            OriginalLensTem.append({'C': 0.0, 't': self.table_data[2][1], 'm': ' '})
+            OriginalLensTem.append({'C': 1.0 / self.table_data[3][0], 't': self.table_data[3][1], 'm': self.table_data[3][3]})
+            OriginalLensTem.append({'C': 1.0 / self.table_data[4][0], 't': self.table_data[4][1], 'm': ' '})
+            OriginalLensTem.append({'C': 1.0 / self.table_data[5][0], 't': self.table_data[5][1], 'm': self.table_data[5][3]})
+            OriginalLensTem.append(
+                {'C': 1.0 / self.table_data[6][0], 't': self.table_data[6][1], 'm': ' ', 'n': self.table_data[6][2]})
+            OriginalLensTem.append({'C': 0.0, 't': self.table_data[7][1], 'm': self.table_data[7][3]})
 
-        if(self.tableWidget.item(0,4).text() != "vacuum" and self.tableWidget.item(0,4).text() != "None"):
-            QMessageBox.information(None,'提示','材料不存在，请重新输入！',QMessageBox.Ok)
-        if(self.tableWidget.item(1,4).text() != "SSK4A" and self.tableWidget.item(1,4).text() != "None"):
-            QMessageBox.information(None, '提示', '材料不存在，请重新输入！', QMessageBox.Ok)
-        if(self.tableWidget.item(3,4).text() != "SF12" and self.tableWidget.item(3,4).text() != "None"):
-            QMessageBox.information(None, '提示', '材料不存在，请重新输入！', QMessageBox.Ok)
-        if(self.tableWidget.item(5,4).text() != "SSK4A" and self.tableWidget.item(5,4).text() != "None"):
-            QMessageBox.information(None, '提示', '材料不存在，请重新输入！', QMessageBox.Ok)
-        if(self.tableWidget.item(7,4).text() != "vacuum" and self.tableWidget.item(7,4).text() != "None"):
-            QMessageBox.information(None, '提示', '材料不存在，请重新输入！', QMessageBox.Ok)
+            if(self.tableWidget.item(0,5).text() != "vacuum" and self.tableWidget.item(0,5).text() != "None"):
+                QMessageBox.information(None,'提示','材料不存在，请重新输入！',QMessageBox.Ok)
+            if(self.tableWidget.item(1,5).text() != "SSK4A" and self.tableWidget.item(1,5).text() != "None"):
+                QMessageBox.information(None, '提示', '材料不存在，请重新输入！', QMessageBox.Ok)
+            if(self.tableWidget.item(3,5).text() != "SF12" and self.tableWidget.item(3,5).text() != "None"):
+                QMessageBox.information(None, '提示', '材料不存在，请重新输入！', QMessageBox.Ok)
+            if(self.tableWidget.item(5,5).text() != "SSK4A" and self.tableWidget.item(5,5).text() != "None"):
+                QMessageBox.information(None, '提示', '材料不存在，请重新输入！', QMessageBox.Ok)
+            if(self.tableWidget.item(7,5).text() != "vacuum" and self.tableWidget.item(7,5).text() != "None"):
+                QMessageBox.information(None, '提示', '材料不存在，请重新输入！', QMessageBox.Ok)
 
-        # OriginalLensTem.append({'C': 0.0, 't': self.table_data[0][1], 'm': 'vacuum'})
-        # OriginalLensTem.append({'C': 1.0 / self.table_data[1][0], 't': self.table_data[1][1], 'm': 'SSK4A'})  # 将第一个透镜面添加进去
-        # OriginalLensTem.append({'C': 0.0, 't': self.table_data[2][1], 'm': ' '})
-        # OriginalLensTem.append({'C': 1.0 / self.table_data[3][0], 't': self.table_data[3][1], 'm': 'SF12'})
-        # OriginalLensTem.append({'C': 1.0 / self.table_data[4][0], 't': self.table_data[4][1], 'm': ' '})
-        # OriginalLensTem.append({'C': 1.0 / self.table_data[5][0], 't': self.table_data[5][1], 'm': 'SSK4A'})
-        # OriginalLensTem.append(
-        #     {'C': 1.0 / self.table_data[6][0], 't': self.table_data[6][1], 'm': ' ', 'n': self.table_data[6][2]})
-        # OriginalLensTem.append({'C': 0.0, 't': self.table_data[7][1], 'm': 'vacuum'})
-        return OriginalLensTem
-
-    # OriginalLens.append({'C': 0.0, 't': 100.0, 'm': 'vacuum'})
-    # OriginalLens.append({'C': 1.0 / 40.94, 't': 8.74, 'm': 'SSK4A'})  # 将第一个透镜面添加进去
-    # OriginalLens.append({'C': 0.0, 't': 11.05, 'm': ' '})
-    # OriginalLens.append({'C': -1.0 / 55.65, 't': 2.78, 'm': 'SF12'})
-    # OriginalLens.append({'C': 1.0 / 39.75, 't': 7.63, 'm': ' '})
-    # OriginalLens.append({'C': 1.0 / 107.56, 't': 9.54, 'm': 'SSK4A'})
-    # OriginalLens.append({'C': -1.0 / 43.33, 't': 0.0, 'm': ' ', 'n': 35})
-    # OriginalLens.append({'C': 0, 't': 0, 'm': 'vacuum'})
+            return OriginalLensTem
+        else:
+            QMessageBox.information(None, '提示', '请输入参数', QMessageBox.Ok)
 
     #删除表格的列
     def del_vol(self):
@@ -660,6 +649,7 @@ class Ui_MainWindow(QMainWindow):
             self.tableWidget.setItem(4,6,item_Stop)
             item_Image = QTableWidgetItem("Image")
             self.tableWidget.setItem(self.tableWidget.rowCount() - 1, 6, item_Image)#为光学系统像面添加备注
+            # self.connLensdata3()
 
     # 获取数据表Lensdata3的数据
     def connLensdata3(self):
@@ -667,16 +657,16 @@ class Ui_MainWindow(QMainWindow):
         result, row, vol = getLensdata3()
         print(result)
         # 将数据填入表格
-        self.tableWidget.setRowCount(row)
-        self.tableWidget.setColumnCount(vol)
+        print(row)
+        print(vol)
         for i in range(row):
             for j in range(1,vol):
-                # 为表格第一列的单元格添加下拉菜单
-                # if j == 0:
-                #     self.addComboBox(i)
-                # else:
-                data = QTableWidgetItem(str(result[i][j]))
-                self.tableWidget.setItem(i, j, data)
+                if(j < 3):
+                    data = QTableWidgetItem(str(result[i][j]))
+                    self.tableWidget.setItem(i, j, data)
+                elif(j >= 3):
+                    data = QTableWidgetItem(str(result[i][j]))
+                    self.tableWidget.setItem(i, j+1, data)
 
     # 连接数据库并获取数据(部分)
     def connectDB(self):
@@ -729,7 +719,6 @@ class Ui_MainWindow(QMainWindow):
             self.m = materials.Ui_Dialog()
             self.m.show()
         else:
-            # elif(m.text() != "材料库"):
             # 光学系统1参数
             # obj = {'C': 0.0, 't': 10.0, 'n': 1.0}
             # surf1 = {'C': 1.0 / 40.94, 't': 8.74, 'n': 1.617}
@@ -757,14 +746,14 @@ class Ui_MainWindow(QMainWindow):
             # 从表格读取数据
             # OriginalLens = self.getTableData()
             # 目前是给定的，所以直接写出来，该部分'm'如果为空格，表示透镜的第二个面
-            OriginalLens.append({'C': 0.0, 't': 100.0, 'm': 'vacuum'})
-            OriginalLens.append({'C': 1.0 / 40.94, 't': 8.74, 'm': 'SSK4A'})  # 将第一个透镜面添加进去
-            OriginalLens.append({'C': 0.0, 't': 11.05, 'm': ' '})
-            OriginalLens.append({'C': -1.0 / 55.65, 't': 2.78, 'm': 'SF12'})
-            OriginalLens.append({'C': 1.0 / 39.75, 't': 7.63, 'm': ' '})
-            OriginalLens.append({'C': 1.0 / 107.56, 't': 9.54, 'm': 'SSK4A'})
-            OriginalLens.append({'C': -1.0 / 43.33, 't': 0.0, 'm': ' ', 'n': 35})
-            OriginalLens.append({'C': 0, 't': 0, 'm': 'vacuum'})
+            # OriginalLens.append({'C': 0.0, 't': 100.0, 'm': 'vacuum'})
+            # OriginalLens.append({'C': 1.0 / 40.94, 't': 8.74, 'm': 'SSK4A'})  # 将第一个透镜面添加进去
+            # OriginalLens.append({'C': 0.0, 't': 11.05, 'm': ' '})
+            # OriginalLens.append({'C': -1.0 / 55.65, 't': 2.78, 'm': 'SF12'})
+            # OriginalLens.append({'C': 1.0 / 39.75, 't': 7.63, 'm': ' '})
+            # OriginalLens.append({'C': 1.0 / 107.56, 't': 9.54, 'm': 'SSK4A'})
+            # OriginalLens.append({'C': -1.0 / 43.33, 't': 0.0, 'm': ' ', 'n': 35})
+            # OriginalLens.append({'C': 0, 't': 0, 'm': 'vacuum'})
 
             # 实际中，我们需要根据透镜的个数添加透镜面的信息
             '''
@@ -773,26 +762,26 @@ class Ui_MainWindow(QMainWindow):
                 surf2 = {'C': 0.0, 't': 11.05, 'm': ' '}
             '''
             # 2) 光学系统的基本参数
-            # pupilRadius = 18.5  # 入瞳孔径大小 参数二
-            pupilRadius = 0
-            if self.lineEdit_pupilRadius.text() != "":
-                pupilRadius = float(self.lineEdit_pupilRadius.text()) / 2  # 入瞳孔径大小 参数二
-            # pupiltheta = 20  # 最大视场角 参数三
-            pupiltheta = 0
-            if (self.lineEdit_pupiltheta.text() != ""):
-                pupiltheta = int(self.lineEdit_pupiltheta.text())  # 最大视场角 参数三
+            pupilRadius = 18.5  # 入瞳孔径大小 参数二
+            # pupilRadius = 0
+            # if self.lineEdit_pupilRadius.text() != "":
+            #     pupilRadius = float(self.lineEdit_pupilRadius.text()) / 2  # 入瞳孔径大小 参数二，输入直径为37
+            pupiltheta = 20  # 最大视场角 参数三
+            # pupiltheta = 0
+            # if (self.lineEdit_pupiltheta.text() != ""):
+            #     pupiltheta = int(self.lineEdit_pupiltheta.text())  # 最大视场角 参数三
             # 3) 光线波长
             wavelength = []  # 建立wavelength列表用来存储波长 参数四
-            if (self.lineEdit_wavelength1.text() != "") and (self.lineEdit_wavelength2.text() != "") and (self.lineEdit_wavelength3.text() != ""):
-                wavelength.append(float(self.lineEdit_wavelength1.text())) # 将所需第一个波长的光添加进去
-                wavelength.append(float(self.lineEdit_wavelength2.text()))
-                wavelength.append(float(self.lineEdit_wavelength3.text()))
-            # wavelength.append(0.4861)  # 将所需第一个波长的光添加进去
-            # wavelength.append(0.5876)
-            # wavelength.append(0.6563)
+            # if (self.lineEdit_wavelength1.text() != "") and (self.lineEdit_wavelength2.text() != "") and (self.lineEdit_wavelength3.text() != ""):
+            #     wavelength.append(float(self.lineEdit_wavelength1.text())) # 将所需第一个波长的光添加进去
+            #     wavelength.append(float(self.lineEdit_wavelength2.text()))
+            #     wavelength.append(float(self.lineEdit_wavelength3.text()))
+            wavelength.append(0.4861)  # 将所需第一个波长的光添加进去
+            wavelength.append(0.5876)
+            wavelength.append(0.6563)
 
             if (len(OriginalLens) == 0) or (pupilRadius == 0) or (pupiltheta == 0) or (len(wavelength) == 0) :
-                QMessageBox.information(None, '提示', '请输入系统参数', QMessageBox.Ok)
+                QMessageBox.information(None, '提示', '请输入参数', QMessageBox.Ok)
             else:
                 if m.text() == "点列图":
                     # 绘制点列图
